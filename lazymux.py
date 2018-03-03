@@ -316,7 +316,8 @@ def main():
 		print "    [07] Websploit"
 		print "    [08] Routersploit"
 		print "    [09] BlackBox"
-		print "    [10] XAttacker\n"
+		print "    [10] XAttacker"
+		print "    [11] tXtool\n"
 		print "    [00] Back to main menu\n"
 		exploitool = raw_input("lzmx > ")
 		
@@ -340,6 +341,8 @@ def main():
 			blackbox()
 		elif exploitool == "10":
 			xattacker()
+		elif exploitool == "11":
+			txtool()
 		elif exploitool == "00" or exploitool == "0":
 			restart_program()
 		else:

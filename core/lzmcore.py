@@ -3,6 +3,7 @@
 import os
 import sys
 import time
+from subprocess import Popen, PIPE
 
 lazymux_banner = """
 .-.                                           
@@ -37,6 +38,23 @@ def backtomenu_option():
 
 def banner():
 	print lazymux_banner
+
+def check_txtool():
+    if os.path.isfile("/data/data/com.termux/files/usr/bin/txtool"):
+        if os.path.isdir("/data/data/com.termux/files/usr/share/txtool"):
+            print '\ntxtool already installed. Skip !!!'
+            backtomenu_option()
+    else: return True
+
+def txtool():
+    check_txtool()
+    print '\n###### Installing txtool'
+    os.system("apt-get install --assume-yes git python2")
+    os.system("cd $HOME && git clone https://github.com/kuburan/txtool.git")
+    txtool_dir = '$HOME/txtool'
+    Popen("cd %s && ./install.py" % (txtool_dir),stderr=PIPE, stdout=PIPE, shell=True).wait()
+    print '\n###### Done'
+    backtomenu_option()
 
 def nmap():
 	print '\n###### Installing Nmap'
