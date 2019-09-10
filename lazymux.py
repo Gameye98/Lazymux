@@ -5,6 +5,7 @@ import os
 import sys
 from time import sleep as timeout
 from core.lzmcore import *
+os.system('cls')
 
 def main():
 	banner()
