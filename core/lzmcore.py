@@ -1,4 +1,4 @@
-## lzmcore.py - useful module of Lazymux
+## lzmcore.py - useful module of Brunette
 # -*- coding: utf-8 -*-
 import os
 import sys
@@ -10,8 +10,7 @@ lazymux_banner = """
 : :    .--.  .---. .-..-.,-.,-.,-..-..-..-.,-.
 : :__ ' .; ; `-'_.': :; :: ,. ,. :: :; :`.  .'
 :___.'`.__,_;`.___;`._. ;:_;:_;:_;`.__.':_,._;
-                    .-. :                     
-                    `._.'                     
+                                   
 """
 backtomenu_banner = """
   [99] Back to main menu
