@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-import time
+import time 
 
-lazymux_banner = """
+lazymux_banner = """ 
 .-.                                           
 : :                                           
 : :    .--.  .---. .-..-.,-.,-.,-..-..-..-.,-.
@@ -15,7 +15,7 @@ lazymux_banner = """
 """
 backtomenu_banner = """
   [99] Back to main menu
-  [00] Exit the Lazymux
+  [00] Exit the Lazymux 
 """
 def restart_program():
 	python = sys.executable
