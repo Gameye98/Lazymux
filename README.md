@@ -1,3 +1,7 @@
+[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/Cvar1984)  
+
+![BlackHole Security](core/gitbhs.svg)
+
 # Lazymux
 Lazymux tools installer is very easy to use, only provided for lazy termux users.
 
@@ -18,7 +22,7 @@ cd Lazymux
 python2 lazymux.py
 ```
 
-## Contact Me
+### Contact Me
 Line     : dtl.lily  
 Telegram : @dtlily  
 Facebook : cgi.izo  

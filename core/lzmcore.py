@@ -1188,3 +1188,13 @@ def vbug():
 	os.system('mv vbug ~')
 	print '###### Done'
 	backtomenu_option()
+
+def kojawafft():
+	print '\n###### Installing kojawafft'
+	os.system('apt update && apt upgrade')
+	os.system('apt install git nodejs')
+	os.system('git clone https://github.com/sandalpenyok/kojawafft')
+	os.system('mv kojawafft ~')
+	os.system('cd $HOME/kojawafft && unzip node_modules.zip && cd -')
+	print '###### Done'
+	backtomenu_option()

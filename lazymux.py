@@ -524,7 +524,8 @@ def main():
 		print "    [20] F4K3"
 		print "    [21] heroku"
 		print "    [22] google"
-		print "    [23] vbug\n"
+		print "    [23] vbug"
+		print "    [24] kojawafft\n"
 		print "    [00] Back to main menu\n"
 		moretool = raw_input("lzmx > ")
 		
@@ -574,6 +575,8 @@ def main():
 			google()
 		elif moretool == "23":
 			vbug()
+		elif moretool == "24":
+			kojawafft()
 		elif moretool == "00" or moretool == "0":
 			restart_program()
 		else:
