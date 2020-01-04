@@ -1,6 +1,6 @@
-[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/Cvar1984)  
+[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/Gameye98)  
 
-![BlackHole Security](core/gitbhs.svg)
+[![BlackHole Security](core/gitbhs.svg)](https://github.com/BlackHoleSecurity)
 
 # Lazymux
 Lazymux tools installer is very easy to use, only provided for lazy termux users.
