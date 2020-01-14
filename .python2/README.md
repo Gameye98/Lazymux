@@ -9,7 +9,7 @@ Lazymux tools installer is very easy to use, only provided for lazy termux users
 <img src="core/lazymux.png">
 
 ### Requirements
-• Python 3.x
+• Python 2.x
 
 #### Installation and Using Lazymux
 ```
@@ -19,7 +19,7 @@ git clone https://github.com/Gameye98/Lazymux
 cd Lazymux
 ```
 ```
-python lazymux.py
+python2 lazymux.py
 ```
 
 ### Contact Me

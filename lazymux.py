@@ -1,4 +1,4 @@
-## lazymux.py - Lazymux v3.0
+## lazymux.py - Lazymux v3.1
 # -*- coding: utf-8 -*-
 ##
 import os
@@ -8,587 +8,587 @@ from core.lzmcore import *
 
 def main():
 	banner()
-	print "   [01] Information Gathering"
-	print "   [02] Vulnerability Scanner"
-	print "   [03] Stress Testing"
-	print "   [04] Password Attacks"
-	print "   [05] Web Hacking"
-	print "   [06] Exploitation Tools"
-	print "   [07] Sniffing & Spoofing"
-	print "   [08] Other\n"
-	print "   [10] Exit the Lazymux\n"
-	lazymux = raw_input("lzmx > ")
+	print("   [01] Information Gathering")
+	print("   [02] Vulnerability Scanner")
+	print("   [03] Stress Testing")
+	print("   [04] Password Attacks")
+	print("   [05] Web Hacking")
+	print("   [06] Exploitation Tools")
+	print("   [07] Sniffing & Spoofing")
+	print("   [08] Other\n")
+	print("   [10] Exit the Lazymux\n")
+	lazymux = input("lzmx > ")
 	
-	if lazymux == "1" or lazymux == "01":
-		print "\n    [01] Nmap"
-		print "    [02] Red Hawk"
-		print "    [03] D-Tect"
-		print "    [04] sqlmap"
-		print "    [05] Infoga"
-		print "    [06] ReconDog"
-		print "    [07] AndroZenmap"
-		print "    [08] sqlmate"
-		print "    [09] AstraNmap"
-		print "    [10] WTF"
-		print "    [11] Easymap"
-		print "    [12] BlackBox"
-		print "    [13] XD3v"
-		print "    [14] Crips"
-		print "    [15] SIR"
-		print "    [16] EvilURL"
-		print "    [17] Striker"
-		print "    [18] Xshell"
-		print "    [19] OWScan"
-		print "    [20] OSIF"
-		print "    [21] Devploit"
-		print "    [22] Namechk"
-		print "    [23] AUXILE"
-		print "    [24] inther"
-		print "    [25] GINF"
-		print "    [26] GPS Tracking"
-		print "    [27] ASU"
-		print "    [28] fim"
-		print "    [29] MaxSubdoFinder"
-		print "    [30] pwnedOrNot"
-		print "    [31] Mac-Lookup"
-		print "    [32] BillCypher\n"
-		print "    [00] Back to main menu\n"
-		infogathering = raw_input("lzmx > ")
+	if lazymux.strip() == "1" or lazymux.strip() == "01":
+		print("\n    [01] Nmap")
+		print("    [02] Red Hawk")
+		print("    [03] D-Tect")
+		print("    [04] sqlmap")
+		print("    [05] Infoga")
+		print("    [06] ReconDog")
+		print("    [07] AndroZenmap")
+		print("    [08] sqlmate")
+		print("    [09] AstraNmap")
+		print("    [10] WTF")
+		print("    [11] Easymap")
+		print("    [12] BlackBox")
+		print("    [13] XD3v")
+		print("    [14] Crips")
+		print("    [15] SIR")
+		print("    [16] EvilURL")
+		print("    [17] Striker")
+		print("    [18] Xshell")
+		print("    [19] OWScan")
+		print("    [20] OSIF")
+		print("    [21] Devploit")
+		print("    [22] Namechk")
+		print("    [23] AUXILE")
+		print("    [24] inther")
+		print("    [25] GINF")
+		print("    [26] GPS Tracking")
+		print("    [27] ASU")
+		print("    [28] fim")
+		print("    [29] MaxSubdoFinder")
+		print("    [30] pwnedOrNot")
+		print("    [31] Mac-Lookup")
+		print("    [32] BillCypher\n")
+		print("    [00] Back to main menu\n")
+		infogathering = input("lzmx > ")
 		
-		if infogathering == "01" or infogathering == "1":
+		if infogathering.strip() == "01" or infogathering.strip() == "1":
 			nmap()
-		elif infogathering == "02" or infogathering == "2":
+		elif infogathering.strip() == "02" or infogathering.strip() == "2":
 			red_hawk()
-		elif infogathering == "03" or infogathering == "3":
+		elif infogathering.strip() == "03" or infogathering.strip() == "3":
 			dtect()
-		elif infogathering == "04" or infogathering == "4":
+		elif infogathering.strip() == "04" or infogathering.strip() == "4":
 			sqlmap()
-		elif infogathering == "05" or infogathering == "5":
+		elif infogathering.strip() == "05" or infogathering.strip() == "5":
 			infoga()
-		elif infogathering == "06" or infogathering == "6":
+		elif infogathering.strip() == "06" or infogathering.strip() == "6":
 			reconDog()
-		elif infogathering == "07" or infogathering == "7":
+		elif infogathering.strip() == "07" or infogathering.strip() == "7":
 			androZenmap()
-		elif infogathering == "08" or infogathering == "8":
+		elif infogathering.strip() == "08" or infogathering.strip() == "8":
 			sqlmate()
-		elif infogathering == "09" or infogathering == "9":
+		elif infogathering.strip() == "09" or infogathering.strip() == "9":
 			astraNmap()
-		elif infogathering == "10":
+		elif infogathering.strip() == "10":
 			wtf()
-		elif infogathering == "11":
+		elif infogathering.strip() == "11":
 			easyMap()
-		elif infogathering == "12":
+		elif infogathering.strip() == "12":
 			blackbox()
-		elif infogathering == "13":
+		elif infogathering.strip() == "13":
 			xd3v()
-		elif infogathering == "14":
+		elif infogathering.strip() == "14":
 			crips()
-		elif infogathering == "15":
+		elif infogathering.strip() == "15":
 			sir()
-		elif infogathering == "16":
+		elif infogathering.strip() == "16":
 			evilURL()
-		elif infogathering == "17":
+		elif infogathering.strip() == "17":
 			striker()
-		elif infogathering == "18":
+		elif infogathering.strip() == "18":
 			xshell()
-		elif infogathering == "19":
+		elif infogathering.strip() == "19":
 			owscan()
-		elif infogathering == "20":
+		elif infogathering.strip() == "20":
 			osif()
-		elif infogathering == "21":
+		elif infogathering.strip() == "21":
 			devploit()
-		elif infogathering == "22":
+		elif infogathering.strip() == "22":
 			namechk()
-		elif infogathering == "23":
+		elif infogathering.strip() == "23":
 			auxile()
-		elif infogathering == "24":
+		elif infogathering.strip() == "24":
 			inther()
-		elif infogathering == "25":
+		elif infogathering.strip() == "25":
 			ginf()
-		elif infogathering == "26":
+		elif infogathering.strip() == "26":
 			gpstr()
-		elif infogathering == "27":
+		elif infogathering.strip() == "27":
 			asu()
-		elif infogathering == "28":
+		elif infogathering.strip() == "28":
 			fim()
-		elif infogathering == "29":
+		elif infogathering.strip() == "29":
 			maxsubdofinder()
-		elif infogathering == "30":
+		elif infogathering.strip() == "30":
 			pwnedOrNot()
-		elif infogathering == "31":
+		elif infogathering.strip() == "31":
 			maclook()
-		elif infogathering == "32":
+		elif infogathering.strip() == "32":
 			billcypher()
-		elif infogathering == "00" or infogathering == "0":
+		elif infogathering.strip() == "00" or infogathering.strip() == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
+			print("\nERROR: Wrong Input")
 			timeout(2)
 			restart_program()
 	
-	elif lazymux == "2" or lazymux == "02":
-		print "\n    [01] Nmap"
-		print "    [02] AndroZenmap"
-		print "    [03] AstraNmap"
-		print "    [04] Easymap"
-		print "    [05] Red Hawk"
-		print "    [06] D-Tect"
-		print "    [07] Damn Small SQLi Scanner"
-		print "    [08] SQLiv"
-		print "    [09] sqlmap"
-		print "    [10] sqlscan"
-		print "    [11] Wordpresscan"
-		print "    [12] WPScan"
-		print "    [13] sqlmate"
-		print "    [14] wordpresscan"
-		print "    [15] WTF"
-		print "    [16] Rang3r"
-		print "    [17] Striker"
-		print "    [18] Routersploit"
-		print "    [19] Xshell"
-		print "    [20] SH33LL"
-		print "    [21] BlackBox"
-		print "    [22] XAttacker"
-		print "    [23] OWScan\n"
-		print "    [00] Back to main menu\n"
-		vulnscan = raw_input("lzmx > ")
+	elif lazymux.strip() == "2" or lazymux.strip() == "02":
+		print("\n    [01] Nmap")
+		print("    [02] AndroZenmap")
+		print("    [03] AstraNmap")
+		print("    [04] Easymap")
+		print("    [05] Red Hawk")
+		print("    [06] D-Tect")
+		print("    [07] Damn Small SQLi Scanner")
+		print("    [08] SQLiv")
+		print("    [09] sqlmap")
+		print("    [10] sqlscan")
+		print("    [11] Wordpresscan")
+		print("    [12] WPScan")
+		print("    [13] sqlmate")
+		print("    [14] wordpresscan")
+		print("    [15] WTF")
+		print("    [16] Rang3r")
+		print("    [17] Striker")
+		print("    [18] Routersploit")
+		print("    [19] Xshell")
+		print("    [20] SH33LL")
+		print("    [21] BlackBox")
+		print("    [22] XAttacker")
+		print("    [23] OWScan\n")
+		print("    [00] Back to main menu\n")
+		vulnscan = input("lzmx > ")
 		
-		if vulnscan == "01" or vulnscan == "1":
+		if vulnscan.strip() == "01" or vulnscan.strip() == "1":
 			nmap()
-		elif vulnscan == "02" or vulnscan == "2":
+		elif vulnscan.strip() == "02" or vulnscan.strip() == "2":
 			androZenmap()
-		elif vulnscan == "03" or vulnscan == "3":
+		elif vulnscan.strip() == "03" or vulnscan.strip() == "3":
 			astraNmap()
-		elif vulnscan == "04" or vulnscan == "4":
+		elif vulnscan.strip() == "04" or vulnscan.strip() == "4":
 			easyMap()
-		elif vulnscan == "05" or vulnscan == "5":
+		elif vulnscan.strip() == "05" or vulnscan.strip() == "5":
 			red_hawk()
-		elif vulnscan == "06" or vulnscan == "6":
+		elif vulnscan.strip() == "06" or vulnscan.strip() == "6":
 			dtect()
-		elif vulnscan == "07" or vulnscan == "7":
+		elif vulnscan.strip() == "07" or vulnscan.strip() == "7":
 			dsss()
-		elif vulnscan == "08" or vulnscan == "8":
+		elif vulnscan.strip() == "08" or vulnscan.strip() == "8":
 			sqliv()
-		elif vulnscan == "09" or vulnscan == "9":
+		elif vulnscan.strip() == "09" or vulnscan.strip() == "9":
 			sqlmap()
-		elif vulnscan == "10":
+		elif vulnscan.strip() == "10":
 			sqlscan()
-		elif vulnscan == "11":
+		elif vulnscan.strip() == "11":
 			wordpreSScan()
-		elif vulnscan == "12":
+		elif vulnscan.strip() == "12":
 			wpscan()
-		elif vulnscan == "13":
+		elif vulnscan.strip() == "13":
 			sqlmate()
-		elif vulnscan == "14":
+		elif vulnscan.strip() == "14":
 			wordpresscan()
-		elif vulnscan == "15":
+		elif vulnscan.strip() == "15":
 			wtf()
-		elif vulnscan == "16":
+		elif vulnscan.strip() == "16":
 			rang3r()
-		elif vulnscan == "17":
+		elif vulnscan.strip() == "17":
 			striker()
-		elif vulnscan == "18":
+		elif vulnscan.strip() == "18":
 			routersploit()
-		elif vulnscan == "19":
+		elif vulnscan.strip() == "19":
 			xshell()
-		elif vulnscan == "20":
+		elif vulnscan.strip() == "20":
 			sh33ll()
-		elif vulnscan == "21":
+		elif vulnscan.strip() == "21":
 			blackbox()
-		elif vulnscan == "22":
+		elif vulnscan.strip() == "22":
 			xattacker()
-		elif vulnscan == "23":
+		elif vulnscan.strip() == "23":
 			owscan()
-		elif vulnscan == "00" or vulnscan == "0":
+		elif vulnscan.strip() == "00" or vulnscan.strip() == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
+			print("\nERROR: Wrong Input")
 			timeout(2)
 			restart_program()
 	
-	elif lazymux == "3" or lazymux == "03":
-		print "\n    [01] Torshammer"
-		print "    [02] Slowloris"
-		print "    [03] Fl00d & Fl00d2"
-		print "    [04] GoldenEye"
-		print "    [05] Xerxes"
-		print "    [06] Planetwork-DDOS"
-		print "    [07] Hydra"
-		print "    [08] Black Hydra"
-		print "    [09] Xshell"
-		print "    [10] santet-online\n"
-		print "    [00] Back to main menu\n"
-		stresstest = raw_input("lzmx > ")
+	elif lazymux.strip() == "3" or lazymux.strip() == "03":
+		print("\n    [01] Torshammer")
+		print("    [02] Slowloris")
+		print("    [03] Fl00d & Fl00d2")
+		print("    [04] GoldenEye")
+		print("    [05] Xerxes")
+		print("    [06] Planetwork-DDOS")
+		print("    [07] Hydra")
+		print("    [08] Black Hydra")
+		print("    [09] Xshell")
+		print("    [10] santet-online\n")
+		print("    [00] Back to main menu\n")
+		stresstest = input("lzmx > ")
 		
-		if stresstest == "01" or stresstest == "1":
+		if stresstest.strip() == "01" or stresstest.strip() == "1":
 			torshammer()
-		elif stresstest == "02" or stresstest == "2":
+		elif stresstest.strip() == "02" or stresstest.strip() == "2":
 			slowloris()
-		elif stresstest == "03" or stresstest == "3":
+		elif stresstest.strip() == "03" or stresstest.strip() == "3":
 			fl00d12()
-		elif stresstest == "04" or stresstest == "4":
+		elif stresstest.strip() == "04" or stresstest.strip() == "4":
 			goldeneye()
-		elif stresstest == "05" or stresstest == "5":
+		elif stresstest.strip() == "05" or stresstest.strip() == "5":
 			xerxes()
-		elif stresstest == "06" or stresstest == "6":
+		elif stresstest.strip() == "06" or stresstest.strip() == "6":
 			planetwork_ddos()
-		elif stresstest == "07" or stresstest == "7":
+		elif stresstest.strip() == "07" or stresstest.strip() == "7":
 			hydra()
-		elif stresstest == "08" or stresstest == "8":
+		elif stresstest.strip() == "08" or stresstest.strip() == "8":
 			black_hydra()
-		elif stresstest == "09" or stresstest == "9":
+		elif stresstest.strip() == "09" or stresstest.strip() == "9":
 			xshell()
-		elif stresstest == "10":
+		elif stresstest.strip() == "10":
 			sanlen()
-		elif stresstest == "00" or stresstest == "0":
+		elif stresstest.strip() == "00" or stresstest.strip() == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
+			print("\nERROR: Wrong Input")
 			timeout(2)
 			restart_program()
 	
-	elif lazymux == "4" or lazymux == "04":
-		print "\n    [01] Hydra"
-		print "    [02] FMBrute"
-		print "    [03] HashID"
-		print "    [04] Facebook Brute Force 3"
-		print "    [05] Black Hydra"
-		print "    [06] Hash Buster"
-		print "    [07] FBBrute"
-		print "    [08] Cupp"
-		print "    [09] InstaHack"
-		print "    [10] Indonesian Wordlist"
-		print "    [11] Xshell"
-		print "    [12] Social-Engineering"
-		print "    [13] BlackBox"
-		print "    [14] Hashzer"
-		print "    [15] Hasher"
-		print "    [16] Hash-Generator"
-		print "    [17] nk26"
-		print "    [18] Hasherdotid"
-		print "    [19] Crunch"
-		print "    [20] Hashcat"
-		print "    [21] ASU"
-		print "    [22] Katak\n"
-		print "    [00] Back to main menu\n"
-		passtak = raw_input("lzmx > ")
+	elif lazymux.strip() == "4" or lazymux.strip() == "04":
+		print("\n    [01] Hydra")
+		print("    [02] FMBrute")
+		print("    [03] HashID")
+		print("    [04] Facebook Brute Force 3")
+		print("    [05] Black Hydra")
+		print("    [06] Hash Buster")
+		print("    [07] FBBrute")
+		print("    [08] Cupp")
+		print("    [09] InstaHack")
+		print("    [10] Indonesian Wordlist")
+		print("    [11] Xshell")
+		print("    [12] Social-Engineering")
+		print("    [13] BlackBox")
+		print("    [14] Hashzer")
+		print("    [15] Hasher")
+		print("    [16] Hash-Generator")
+		print("    [17] nk26")
+		print("    [18] Hasherdotid")
+		print("    [19] Crunch")
+		print("    [20] Hashcat")
+		print("    [21] ASU")
+		print("    [22] Katak\n")
+		print("    [00] Back to main menu\n")
+		passtak = input("lzmx > ")
 		
-		if passtak == "01" or passtak == "1":
+		if passtak.strip() == "01" or passtak.strip() == "1":
 			hydra()
-		elif passtak == "02" or passtak == "2":
+		elif passtak.strip() == "02" or passtak.strip() == "2":
 			fmbrute()
-		elif passtak == "03" or passtak == "3":
+		elif passtak.strip() == "03" or passtak.strip() == "3":
 			hashid()
-		elif passtak == "04" or passtak == "4":
+		elif passtak.strip() == "04" or passtak.strip() == "4":
 			fbBrute()
-		elif passtak == "05" or passtak == "5":
+		elif passtak.strip() == "05" or passtak.strip() == "5":
 			black_hydra()
-		elif passtak == "06" or passtak == "6":
+		elif passtak.strip() == "06" or passtak.strip() == "6":
 			hash_buster()
-		elif passtak == "07" or passtak == "7":
+		elif passtak.strip() == "07" or passtak.strip() == "7":
 			fbbrutex()
-		elif passtak == "08" or passtak == "8":
+		elif passtak.strip() == "08" or passtak.strip() == "8":
 			cupp()
-		elif passtak == "09" or passtak == "9":
+		elif passtak.strip() == "09" or passtak.strip() == "9":
 			instaHack()
-		elif passtak == "10":
+		elif passtak.strip() == "10":
 			indonesian_wordlist()
-		elif passtak == "11":
+		elif passtak.strip() == "11":
 			xshell()
-		elif passtak == "12":
+		elif passtak.strip() == "12":
 			social()
-		elif passtak == "13":
+		elif passtak.strip() == "13":
 			blackbox()
-		elif passtak == "14":
+		elif passtak.strip() == "14":
 			hashzer()
-		elif passtak == "15":
+		elif passtak.strip() == "15":
 			hasher()
-		elif passtak == "16":
+		elif passtak.strip() == "16":
 			hashgenerator()
-		elif passtak == "17":
+		elif passtak.strip() == "17":
 			nk26()
-		elif passtak == "18":
+		elif passtak.strip() == "18":
 			hasherdotid()
-		elif passtak == "19":
+		elif passtak.strip() == "19":
 			crunch()
-		elif passtak == "20":
+		elif passtak.strip() == "20":
 			hashcat()
-		elif passtak == "21":
+		elif passtak.strip() == "21":
 			asu()
-		elif passtak == "22":
+		elif passtak.strip() == "22":
 			katak()
-		elif passtak == "00" or passtak == "0":
+		elif passtak.strip() == "00" or passtak.strip() == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
+			print("\nERROR: Wrong Input")
 			timeout(2)
 			restart_program()
 	
-	elif lazymux == "5" or lazymux == "05":
-		print "\n    [01] sqlmap"
-		print "    [02] Webdav"
-		print "    [03] xGans"
-		print "    [04] Webdav Mass Exploit"
-		print "    [05] WPSploit"
-		print "    [06] sqldump"
-		print "    [07] Websploit"
-		print "    [08] sqlmate"
-		print "    [09] sqlokmed"
-		print "    [10] zones"
-		print "    [11] Xshell"
-		print "    [12] SH33LL"
-		print "    [13] XAttacker"
-		print "    [14] XSStrike"
-		print "    [15] Breacher"
-		print "    [16] OWScan"
-		print "    [17] ko-dork"
-		print "    [18] ApSca"
-		print "    [19] amox"
-		print "    [20] FaDe"
-		print "    [21] AUXILE"
-		print "    [22] HPB"
-		print "    [23] inther"
-		print "    [24] Atlas"
-		print "    [25] MaxSubdoFinder\n"
-		print "    [00] Back to main menu\n"
-		webhack = raw_input("lzmx > ")
+	elif lazymux.strip() == "5" or lazymux.strip() == "05":
+		print("\n    [01] sqlmap")
+		print("    [02] Webdav")
+		print("    [03] xGans")
+		print("    [04] Webdav Mass Exploit")
+		print("    [05] WPSploit")
+		print("    [06] sqldump")
+		print("    [07] Websploit")
+		print("    [08] sqlmate")
+		print("    [09] sqlokmed")
+		print("    [10] zones")
+		print("    [11] Xshell")
+		print("    [12] SH33LL")
+		print("    [13] XAttacker")
+		print("    [14] XSStrike")
+		print("    [15] Breacher")
+		print("    [16] OWScan")
+		print("    [17] ko-dork")
+		print("    [18] ApSca")
+		print("    [19] amox")
+		print("    [20] FaDe")
+		print("    [21] AUXILE")
+		print("    [22] HPB")
+		print("    [23] inther")
+		print("    [24] Atlas")
+		print("    [25] MaxSubdoFinder\n")
+		print("    [00] Back to main menu\n")
+		webhack = input("lzmx > ")
 		
-		if webhack == "01" or webhack == "1":
+		if webhack.strip() == "01" or webhack.strip() == "1":
 			sqlmap()
-		elif webhack == "02" or webhack == "2":
+		elif webhack.strip() == "02" or webhack.strip() == "2":
 			webdav()
-		elif webhack == "03" or webhack == "3":
+		elif webhack.strip() == "03" or webhack.strip() == "3":
 			xGans()
-		elif webhack == "04" or webhack == "4":
+		elif webhack.strip() == "04" or webhack.strip() == "4":
 			webmassploit()
-		elif webhack == "05" or webhack == "5":
+		elif webhack.strip() == "05" or webhack.strip() == "5":
 			wpsploit()
-		elif webhack == "06" or webhack == "6":
+		elif webhack.strip() == "06" or webhack.strip() == "6":
 			sqldump()
-		elif webhack == "07" or webhack == "7":
+		elif webhack.strip() == "07" or webhack.strip() == "7":
 			websploit()
-		elif webhack == "08" or webhack == "8":
+		elif webhack.strip() == "08" or webhack.strip() == "8":
 			sqlmate()
-		elif webhack == "09" or webhack == "9":
+		elif webhack.strip() == "09" or webhack.strip() == "9":
 			sqlokmed()
-		elif webhack == "10":
+		elif webhack.strip() == "10":
 			zones()
-		elif webhack == "11":
+		elif webhack.strip() == "11":
 			xshell()
-		elif webhack == "12":
+		elif webhack.strip() == "12":
 			sh33ll()
-		elif webhack == "13":
+		elif webhack.strip() == "13":
 			xattacker()
-		elif webhack == "14":
+		elif webhack.strip() == "14":
 			xsstrike()
-		elif webhack == "15":
+		elif webhack.strip() == "15":
 			breacher()
-		elif webhack == "16":
+		elif webhack.strip() == "16":
 			owscan()
-		elif webhack == "17":
+		elif webhack.strip() == "17":
 			kodork()
-		elif webhack == "18":
+		elif webhack.strip() == "18":
 			apsca()
-		elif webhack == "19":
+		elif webhack.strip() == "19":
 			amox()
-		elif webhack == "20":
+		elif webhack.strip() == "20":
 			fade()
-		elif webhack == "21":
+		elif webhack.strip() == "21":
 			auxile()
-		elif webhack == "22":
+		elif webhack.strip() == "22":
 			hpb()
-		elif webhack == "23":
+		elif webhack.strip() == "23":
 			inther()
-		elif webhack == "24":
+		elif webhack.strip() == "24":
 			atlas()
-		elif webhack == "25":
+		elif webhack.strip() == "25":
 			maxsubdofinder()
-		elif webhack == "00" or webhack == "0":
+		elif webhack.strip() == "00" or webhack.strip() == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
+			print("\nERROR: Wrong Input")
 			timeout(2)
 			restart_program()
 	
-	elif lazymux == "6" or lazymux == "06":
-		print "\n    [01] Metasploit"
-		print "    [02] commix"
-		print "    [03] sqlmap"
-		print "    [04] Brutal"
-		print "    [05] A-Rat"
-		print "    [06] WPSploit"  
-		print "    [07] Websploit"
-		print "    [08] Routersploit"
-		print "    [09] BlackBox"
-		print "    [10] XAttacker"
-		print "    [11] TXTool"
-		print "    [12] MSF-Pg"
-		print "    [13] Binary Exploitation"
-		print "    [14] ASU\n"
-		print "    [00] Back to main menu\n"
-		exploitool = raw_input("lzmx > ")
+	elif lazymux.strip() == "6" or lazymux.strip() == "06":
+		print("\n    [01] Metasploit")
+		print("    [02] commix")
+		print("    [03] sqlmap")
+		print("    [04] Brutal")
+		print("    [05] A-Rat")
+		print("    [06] WPSploit")  
+		print("    [07] Websploit")
+		print("    [08] Routersploit")
+		print("    [09] BlackBox")
+		print("    [10] XAttacker")
+		print("    [11] TXTool")
+		print("    [12] MSF-Pg")
+		print("    [13] Binary Exploitation")
+		print("    [14] ASU\n")
+		print("    [00] Back to main menu\n")
+		exploitool = input("lzmx > ")
 		
-		if exploitool == "01" or exploitool == "1":
+		if exploitool.strip() == "01" or exploitool.strip() == "1":
 			metasploit()
-		elif exploitool == "02" or exploitool == "2":
+		elif exploitool.strip() == "02" or exploitool.strip() == "2":
 			commix()
-		elif exploitool == "03" or exploitool == "3":
+		elif exploitool.strip() == "03" or exploitool.strip() == "3":
 			sqlmap()
-		elif exploitool == "04" or exploitool == "4":
+		elif exploitool.strip() == "04" or exploitool.strip() == "4":
 			brutal()
-		elif exploitool == "05" or exploitool == "5":
+		elif exploitool.strip() == "05" or exploitool.strip() == "5":
 			a_rat()
-		elif exploitool == "06" or exploitool == "6":
+		elif exploitool.strip() == "06" or exploitool.strip() == "6":
 			wpsploit()
-		elif exploitool == "07" or exploitool == "7":
+		elif exploitool.strip() == "07" or exploitool.strip() == "7":
 			websploit()
-		elif exploitool == "08" or exploitool == "8":
+		elif exploitool.strip() == "08" or exploitool.strip() == "8":
 			routersploit()
-		elif exploitool == "09" or exploitool == "9":
+		elif exploitool.strip() == "09" or exploitool.strip() == "9":
 			blackbox()
-		elif exploitool == "10":
+		elif exploitool.strip() == "10":
 			xattacker()
-		elif exploitool == "11":
+		elif exploitool.strip() == "11":
 			txtool()
-		elif exploitool == "12":
+		elif exploitool.strip() == "12":
 			msfpg()
-		elif exploitool == "13":
+		elif exploitool.strip() == "13":
 			binploit()
-		elif exploitool == "14":
+		elif exploitool.strip() == "14":
 			asu()
-		elif exploitool == "00" or exploitool == "0":
+		elif exploitool.strip() == "00" or exploitool.strip() == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
+			print("\nERROR: Wrong Input")
 			timeout(2)
 			restart_program()
 	
-	elif lazymux == "7" or lazymux == "07":
-		print "\n    [01] KnockMail"
-		print "    [02] Spammer-Grab"
-		print "    [03] Hac"
-		print "    [04] Spammer-Email"
-		print "    [05] SocialFish"
-		print "    [06] santet-online"
-		print "    [07] SpazSMS"
-		print "    [08] LiteOTP"
-		print "    [09] ASU\n"
-		print "    [00] Back to main menu\n"
-		sspoof = raw_input("lzmx > ")
+	elif lazymux.strip() == "7" or lazymux.strip() == "07":
+		print("\n    [01] KnockMail")
+		print("    [02] Spammer-Grab")
+		print("    [03] Hac")
+		print("    [04] Spammer-Email")
+		print("    [05] SocialFish")
+		print("    [06] santet-online")
+		print("    [07] SpazSMS")
+		print("    [08] LiteOTP")
+		print("    [09] ASU\n")
+		print("    [00] Back to main menu\n")
+		sspoof = input("lzmx > ")
 		
-		if sspoof == "01" or sspoof == "1":
+		if sspoof.strip() == "01" or sspoof.strip() == "1":
 			knockmail()
-		elif sspoof == "02" or sspoof == "2":
+		elif sspoof.strip() == "02" or sspoof.strip() == "2":
 			spammer_grab()
-		elif sspoof == "03" or sspoof == "3":
+		elif sspoof.strip() == "03" or sspoof.strip() == "3":
 			hac()
-		elif sspoof == "04" or sspoof == "4":
+		elif sspoof.strip() == "04" or sspoof.strip() == "4":
 			spammer_email()
-		elif sspoof == "05" or sspoof == "5":
+		elif sspoof.strip() == "05" or sspoof.strip() == "5":
 			socfish()
-		elif sspoof == "06" or sspoof == "6":
+		elif sspoof.strip() == "06" or sspoof.strip() == "6":
 			sanlen()
-		elif sspoof == "07" or sspoof == "7":
+		elif sspoof.strip() == "07" or sspoof.strip() == "7":
 			spazsms()
-		elif sspoof == "08" or sspoof == "8":
+		elif sspoof.strip() == "08" or sspoof.strip() == "8":
 			liteotp()
-		elif sspoof == "09" or sspoof == "9":
+		elif sspoof.strip() == "09" or sspoof.strip() == "9":
 			asu()
-		elif sspoof == "00" or sspoof == "0":
+		elif sspoof.strip() == "00" or sspoof.strip() == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
+			print("\nERROR: Wrong Input")
 			timeout(2)
 			restart_program()
 	
-	elif lazymux == "8" or lazymux == "08":
-		print "\n    [01] SpiderBot"
-		print "    [02] Ngrok"
-		print "    [03] Sudo"
-		print "    [04] Ubuntu"
-		print "    [05] Fedora"
-		print "    [06] Kali Nethunter"
-		print "    [07] VCRT"
-		print "    [08] E-Code"
-		print "    [09] Termux-Styling"
-		print "    [10] PassGen"
-		print "    [11] xl-py"
-		print "    [12] BeanShell"
-		print "    [13] WebConn"
-		print "    [14] Crunch"
-		print "    [15] Textr"
-		print "    [16] AutoVisitor"
-		print "    [17] RShell"
-		print "    [18] TermPyter"
-		print "    [19] jadx"
-		print "    [20] F4K3"
-		print "    [21] heroku"
-		print "    [22] google"
-		print "    [23] vbug"
-		print "    [24] kojawafft\n"
-		print "    [00] Back to main menu\n"
-		moretool = raw_input("lzmx > ")
+	elif lazymux.strip() == "8" or lazymux.strip() == "08":
+		print("\n    [01] SpiderBot")
+		print("    [02] Ngrok")
+		print("    [03] Sudo")
+		print("    [04] Ubuntu")
+		print("    [05] Fedora")
+		print("    [06] Kali Nethunter")
+		print("    [07] VCRT")
+		print("    [08] E-Code")
+		print("    [09] Termux-Styling")
+		print("    [10] PassGen")
+		print("    [11] xl-py")
+		print("    [12] BeanShell")
+		print("    [13] WebConn")
+		print("    [14] Crunch")
+		print("    [15] Textr")
+		print("    [16] AutoVisitor")
+		print("    [17] RShell")
+		print("    [18] TermPyter")
+		print("    [19] jadx")
+		print("    [20] F4K3")
+		print("    [21] heroku")
+		print("    [22] google")
+		print("    [23] vbug")
+		print("    [24] kojawafft\n")
+		print("    [00] Back to main menu\n")
+		moretool = input("lzmx > ")
 		
-		if moretool == "01" or moretool == "1":
+		if moretool.strip() == "01" or moretool.strip() == "1":
 			spiderbot()
-		elif moretool == "02" or moretool == "2":
+		elif moretool.strip() == "02" or moretool.strip() == "2":
 			ngrok()
-		elif moretool == "03" or moretool == "3":
+		elif moretool.strip() == "03" or moretool.strip() == "3":
 			sudo()
-		elif moretool == "04" or moretool == "4":
+		elif moretool.strip() == "04" or moretool.strip() == "4":
 			ubuntu()
-		elif moretool == "05" or moretool == "5":
+		elif moretool.strip() == "05" or moretool.strip() == "5":
 			fedora()
-		elif moretool == "06" or moretool == "6":
+		elif moretool.strip() == "06" or moretool.strip() == "6":
 			nethunter()
-		elif moretool == "07" or moretool == "7":
+		elif moretool.strip() == "07" or moretool.strip() == "7":
 			vcrt()
-		elif moretool == "08" or moretool == "8":
+		elif moretool.strip() == "08" or moretool.strip() == "8":
 			ecode()
-		elif moretool == "09" or moretool == "9":
+		elif moretool.strip() == "09" or moretool.strip() == "9":
 			stylemux()
-		elif moretool == "10":
+		elif moretool.strip() == "10":
 			passgencvar()
-		elif moretool == "11":
+		elif moretool.strip() == "11":
 			xlPy()
-		elif moretool == "12":
+		elif moretool.strip() == "12":
 			beanshell()
-		elif moretool == "13":
+		elif moretool.strip() == "13":
 			webconn()
-		elif moretool == "14":
+		elif moretool.strip() == "14":
 			crunch()
-		elif moretool == "15":
+		elif moretool.strip() == "15":
 			textr()
-		elif moretool == "16":
+		elif moretool.strip() == "16":
 			autovisitor()
-		elif moretool == "17":
+		elif moretool.strip() == "17":
 			rshell()
-		elif moretool == "18":
+		elif moretool.strip() == "18":
 			termpyter()
-		elif moretool == "19":
+		elif moretool.strip() == "19":
 			jadx()
-		elif moretool == "20":
+		elif moretool.strip() == "20":
 			f4k3()
-		elif moretool == "21":
+		elif moretool.strip() == "21":
 			heroku()
-		elif moretool == "22":
+		elif moretool.strip() == "22":
 			google()
-		elif moretool == "23":
+		elif moretool.strip() == "23":
 			vbug()
-		elif moretool == "24":
+		elif moretool.strip() == "24":
 			kojawafft()
-		elif moretool == "00" or moretool == "0":
+		elif moretool.strip() == "00" or moretool.strip() == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
+			print("\nERROR: Wrong Input")
 			timeout(2)
 			restart_program()
 	
-	elif lazymux == "10":
+	elif lazymux.strip() == "10":
 		sys.exit()
 	
 	else:
-		print "\nERROR: Wrong Input"
+		print("\nERROR: Wrong Input")
 		timeout(2)
 		restart_program()
 
