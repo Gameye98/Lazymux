@@ -1,8 +1,7 @@
 ## lzmcore.py - useful module of Lazymux
 # -*- coding: utf-8 -*-
-import os
-import sys
-import time
+import os, sys, time
+from subprocess import check_output as inputstream
 
 lazymux_banner = """
 .-.                                           
@@ -1196,5 +1195,43 @@ def kojawafft():
 	os.system('git clone https://github.com/sandalpenyok/kojawafft')
 	os.system('mv kojawafft ~')
 	os.system('cd $HOME/kojawafft && unzip node_modules.zip && cd -')
+	print('###### Done')
+	backtomenu_option()
+
+def aircrackng():
+	if int(inputstream("id -u".split()).decode("utf8")) != 0: print("\nERROR: Make sure you're device has been rooted");
+	else:
+		print('\n###### Installing aircrack-ng')
+		os.system('apt update && apt upgrade')
+		os.system('apt install root-repo aircrack-ng')
+		print('###### Done')
+		print("###### Type 'aircrack-ng' to start.")
+	backtomenu_option()
+
+def ettercap():
+	if int(inputstream("id -u".split()).decode("utf8")) != 0: print("\nERROR: Make sure you're device has been rooted");
+	else:
+		print('\n###### Installing ettercap')
+		os.system('apt update && apt upgrade')
+		os.system('apt install root-repo ettercap')
+		print('###### Done')
+		print("###### Type 'ettercap' to start.")
+	backtomenu_option()
+
+def ccgen():
+	print('\n###### Installing ccgen')
+	os.system('apt update && apt upgrade')
+	os.system('apt install git python')
+	os.system('git clone https://github.com/Gameye98/ccgen')
+	os.system('mv ccgen ~')
+	print('###### Done')
+	backtomenu_option()
+
+def ddcrypt():
+	print('\n###### Installing ddcrypt')
+	os.system('apt update && apt upgrade')
+	os.system('apt install git python')
+	os.system('git clone https://github.com/Gameye98/ddcrypt')
+	os.system('mv ddcrypt ~')
 	print('###### Done')
 	backtomenu_option()
