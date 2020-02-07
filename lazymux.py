@@ -419,6 +419,8 @@ def main():
 		elif moretool.strip() == "22": google()
 		elif moretool.strip() == "23": vbug()
 		elif moretool.strip() == "24": kojawafft()
+		elif moretool.strip() == "25": ccgen()
+		elif moretool.strip() == "26": ddcrypt()
 		elif moretool.strip() == "00" or moretool.strip() == "0": restart_program()
 		else:
 			print("\nERROR: Wrong Input")
