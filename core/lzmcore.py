@@ -120,12 +120,12 @@ def astraNmap():
 	print('###### Done')
 	backtomenu_option()
 
-def wtf():
-	print('\n###### Installing WTF')
+def justforfun():
+	print('\n###### Installing just-for-fun')
 	os.system('apt update && apt upgrade')
 	os.system('apt install git python2')
 	os.system('python2 -m pip bs4 requests HTMLParser urlparse mechanize argparse')
-	os.system('git clone https://github.com/Xi4u7/wtf')
+	os.system('git clone https://github.com/Xi4u7/just-for-fun')
 	os.system('mv wtf ~')
 	print('###### Done')
 	backtomenu_option()
