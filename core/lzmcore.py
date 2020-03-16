@@ -123,7 +123,7 @@ def astraNmap():
 def justforfun():
 	print('\n###### Installing just-for-fun')
 	os.system('apt update && apt upgrade')
-	os.system('apt install git python2')
+	os.system('apt install git python2 php')
 	os.system('python2 -m pip bs4 requests HTMLParser urlparse mechanize argparse')
 	os.system('git clone https://github.com/Xi4u7/just-for-fun')
 	os.system('mv wtf ~')
