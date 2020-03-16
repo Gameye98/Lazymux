@@ -86,7 +86,7 @@ def reconDog():
 	print('\n###### Installing ReconDog')
 	os.system('apt update && apt upgrade')
 	os.system('apt install python2 git')
-	os.system('git clone https://github.com/UltimateHackers/ReconDog')
+	os.system('git clone https://github.com/s0md3v/ReconDog')
 	os.system('mv ReconDog ~')
 	print('###### Done')
 	backtomenu_option()
