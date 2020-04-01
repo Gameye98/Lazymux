@@ -1235,3 +1235,24 @@ def ddcrypt():
 	os.system('mv ddcrypt ~')
 	print('###### Done')
 	backtomenu_option()
+
+def dnsrecon():
+	print('\n###### Installing dnsrecon')
+	os.system('apt update && apt upgrade')
+	os.system('apt install git python')
+	os.system('git clone https://github.com/darkoperator/dnsrecon')
+	os.system('python -m pip install -r dnsrecon/requirements.txt')
+	os.system('mv dnsrecon ~')
+	print('###### Done')
+	backtomenu_option()
+
+def fbvid():
+	print('\n###### Installing fbvid')
+	os.system('apt install python ffmpeg -y')
+	os.system('python -m pip install youtube-dl')
+	fbvid_code = open(".myshfunc/fbvid.sh","r").read()
+	open(os.getenv("HOME")+"/.bashrc","a").write(fbvid_code)
+	os.system('source '+os.getenv("HOME")+"/.bashrc")
+	print('###### Done')
+	print('###### Usage: fbvid "POST_URL"')
+	backtomenu_option()

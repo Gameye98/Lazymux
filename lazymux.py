@@ -15,10 +15,10 @@ def main():
 	print("   [05] Web Hacking")
 	print("   [06] Exploitation Tools")
 	print("   [07] Sniffing & Spoofing")
-	print("   [08] Other\n")
+	print("   [08] Shell function [.bashrc]")
+	print("   [09] Other\n")
 	print("   [10] Exit the Lazymux\n")
 	lazymux = input("lzmx > ")
-	
 	if lazymux.strip() == "1" or lazymux.strip() == "01":
 		print("\n    [01] Nmap")
 		print("    [02] Red Hawk")
@@ -52,9 +52,9 @@ def main():
 		print("    [30] pwnedOrNot")
 		print("    [31] Mac-Lookup")
 		print("    [32] BillCypher")
+		print("    [33] dnsrecon")
 		print("\n    [00] Back to main menu\n")
 		infogathering = input("lzmx > ")
-		
 		if infogathering.strip() == "01" or infogathering.strip() == "1": nmap()
 		elif infogathering.strip() == "02" or infogathering.strip() == "2": red_hawk()
 		elif infogathering.strip() == "03" or infogathering.strip() == "3": dtect()
@@ -87,11 +87,9 @@ def main():
 		elif infogathering.strip() == "30": pwnedOrNot()
 		elif infogathering.strip() == "31": maclook()
 		elif infogathering.strip() == "32": billcypher()
+		elif infogathering.strip() == "33": dnsrecon()
 		elif infogathering.strip() == "00" or infogathering.strip() == "0": restart_program()
-		else:
-			print("\nERROR: Wrong Input")
-			timeout(2)
-			restart_program()
+		else: print("\nERROR: Wrong Input");timeout(2);restart_program()
 	
 	elif lazymux.strip() == "2" or lazymux.strip() == "02":
 		print("\n    [01] Nmap")
@@ -119,7 +117,6 @@ def main():
 		print("    [23] OWScan")
 		print("\n    [00] Back to main menu\n")
 		vulnscan = input("lzmx > ")
-		
 		if vulnscan.strip() == "01" or vulnscan.strip() == "1": nmap()
 		elif vulnscan.strip() == "02" or vulnscan.strip() == "2": androZenmap()
 		elif vulnscan.strip() == "03" or vulnscan.strip() == "3": astraNmap()
@@ -144,10 +141,7 @@ def main():
 		elif vulnscan.strip() == "22": xattacker()
 		elif vulnscan.strip() == "23": owscan()
 		elif vulnscan.strip() == "00" or vulnscan.strip() == "0": restart_program()
-		else:
-			print("\nERROR: Wrong Input")
-			timeout(2)
-			restart_program()
+		else: print("\nERROR: Wrong Input");timeout(2);restart_program()
 	
 	elif lazymux.strip() == "3" or lazymux.strip() == "03":
 		print("\n    [01] Torshammer")
@@ -163,7 +157,6 @@ def main():
 		print("    [11] aircrack-ng")
 		print("\n    [00] Back to main menu\n")
 		stresstest = input("lzmx > ")
-		
 		if stresstest.strip() == "01" or stresstest.strip() == "1": torshammer()
 		elif stresstest.strip() == "02" or stresstest.strip() == "2": slowloris()
 		elif stresstest.strip() == "03" or stresstest.strip() == "3": fl00d12()
@@ -176,10 +169,7 @@ def main():
 		elif stresstest.strip() == "10": sanlen()
 		elif stresstest.strip() == "11": aircrackng()
 		elif stresstest.strip() == "00" or stresstest.strip() == "0": restart_program()
-		else:
-			print("\nERROR: Wrong Input")
-			timeout(2)
-			restart_program()
+		else: print("\nERROR: Wrong Input");timeout(2);restart_program()
 	
 	elif lazymux.strip() == "4" or lazymux.strip() == "04":
 		print("\n    [01] Hydra")
@@ -207,7 +197,6 @@ def main():
 		print("    [23] aircrack-ng")
 		print("\n    [00] Back to main menu\n")
 		passtak = input("lzmx > ")
-		
 		if passtak.strip() == "01" or passtak.strip() == "1": hydra()
 		elif passtak.strip() == "02" or passtak.strip() == "2": fmbrute()
 		elif passtak.strip() == "03" or passtak.strip() == "3": hashid()
@@ -232,10 +221,7 @@ def main():
 		elif passtak.strip() == "22": katak()
 		elif passtak.strip() == "23": aircrackng()
 		elif passtak.strip() == "00" or passtak.strip() == "0": restart_program()
-		else:
-			print("\nERROR: Wrong Input")
-			timeout(2)
-			restart_program()
+		else: print("\nERROR: Wrong Input");timeout(2);restart_program()
 	
 	elif lazymux.strip() == "5" or lazymux.strip() == "05":
 		print("\n    [01] sqlmap")
@@ -265,7 +251,6 @@ def main():
 		print("    [25] MaxSubdoFinder")
 		print("\n    [00] Back to main menu\n")
 		webhack = input("lzmx > ")
-		
 		if webhack.strip() == "01" or webhack.strip() == "1": sqlmap()
 		elif webhack.strip() == "02" or webhack.strip() == "2": webdav()
 		elif webhack.strip() == "03" or webhack.strip() == "3": xGans()
@@ -292,10 +277,7 @@ def main():
 		elif webhack.strip() == "24": atlas()
 		elif webhack.strip() == "25": maxsubdofinder()
 		elif webhack.strip() == "00" or webhack.strip() == "0": restart_program()
-		else:
-			print("\nERROR: Wrong Input")
-			timeout(2)
-			restart_program()
+		else: print("\nERROR: Wrong Input");timeout(2);restart_program()
 	
 	elif lazymux.strip() == "6" or lazymux.strip() == "06":
 		print("\n    [01] Metasploit")
@@ -314,7 +296,6 @@ def main():
 		print("    [14] ASU")
 		print("\n    [00] Back to main menu\n")
 		exploitool = input("lzmx > ")
-		
 		if exploitool.strip() == "01" or exploitool.strip() == "1": metasploit()
 		elif exploitool.strip() == "02" or exploitool.strip() == "2": commix()
 		elif exploitool.strip() == "03" or exploitool.strip() == "3": sqlmap()
@@ -330,10 +311,7 @@ def main():
 		elif exploitool.strip() == "13": binploit()
 		elif exploitool.strip() == "14": asu()
 		elif exploitool.strip() == "00" or exploitool.strip() == "0": restart_program()
-		else:
-			print("\nERROR: Wrong Input")
-			timeout(2)
-			restart_program()
+		else: print("\nERROR: Wrong Input");timeout(2);restart_program()
 	
 	elif lazymux.strip() == "7" or lazymux.strip() == "07":
 		print("\n    [01] KnockMail")
@@ -348,7 +326,6 @@ def main():
 		print("    [10] Ettercap")
 		print("\n    [00] Back to main menu\n")
 		sspoof = input("lzmx > ")
-		
 		if sspoof.strip() == "01" or sspoof.strip() == "1": knockmail()
 		elif sspoof.strip() == "02" or sspoof.strip() == "2": spammer_grab()
 		elif sspoof.strip() == "03" or sspoof.strip() == "3": hac()
@@ -360,12 +337,19 @@ def main():
 		elif sspoof.strip() == "09" or sspoof.strip() == "9": asu()
 		elif sspoof.strip() == "10": ettercap()
 		elif sspoof.strip() == "00" or sspoof.strip() == "0": restart_program()
-		else:
-			print("\nERROR: Wrong Input")
-			timeout(2)
-			restart_program()
+		else: print("\nERROR: Wrong Input");timeout(2);restart_program()
 	
 	elif lazymux.strip() == "8" or lazymux.strip() == "08":
+		print("\n    [01] FBVid (FB Video Downloader)")
+		# print("    [02] Spammer-Grab")
+		print("\n    [00] Back to main menu\n")
+		myshf = input("lzmx > ")
+		if myshf.strip() == "01" or myshf.strip() == "1": fbvid()
+		# elif sspoof.strip() == "02" or sspoof.strip() == "2": spammer_grab()
+		elif myshf.strip() == "00" or myshf.strip() == "0": restart_program()
+		else: print("\nERROR: Wrong Input");timeout(2);restart_program()
+	
+	elif lazymux.strip() == "9" or lazymux.strip() == "09":
 		print("\n    [01] SpiderBot")
 		print("    [02] Ngrok")
 		print("    [03] Sudo")
@@ -394,7 +378,6 @@ def main():
 		print("    [26] ddcrypt")
 		print("\n    [00] Back to main menu\n")
 		moretool = input("lzmx > ")
-		
 		if moretool.strip() == "01" or moretool.strip() == "1": spiderbot()
 		elif moretool.strip() == "02" or moretool.strip() == "2": ngrok()
 		elif moretool.strip() == "03" or moretool.strip() == "3": sudo()
@@ -422,10 +405,7 @@ def main():
 		elif moretool.strip() == "25": ccgen()
 		elif moretool.strip() == "26": ddcrypt()
 		elif moretool.strip() == "00" or moretool.strip() == "0": restart_program()
-		else:
-			print("\nERROR: Wrong Input")
-			timeout(2)
-			restart_program()
+		else: print("\nERROR: Wrong Input");timeout(2);restart_program()
 	
 	elif lazymux.strip() == "10":
 		sys.exit()
