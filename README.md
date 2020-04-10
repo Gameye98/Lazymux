@@ -12,13 +12,10 @@ Lazymux tools installer is very easy to use, only provided for lazy termux users
 • Python 3.x
 
 #### Installation and Using Lazymux
-```
+```bash
+apt install python git
 git clone https://github.com/Gameye98/Lazymux
-```
-```
 cd Lazymux
-```
-```
 python lazymux.py
 ```
 

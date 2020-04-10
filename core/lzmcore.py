@@ -1246,6 +1246,16 @@ def dnsrecon():
 	print('###### Done')
 	backtomenu_option()
 
+def zphisher():
+	print('\n###### Installing zphisher')
+	os.system('apt update && apt upgrade')
+	os.system('apt install git php openssh curl')
+	os.system('git clone https://github.com/htr-tech/zphisher')
+	os.system('mv zphisher ~')
+	print('###### Done')
+	backtomenu_option()
+
+### bash function ---
 def fbvid():
 	print('\n###### Installing fbvid')
 	os.system('apt install python ffmpeg -y')

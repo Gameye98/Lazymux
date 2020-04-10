@@ -53,6 +53,7 @@ def main():
 		print("    [31] Mac-Lookup")
 		print("    [32] BillCypher")
 		print("    [33] dnsrecon")
+		print("    [34] zphisher")
 		print("\n    [00] Back to main menu\n")
 		infogathering = input("lzmx > ")
 		if infogathering.strip() == "01" or infogathering.strip() == "1": nmap()
@@ -88,6 +89,7 @@ def main():
 		elif infogathering.strip() == "31": maclook()
 		elif infogathering.strip() == "32": billcypher()
 		elif infogathering.strip() == "33": dnsrecon()
+		elif infogathering.strip() == "34": zphisher()
 		elif infogathering.strip() == "00" or infogathering.strip() == "0": restart_program()
 		else: print("\nERROR: Wrong Input");timeout(2);restart_program()
 	
