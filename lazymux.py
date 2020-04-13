@@ -1,4 +1,4 @@
-## lazymux.py - Lazymux v3.0
+## lazymux.py - Lazymux v2.0
 # -*- coding: utf-8 -*-
 ##
 import os
