@@ -1,0 +1,15 @@
+{
+	"forum": [
+		{"id":"termux_community_forum","name":"Termux Community Forum","url":"https://termux.com/community"}
+	],
+	"group_chat": [
+		{"id":"crabs_id","appId":"Telegram","admin":"https://t.me/om_karjok","name":"CRABS_ID","url":"https://t.me/CRABS_ID"},
+		{"id":"termux_india","appId":"Telegram","admin":"https://t.me/OxDev","name":"Termux INDIA","url":"https://t.me/termux_india"},
+		{"id":"termux_id","appId":"Telegram","admin":"https://t.me/kang_nuubi","name":"Termux ID","url":"https://t.me/termuxid"},
+		{"id":"termux_new_user","appId":"Telegram","admin":"https://t.me/Remo773","name":"Termux New User","url":"https://t.me/joinchat/FY2amVKlBrBQIi3dT_lUug"},
+		{"id":"termux_group","appId":"Telegram","admin":"https://t.me/Xiaoxi654","name":"Termux Group","url":"https://t.me/TermuxGroup"},
+		{"id":"termux_indonesia","appId":"Facebook","admin":"https://mbasic.facebook.com/100011007121639","name":"Termux Indonesia","url":"https://mbasic.facebook.com/groups/1922836934621172"},
+		{"id":"termux_ind","appId":"Facebook","admin":"https://mbasic.facebook.com/100012490237964","name":"Termux IND","url":"https://mbasic.facebook.com/groups/120852901908366"},
+		{"id":"termux_asia_user","appId":"Facebook","admin":"https://mbasic.facebook.com/100003636568836","name":"Termux ASIA USER","url":"https://mbasic.facebook.com/groups/189544601647869"}
+	]
+}
