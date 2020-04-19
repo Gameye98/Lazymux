@@ -3,7 +3,10 @@
 [![BlackHole Security](core/gitbhs.svg)](https://github.com/BlackHoleSecurity)
 
 # Lazymux
-Lazymux tools installer is very easy to use, only provided for lazy termux users.
+Lazymux tools installer is very easy to use, only provided for lazy termux users, just kidding.
+Lazymux is a tool that is specially made for termux user which provides a lot of tool mainly used tools in termux, Lazymux install any of the given tools provided by it from itself with just one click, and Lazymux always get updated.
+
+Made with ❤️
 
 ## Screenshot
 <img src="core/lazymux.png">
@@ -20,7 +23,5 @@ python lazymux.py
 ```
 
 ### Contact Me
-Line     : dtl.lily  
 Telegram : @dtlily  
-Facebook : cgi.izo  
 Instagram: @dtlily  

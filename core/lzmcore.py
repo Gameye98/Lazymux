@@ -106,7 +106,7 @@ def sqlmate():
 	os.system('apt update && apt upgrade')
 	os.system('apt install python2 git')
 	os.system('python2 -m pip install mechanize bs4 HTMLparser argparse requests urlparse2')
-	os.system('git clone https://github.com/UltimateHackers/sqlmate')
+	os.system('git clone https://github.com/s0md3v/sqlmate')
 	os.system('mv sqlmate ~')
 	print('###### Done')
 	backtomenu_option()
@@ -191,7 +191,7 @@ def striker():
 	print('\n###### Installing Striker')
 	os.system('apt update && apt upgrade')
 	os.system('apt install git python2')
-	os.system('git clone https://github.com/UltimateHackers/Striker')
+	os.system('git clone https://github.com/s0md3v/Striker')
 	os.system('mv Striker ~')
 	os.system('cd ~/Striker && python2 -m pip install -r requirements.txt')
 	print('###### Done')
@@ -260,7 +260,7 @@ def routersploit():
 	os.system('apt update && apt upgrade')
 	os.system('apt install python2 git')
 	os.system('python2 -m pip install requests')
-	os.system('git clone https://github.com/reverse-shell/routersploit')
+	os.system('git clone https://github.com/threat9/routersploit')
 	os.system('mv routersploit ~;cd ~/routersploit;python2 -m pip install -r requirements.txt;termux-fix-shebang rsf.py')
 	print('###### Done')
 	backtomenu_option()
@@ -308,7 +308,7 @@ def xerxes():
 	os.system('apt update && apt upgrade')
 	os.system('apt install git')
 	os.system('apt install clang')
-	os.system('git clone https://github.com/zanyarjamal/xerxes')
+	os.system('git clone https://github.com/baraalmasri/xerxes')
 	os.system('mv xerxes ~')
 	os.system('cd ~/xerxes && clang xerxes.c -o xerxes')
 	print('###### Done')
@@ -362,7 +362,7 @@ def hash_buster():
 	print('\n###### Installing Hash-Buster')
 	os.system('apt update && apt upgrade')
 	os.system('apt install python2 git')
-	os.system('git clone https://github.com/UltimateHackers/Hash-Buster')
+	os.system('git clone https://github.com/s0md3v/Hash-Buster')
 	os.system('mv Hash-Buster ~')
 	print('###### Done')
 	backtomenu_option()
@@ -372,7 +372,7 @@ def instaHack():
 	os.system('apt update && apt upgrade')
 	os.system('apt install python2 git')
 	os.system('python2 -m pip install requests')
-	os.system('git clone https://github.com/avramit/instahack')
+	os.system('git clone https://github.com/Slayeri4/instahack')
 	os.system('mv instahack ~')
 	print('###### Done')
 	backtomenu_option()
@@ -399,22 +399,12 @@ def fbBrute():
 	backtomenu_option()
 
 def webdav():
-	print('\n###### Installing Webdav')
+	print('\n###### Installing WebDAV')
 	os.system('apt update && apt upgrade')
 	os.system('apt install python2 openssl curl libcurl')
 	os.system('python2 -m pip install urllib3 chardet certifi idna requests')
 	os.system('mkdir ~/webdav')
-	os.system('curl -k -O http://override.waper.co/files/webdav.txt;mv webdav.txt ~/webdav/webdav.py')
-	print('###### Done')
-	backtomenu_option()
-
-def xGans():
-	print('\n###### Installing xGans')
-	os.system('apt update && apt upgrade')
-	os.system('apt install python2 curl')
-	os.system('mkdir ~/xGans')
-	os.system('curl -O http://override.waper.co/files/xgans.txt')
-	os.system('mv xgans.txt ~/xGans/xgans.py')
+	os.system('curl -k -O https://pastebin.com/raw/HnVyQPtR;mv HnVyQPtR ~/webdav/webdav.py')
 	print('###### Done')
 	backtomenu_option()
 
@@ -425,15 +415,6 @@ def webmassploit():
 	os.system("python2 -m pip install requests")
 	os.system("curl -k -O https://pastebin.com/raw/K1VYVHxX && mv K1VYVHxX webdav.py")
 	os.system("mkdir ~/webdav-mass-exploit && mv webdav.py ~/webdav-mass-exploit")
-	print('###### Done')
-	backtomenu_option()
-
-def wpsploit():
-	print('\n###### Installing WPSploit')
-	os.system('apt update && apt upgrade')
-	os.system('apt install python2 git')
-	os.system('git clone git clone https://github.com/m4ll0k/wpsploit')
-	os.system('mv wpsploit ~')
 	print('###### Done')
 	backtomenu_option()
 
@@ -454,25 +435,6 @@ def websploit():
 	os.system('python2 -m pip install scapy')
 	os.system('git clone https://github.com/The404Hacking/websploit')
 	os.system('mv websploit ~')
-	print('###### Done')
-	backtomenu_option()
-
-def sqlokmed():
-	print('\n###### Installing sqlokmed')
-	os.system('apt update && apt upgrade')
-	os.system('apt install python2 git')
-	os.system('python2 -m pip install urllib2')
-	os.system('git clone https://github.com/Anb3rSecID/sqlokmed')
-	os.system('mv sqlokmed ~')
-	print('###### Done')
-	backtomenu_option()
-
-def zones():
-	print('\n###### Installing zones')
-	os.system("apt update && apt upgrade")
-	os.system("apt install git php")
-	os.system("git clone https://github.com/Cvar1984/zones")
-	os.system("mv zones ~")
 	print('###### Done')
 	backtomenu_option()
 
@@ -503,15 +465,6 @@ def brutal():
 	print('###### Done')
 	backtomenu_option()
 
-def a_rat():
-	print('\n###### Installing A-Rat')
-	os.system('apt update && apt upgrade')
-	os.system('apt install python2 git')
-	os.system('git clone https://github.com/Xi4u7/A-Rat')
-	os.system('mv A-Rat ~')
-	print('###### Done')
-	backtomenu_option()
-
 def knockmail():
 	print('\n###### Installing KnockMail')
 	os.system('apt update && apt upgrade')
@@ -522,30 +475,12 @@ def knockmail():
 	print('###### Done')
 	backtomenu_option()
 
-def spammer_grab():
-	print('\n###### Installing Spammer-Grab')
-	os.system('apt update && apt upgrade')
-	os.system('apt install python2 git && python2 -m pip install requests')
-	os.system('git clone https://github.com/p4kl0nc4t/spammer-grab')
-	os.system('mv spammer-grab ~')
-	print('###### Done')
-	backtomenu_option()
-
 def hac():
 	print('\n###### Installing Hac')
 	os.system('apt update && apt upgrade')
 	os.system('apt install php git')
 	os.system('git clone https://github.com/Cvar1984/Hac')
 	os.system('mv Hac ~')
-	print('###### Done')
-	backtomenu_option()
-
-def spammer_email():
-	print('\n###### Installing Spammer-Email')
-	os.system("apt update && apt upgrade")
-	os.system("apt install git python2 && python2 -m pip install argparse requests")
-	os.system("git clone https://github.com/p4kl0nc4t/Spammer-Email")
-	os.system("mv Spammer-Email ~")
 	print('###### Done')
 	backtomenu_option()
 
@@ -679,22 +614,12 @@ def ecode():
 	print('###### Done')
 	backtomenu_option()
 
-def hashzer():
-	print('\n###### Installing Hashzer')
-	os.system('apt update && apt upgrade')
-	os.system('apt install git python2')
-	os.system('python2 -m pip install requests')
-	os.system('git clone https://github.com/Anb3rSecID/Hashzer')
-	os.system('mv Hashzer ~')
-	print('###### Done')
-	backtomenu_option()
-
 def xsstrike():
 	print('\n###### Installing XSStrike')
 	os.system('apt update && apt upgrade')
 	os.system('apt install git python2')
 	os.system('python2 -m pip install fuzzywuzzy prettytable mechanize HTMLParser')
-	os.system('git clone https://github.com/UltimateHackers/XSStrike')
+	os.system('git clone https://github.com/s0md3v/XSStrike')
 	os.system('mv XSStrike ~')
 	print('###### Done')
 	backtomenu_option()
@@ -704,7 +629,7 @@ def breacher():
 	os.system('apt update && apt upgrade')
 	os.system('apt install git python2')
 	os.system('python2 -m pip install requests argparse')
-	os.system('git clone https://github.com/UltimateHackers/Breacher')
+	os.system('git clone https://github.com/s0md3v/Breacher')
 	os.system('mv Breacher ~')
 	print('###### Done')
 	backtomenu_option()
@@ -768,7 +693,7 @@ def hasher():
 	print('\n###### Installing Hasher')
 	os.system('apt update && apt upgrade')
 	os.system('apt install git python2 && python2 -m pip install passlib binascii progressbar')
-	os.system('git clone https://github.com/ciku370/hasher')
+	os.system('git clone https://github.com/CiKu370/hasher')
 	os.system('mv hasher ~')
 	print('###### Done')
 	backtomenu_option()
@@ -777,7 +702,7 @@ def hashgenerator():
 	print('\n###### Installing Hash-Generator')
 	os.system('apt update && apt upgrade')
 	os.system('apt install git python2 && python2 -m pip install passlib progressbar')
-	os.system('git clone https://github.com/ciku370/hash-generator')
+	os.system('git clone https://github.com/CiKu370/hash-generator')
 	os.system('mv hash-generator ~')
 	print('###### Done')
 	backtomenu_option()
@@ -814,7 +739,7 @@ def nk26():
 	print('\n###### Installing nk26')
 	os.system('apt update && apt upgrade')
 	os.system('apt install git php')
-	os.system('git clone ')
+	os.system('git clone https://github.com/milio48/nk26')
 	os.system('mv nk26 ~')
 	print('###### Done')
 	backtomenu_option()
@@ -884,18 +809,10 @@ def crunch():
 	print("###### Type 'crunch' to start.")
 	backtomenu_option()
 
-def webconn():
-	print('\n###### Installing WebConn')
-	os.system('apt update && apt upgrade')
-	os.system('apt install python git')
-	os.system('git clone https://github.com/SkyKnight-Team/WebConn')
-	os.system('mv WebConn ~')
-	print("###### Done")
-	backtomenu_option()
-
 def binploit():
 	print('\n###### Installing Binary Exploitation')
 	os.system('apt update && apt upgrade')
+	os.system('apt install unstable-repo')
 	os.system('apt install gdb radare2 ired ddrescue bin-utils yasm strace ltrace cdb hexcurse memcached llvmdb')
 	print("###### Done")
 	print("###### Tutorial: https://youtu.be/3NTXFUxcKPc")
@@ -974,7 +891,7 @@ def hpb():
 	print('\n###### Installing HPB')
 	os.system('apt update && apt upgrade')
 	os.system('apt install dpkg wget')
-	os.system('wget https://raw.githubusercontent.com/Cvar1984/HPB/master/html_0.1_all.deb')
+	os.system('wget https://raw.githubusercontent.com/Gameye98/Gameye98.github.io/master/package/html_0.1_all.deb')
 	os.system('dpkg -i html_0.1_all.deb')
 	os.system('rm html_0.1_all.deb')
 	print('###### Done')
@@ -1014,15 +931,6 @@ def pret():
 	os.system('python2 -m pip install colorama pysnmp')
 	os.system('git clone https://github.com/RUB-NDS/PRET')
 	os.system('mv PRET ~')
-	print("###### Done")
-	backtomenu_option()
-
-def autovisitor():
-	print('\n###### Installing AutoVisitor')
-	os.system('apt update && apt upgrade')
-	os.system('apt install git curl')
-	os.system('git clone https://github.com/wannabeee/AutoVisitor')
-	os.system('mv AutoVisitor ~')
 	print("###### Done")
 	backtomenu_option()
 
@@ -1255,9 +1163,183 @@ def zphisher():
 	print('###### Done')
 	backtomenu_option()
 
+def apktool():
+	print('\n###### Installing apktool')
+	os.system('apt update && apt upgrade')
+	os.system('apt install git dpkg')
+	os.system('git clone https://github.com/Lexiie/Termux-Apktool')
+	os.system('mv Termux-Apktool ~')
+	os.system('cd ~/Termux-Apktool && dpkg -i *.deb')
+	print('###### Done')
+	print("###### Type 'apktool' to start.")
+	backtomenu_option()
+
+def uncompyle():
+	print('\n###### Installing uncompyle6')
+	os.system('apt update && apt upgrade')
+	os.system('apt install python python2')
+	os.system('python2 -m pip install uncompyle6')
+	os.system('mv $PREFIX/bin/uncompyle6 $PREFIX/bin/uncompyle')
+	os.system('python -m pip install uncompyle6')
+	print('###### Done')
+	print('###### (py2) Usage: uncompyle')
+	print('###### (py3) Usage: uncompyle6')
+	backtomenu_option()
+
+def wifite():
+	if int(inputstream("id -u".split()).decode("utf8")) != 0: print("\nERROR: Make sure you're device has been rooted");
+	else:
+		print('\n###### Installing Wifite')
+		os.system('apt update && apt upgrade')
+		os.system('apt install git python2')
+		os.system('git clone https://github.com/derv82/wifite')
+		os.system('mv wifite ~')
+		print('###### Done')
+	backtomenu_option()
+
+def parrot():
+	print('\n###### Installing Parrot')
+	os.system('apt update && apt upgrade')
+	os.system('apt install wget openssl-tool proot -y && hash -r && cd ~ && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Parrot/parrot.sh && bash parrot.sh')
+	os.system('cd ~ && bash start-parrot.sh')
+	print('###### Done')
+	print('###### Make sure visit: https://techriz.com/how-to-install-parrot-linux-on-android-without-root/')
+	os.system('am start -a android.intent.action.VIEW -d "https://techriz.com/how-to-install-parrot-linux-on-android-without-root/"')
+	backtomenu_option()
+
+def archlinux():
+	print('\n###### Installing Arch Linux')
+	os.system('apt update && apt upgrade')
+	os.system('apt install git')
+	os.system('cd $HOME && git clone https://github.com/sdrausty/TermuxArch')
+	os.system('cd $HOME && bash TermuxArch/setupTermuxArch.sh')
+	print('###### Done')
+	backtomenu_option()
+
+def tshark():
+	if int(inputstream("id -u".split()).decode("utf8")) != 0: print("\nERROR: Make sure you're device has been rooted");
+	else:
+		print('\n###### Installing tshark')
+		os.system('apt update && apt upgrade')
+		os.system('apt install root-repo tshark')
+		print('###### Done')
+		print("###### Type 'tshark' to start.")
+	backtomenu_option()
+
+def dos2unix():
+	print('\n###### Installing dos2unix')
+	os.system('apt update && apt upgrade')
+	os.system('apt install dos2unix')
+	print('###### Done')
+	print("###### Type 'dos2unix' to start.")
+	backtomenu_option()
+
+def exiftool():
+	print('\n###### Installing exiftool')
+	os.system('apt update && apt upgrade')
+	os.system('apt install exiftool')
+	print('###### Done')
+	print("###### Type 'exiftool' to start.")
+	backtomenu_option()
+
+def iconv():
+	print('\n###### Installing iconv')
+	os.system('apt update && apt upgrade')
+	os.system('apt install iconv')
+	print('###### Done')
+	print("###### Type 'iconv' to start.")
+	backtomenu_option()
+
+def mediainfo():
+	print('\n###### Installing mediainfo')
+	os.system('apt update && apt upgrade')
+	os.system('apt install mediainfo')
+	print('###### Done')
+	print('###### Usage: mediainfo filename.pdf')
+	backtomenu_option()
+
+def pdfinfo():
+	print('\n###### Installing pdfinfo')
+	os.system('apt update && apt upgrade')
+	os.system('apt install poppler')
+	print('###### Done')
+	print('###### Usage: pdfinfo filename.pdf')
+	backtomenu_option()
+
+def tcpdump():
+	if int(inputstream("id -u".split()).decode("utf8")) != 0: print("\nERROR: Make sure you're device has been rooted");
+	else:
+		print('\n###### Installing tcpdump')
+		os.system('apt update && apt upgrade')
+		os.system('apt install root-repo tcpdump')
+		print('###### Done')
+		print("###### Type 'tcpdump' to start.")
+	backtomenu_option()
+
+def hping3():
+	if int(inputstream("id -u".split()).decode("utf8")) != 0: print("\nERROR: Make sure you're device has been rooted");
+	else:
+		print('\n###### Installing hping3')
+		os.system('apt update && apt upgrade')
+		os.system('apt install root-repo hping3')
+		print('###### Done')
+		print("###### Type 'hping3' to start.")
+	backtomenu_option()
+
+def dbdat():
+	print('\n###### Installing DbDat')
+	os.system('apt update && apt upgrade')
+	os.system('apt install git python2')
+	os.system('python2 -m pip install MySQL-python psycopg2 cx_Oracle pymssql ibm_db pymongo pyyaml couchdb')
+	os.system('git clone https://github.com/foospidy/DbDat')
+	os.system('mv DbDat ~')
+	print('###### Done')
+	backtomenu_option()
+
+def nosqlmap():
+	print('\n###### Installing NoSQLMap')
+	os.system('apt update && apt upgrade')
+	os.system('apt install git python2 unstable-repo metasploit')
+	os.system('python2 -m pip install pymongo httplib2')
+	os.system('git clone https://github.com/codingo/NoSQLMap')
+	os.system('mv NoSQLMap ~')
+	print('###### Done')
+	backtomenu_option()
+
+def audit_couchdb():
+	print('\n###### Installing audit_couchdb')
+	os.system('apt update && apt upgrade')
+	os.system('apt install git nodejs')
+	os.system('npm install -g npm@next audit_couchdb')
+	os.system('git clone https://github.com/iriscouch/audit_couchdb')
+	os.system('mv audit_couchdb ~')
+	print('###### Done')
+	print('###### Usage: audit_couchdb https://admin:secret@localhost:5984')
+	backtomenu_option()
+
+def mongoaudit():
+	print('\n###### Installing mongoaudit')
+	os.system('apt update && apt upgrade')
+	os.system('apt install git python')
+	os.system('python -m pip install pymongo mongoaudit')
+	print('###### Done')
+	print("###### Type 'mongoaudit' to start.")
+	backtomenu_option()
+
+def wifiphisher():
+	print('\n###### Installing Wifiphisher')
+	os.system('apt update && apt upgrade')
+	os.system('apt install git python')
+	os.system('python -m pip install setuptools scapy')
+	os.system('git clone https://github.com/wifiphisher/wifiphisher')
+	os.system('mv wifiphisher ~ && cd ~/wifiphisher && python setup.py install')
+	print('###### Done')
+	backtomenu_option()
+
 ### bash function ---
 def fbvid():
 	print('\n###### Installing fbvid')
+	os.system('pkg up')
 	os.system('apt install python ffmpeg -y')
 	os.system('python -m pip install youtube-dl')
 	fbvid_code = open(".myshfunc/fbvid.sh","r").read()
@@ -1265,4 +1347,56 @@ def fbvid():
 	os.system('source '+os.getenv("HOME")+"/.bashrc")
 	print('###### Done')
 	print('###### Usage: fbvid "POST_URL"')
+	backtomenu_option()
+
+def cast2video():
+	print('\n###### Installing cast2video')
+	os.system('pkg up')
+	os.system('apt install clang python ffmpeg -y')
+	os.system('python -m pip install CPython ttygif')
+	cast2video_code = open(".myshfunc/cast2video.sh","r").read()
+	open(os.getenv("HOME")+"/.bashrc","a").write(cast2video_code)
+	os.system('source '+os.getenv("HOME")+"/.bashrc")
+	print('###### Done')
+	print('###### Usage: cast2video file.cast')
+	backtomenu_option()
+
+def iconset():
+	print('\n###### Installing iconset')
+	iconset_code = open(".myshfunc/iconset.sh","r").read()
+	open(os.getenv("HOME")+"/.bashrc","a").write(iconset_code)
+	os.system('source '+os.getenv("HOME")+"/.bashrc")
+	print('###### Done')
+	print('###### Usage: iconset project_name icon.png')
+	backtomenu_option()
+
+def readme():
+	print('\n###### Installing readme')
+	os.system('pkg up')
+	os.system('apt install curl')
+	readme_code = open(".myshfunc/readme.sh","r").read()
+	open(os.getenv("HOME")+"/.bashrc","a").write(readme_code)
+	os.system('source '+os.getenv("HOME")+"/.bashrc")
+	print('###### Done')
+	print('###### Usage: readme User/Repo')
+	backtomenu_option()
+
+def makedeb():
+	print('\n###### Installing makedeb')
+	os.system('pkg up')
+	os.system('apt install dpkg neovim')
+	makedeb_code = open(".myshfunc/makedeb.sh","r").read()
+	open(os.getenv("HOME")+"/.bashrc","a").write(makedeb_code)
+	os.system('source '+os.getenv("HOME")+"/.bashrc")
+	print('###### Done')
+	print('###### Usage: makedeb')
+	backtomenu_option()
+
+def quikfind():
+	print('\n###### Installing quikfind')
+	quikfind_code = open(".myshfunc/quikfind.sh","r").read()
+	open(os.getenv("HOME")+"/.bashrc","a").write(quikfind_code)
+	os.system('source '+os.getenv("HOME")+"/.bashrc")
+	print('###### Done')
+	print('###### Usage: quikfind')
 	backtomenu_option()
