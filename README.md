@@ -23,6 +23,6 @@ python lazymux.py
 ```
 
 ### Contact Me
-Facebook: [Dio Vario](https://www.facebook.com/100042910716603)  
+Facebook: [Gameye98](https://www.facebook.com/100042910716603)  
 Instagram: @dtlily  
 Telegram : @dtlily  
