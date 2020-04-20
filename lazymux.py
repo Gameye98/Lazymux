@@ -472,7 +472,7 @@ def main():
 		elif myshf.strip() == "00" or myshf.strip() == "0": restart_program()
 		else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 	
-	elif lazymux.strip() == "10":
+	elif lazymux.strip() == "00":
 		sys.exit()
 	
 	else:
