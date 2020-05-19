@@ -17,10 +17,11 @@ def main():
 	print("   [08] Exploitation Tools")
 	print("   [09] Sniffing and Spoofing")
 	print("   [10] Reporting Tools")
-	print("   [11] Install Linux Distro")
+	print("   [11] Forensic Tools")
 	print("   [12] Stress Testing")
-	print("   [13] Termux Utility")
-	print("   [14] Shell Function [.bashrc]")
+	print("   [13] Install Linux Distro")
+	print("   [14] Termux Utility")
+	print("   [15] Shell Function [.bashrc]")
 	print("\n   [00] Exit the Lazymux\n")
 	lazymux = input("lzmx > ")
 
@@ -61,6 +62,7 @@ def main():
 		print("    [33] dnsrecon: Security assessment and network troubleshooting")
 		print("    [34] zphisher: Automated Phishing Tool")
 		print("    [35] Mr.SIP: SIP-Based Audit and Attack Tool")
+		print("    [36] Sherlock: Hunt down social media accounts by username")
 		print("\n    [00] Back to main menu\n")
 		infogathering = input("lzmx > ")
 		if infogathering.strip() == "01" or infogathering.strip() == "1": nmap()
@@ -98,6 +100,7 @@ def main():
 		elif infogathering.strip() == "33": dnsrecon()
 		elif infogathering.strip() == "34": zphisher()
 		elif infogathering.strip() == "35": mrsip()
+		elif infogathering.strip() == "36": sherlock()
 		elif infogathering.strip() == "00" or infogathering.strip() == "0": restart_program()
 		else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 	
@@ -369,23 +372,20 @@ def main():
 		elif reportls.strip() == "05" or reportls.strip() == "5": pdfinfo()
 		elif reportls.strip() == "00" or reportls.strip() == "0": restart_program()
 		else: print("\nERROR: Wrong Input");timeout(1);restart_program()
-
-	# 11 - Install Linux Distro
+	
+	# 11 - Forensic Tools
 	elif lazymux.strip() == "11":
-		print("\n    [01] Ubuntu")
-		print("    [02] Fedora")
-		print("    [03] Kali Nethunter")
-		print("    [04] Parrot")
-		print("    [05] Arch Linux")
-		innudis = input("lzmx > ")
-		if innudis.strip() == "01" or innudis.strip() == "1": ubuntu()
-		elif innudis.strip() == "02" or innudis.strip() == "2": fedora()
-		elif innudis.strip() == "03" or innudis.strip() == "3": nethunter()
-		elif innudis.strip() == "04" or innudis.strip() == "4": parrot()
-		elif innudis.strip() == "05" or innudis.strip() == "5": archlinux()
-		elif innudis.strip() == "00" or innudis.strip() == "0": restart_program()
+		print("\n    [01] steghide: Embeds a message in a file by replacing some of the least significant bits")
+		print("    [02] tesseract: Tesseract is probably the most accurate open source OCR engine available")
+		print("    [03] sleuthkit: The Sleuth Kit® (TSK) is a library for digital forensics tools")
+		print("\n    [00] Back to main menu\n")
+		forensc = input("lzmx > ")
+		if forensc.strip() == "01" or forensc.strip() == "1": steghide()
+		elif forensc.strip() == "02" or forensc.strip() == "2": tesseract()
+		elif forensc.strip() == "03" or forensc.strip() == "3": sleuthkit()
+		elif forensc.strip() == "00" or forensc.strip() == "0": restart_program()
 		else: print("\nERROR: Wrong Input");timeout(1);restart_program()
-
+	
 	# 12 - Stress Testing
 	elif lazymux.strip() == "12":
 		print("\n    [01] Torshammer: Slow post DDOS tool")
@@ -409,8 +409,24 @@ def main():
 		elif stresstest.strip() == "00" or stresstest.strip() == "0": restart_program()
 		else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 	
-	# 13 - Termux Utility
+	# 13 - Install Linux Distro
 	elif lazymux.strip() == "13":
+		print("\n    [01] Ubuntu")
+		print("    [02] Fedora")
+		print("    [03] Kali Nethunter")
+		print("    [04] Parrot")
+		print("    [05] Arch Linux")
+		innudis = input("lzmx > ")
+		if innudis.strip() == "01" or innudis.strip() == "1": ubuntu()
+		elif innudis.strip() == "02" or innudis.strip() == "2": fedora()
+		elif innudis.strip() == "03" or innudis.strip() == "3": nethunter()
+		elif innudis.strip() == "04" or innudis.strip() == "4": parrot()
+		elif innudis.strip() == "05" or innudis.strip() == "5": archlinux()
+		elif innudis.strip() == "00" or innudis.strip() == "0": restart_program()
+		else: print("\nERROR: Wrong Input");timeout(1);restart_program()
+	
+	# 14 - Termux Utility
+	elif lazymux.strip() == "14":
 		print("\n    [01] SpiderBot: Curl website using random proxy and user agent")
 		print("    [02] Ngrok: tunnel local ports to public URLs and inspect traffic")
 		print("    [03] Sudo: sudo installer for Android")
@@ -429,6 +445,10 @@ def main():
 		print("    [17] RShell: Reverse shell for single listening")
 		print("    [18] TermPyter: Fix all error Jupyter installation on termux")
 		print("    [19] F4K3: Fake User Data Generator")
+		print("    [20] shc: Shell script compiler")
+		print("    [21] Octave: Scientific Programming Language")
+		print("    [22] fp-compiler: Free Pascal is a 32, 64 and 16 bit professional Pascal compiler")
+		print("    [23] Numpy: The fundamental package for scientific computing with Python")
 		print("\n    [00] Back to main menu\n")
 		moretool = input("lzmx > ")
 		if moretool.strip() == "01" or moretool.strip() == "1": spiderbot()
@@ -450,11 +470,15 @@ def main():
 		elif moretool.strip() == "17": rshell()
 		elif moretool.strip() == "18": termpyter()
 		elif moretool.strip() == "19": f4k3()
+		elif moretool.strip() == "20": shc()
+		elif moretool.strip() == "21": octave()
+		elif moretool.strip() == "22": fpcompiler()
+		elif moretool.strip() == "23": numpy()
 		elif moretool.strip() == "00" or moretool.strip() == "0": restart_program()
 		else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 	
-	# 14 - Shell Function [.bashrc]
-	elif lazymux.strip() == "14":
+	# 15 - Shell Function [.bashrc]
+	elif lazymux.strip() == "15":
 		print("\n    [01] FBVid (FB Video Downloader)")
 		print("    [02] cast2video (Asciinema Cast Converter)")
 		print("    [03] iconset (AIDE App Icon)")
