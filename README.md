@@ -1,8 +1,10 @@
 [![GitHub stars](https://img.shields.io/github/stars/Gameye98/Lazymux.svg)](https://github.com/Gameye98/Lazymux/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Gameye98/Lazymux.svg)](https://github.com/Gameye98/Lazymux/network/members)
 [![GitHub issues](https://img.shields.io/github/issues/Gameye98/Lazymux.svg)](https://github.com/Gameye98/Lazymux/issues)
+[![GitHub issues](https://img.shields.io/github/watchers/Gameye98/Lazymux.svg)](https://github.com/Gameye98/Lazymux/watchers)
 [![Python](https://img.shields.io/badge/Language-Python3-blue.svg)](https://www.python.org)
 [![Bash](https://img.shields.io/badge/Language-Bash-blue.svg)](https://www.gnu.org/software/bash/)
+[![WTFPL](https://img.shields.io/badge/License-WTFPL-red.svg)](http://www.wtfpl.net/)
 
 [![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/Gameye98)  
 
