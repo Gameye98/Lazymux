@@ -377,7 +377,7 @@ def main():
 	elif lazymux.strip() == "11":
 		print("\n    [01] steghide: Embeds a message in a file by replacing some of the least significant bits")
 		print("    [02] tesseract: Tesseract is probably the most accurate open source OCR engine available")
-		print("    [03] sleuthkit: The Sleuth Kit® (TSK) is a library for digital forensics tools")
+		print("    [03] sleuthkit: The Sleuth Kit (TSK) is a library for digital forensics tools")
 		print("\n    [00] Back to main menu\n")
 		forensc = input("lzmx > ")
 		if forensc.strip() == "01" or forensc.strip() == "1": steghide()
