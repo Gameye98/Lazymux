@@ -1389,7 +1389,7 @@ def octave():
 	print('\n###### Installing Octave')
 	os.system('apt update -y && apt upgrade -y')
 	if not repo_check("pointless.list"):
-		urllib.request.urlretrieve('https://its-pointless.github.io/setup-pointless-repo.sh')
+		urllib.request.urlretrieve('https://its-pointless.github.io/setup-pointless-repo.sh','setup-pointless-repo.sh')
 		os.system('bash setup-pointless-repo.sh')
 		os.remove('setup-pointless-repo.sh')
 		os.system('apt update -y && apt upgrade -y')
@@ -1402,7 +1402,7 @@ def fpcompiler():
 	print('\n###### Installing fp-compiler')
 	os.system('apt update -y && apt upgrade -y')
 	if not repo_check("pointless.list"):
-		urllib.request.urlretrieve('https://its-pointless.github.io/setup-pointless-repo.sh')
+		urllib.request.urlretrieve('https://its-pointless.github.io/setup-pointless-repo.sh','setup-pointless-repo.sh')
 		os.system('bash setup-pointless-repo.sh')
 		os.remove('setup-pointless-repo.sh')
 		os.system('apt update -y && apt upgrade -y')
@@ -1415,7 +1415,7 @@ def numpy():
 	print('\n###### Installing numpy')
 	os.system('apt update -y && apt upgrade -y')
 	if not repo_check("pointless.list"):
-		urllib.request.urlretrieve('https://its-pointless.github.io/setup-pointless-repo.sh')
+		urllib.request.urlretrieve('https://its-pointless.github.io/setup-pointless-repo.sh','setup-pointless-repo.sh')
 		os.system('bash setup-pointless-repo.sh')
 		os.remove('setup-pointless-repo.sh')
 		os.system('apt update -y && apt upgrade -y')
