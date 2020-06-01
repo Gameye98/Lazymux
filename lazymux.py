@@ -485,6 +485,8 @@ def main():
 		print("    [04] readme (GitHub README.md)")
 		print("    [05] makedeb (DEB Package Builder)")
 		print("    [06] quikfind (Search Files)")
+		print("    [07] pranayama (4-7-8 Relax Breathing)")
+		print("    [08] sqlc (SQLite Query Processor)")
 		print("\n    [00] Back to main menu\n")
 		myshf = input("lzmx > ")
 		if myshf.strip() == "01" or myshf.strip() == "1": fbvid()
@@ -493,6 +495,8 @@ def main():
 		elif myshf.strip() == "04" or myshf.strip() == "4": readme()
 		elif myshf.strip() == "05" or myshf.strip() == "5": makedeb()
 		elif myshf.strip() == "06" or myshf.strip() == "6": quikfind()
+		elif myshf.strip() == "07" or myshf.strip() == "7": pranayama()
+		elif myshf.strip() == "08" or myshf.strip() == "8": sqlc()
 		elif myshf.strip() == "00" or myshf.strip() == "0": restart_program()
 		else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 	

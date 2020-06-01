@@ -1488,3 +1488,27 @@ def quikfind():
 	print('###### Done')
 	print('###### Usage: quikfind')
 	backtomenu_option()
+
+def pranayama():
+	print('\n###### Installing pranayama')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install termux-api -y')
+	pranayama_code = open(".myshfunc/pranayama.sh","r").read()
+	open(os.getenv("HOME")+"/.bashrc","a").write(pranayama_code)
+	os.system('source '+os.getenv("HOME")+"./bashrc")
+	print('###### Done')
+	print('###### Usage: pranayama')
+	print('######            or')
+	print('######        pranayama [n]')
+	backtomenu_option()
+
+def sqlc():
+	print('\n###### Installing sqlc')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python sqlite3 -y')
+	sqlc_code = open(".myshfunc/sqlc.sh","r").read()
+	open(os.getenv("HOME")+"/.bashrc","a").write(sqlc_code)
+	os.system('source '+os.getenv("HOME")+"/.bashrc")
+	print('###### Done')
+	print('###### Usage: sqlc db_file sql_script')
+	backtomenu_option()
