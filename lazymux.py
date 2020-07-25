@@ -94,7 +94,7 @@ def main():
 		elif infogathering.strip() == "27": asu()
 		elif infogathering.strip() == "28": fim()
 		elif infogathering.strip() == "29": maxsubdofinder()
-		elif infogathering.strip() == "30": pwnedOrNot()
+		elif infogathering.strip() == "30": pwnedornot()
 		elif infogathering.strip() == "31": maclook()
 		elif infogathering.strip() == "32": billcypher()
 		elif infogathering.strip() == "33": dnsrecon()

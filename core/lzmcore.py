@@ -1347,7 +1347,7 @@ def wifiphisher():
 def sherlock():
 	print('\n###### Installing sherlock')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install git python -y')
+	os.system('apt install libxml2 libxslt git python -y')
 	os.system('git clone https://github.com/sherlock-project/sherlock')
 	os.system('mv sherlock ~ && cd ~/sherlock && python -m pip install -r requirements.txt')
 	print('###### Done')
