@@ -273,6 +273,13 @@ def routersploit():
 	print('###### Done')
 	backtomenu_option()
 
+def pskracker():
+	print('\n###### Installing PSKracker')
+	os.system('git clone https://github.com/soxrok2212/pskracker')
+	os.system('mv pskracker ~;cd ~/pskracker;make;make install clean')
+	print('###### Done')
+	backtomenu_option()
+
 def torshammer():
 	print('\n###### Installing Torshammer')
 	os.system('apt update -y && apt upgrade -y')
