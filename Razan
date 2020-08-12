@@ -1,0 +1,10 @@
+‏apt update 
+‏apt upgrade 
+‏apt install python 
+‏apt install python2 
+‏apt install git
+‏git clone https://github.com/Gameye98/Lazymux.git
+‏ls 
+‏cd Lazymux 
+‏chmod 777 lazymux.py 
+‏python2 lazymux.py 
