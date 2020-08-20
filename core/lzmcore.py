@@ -63,11 +63,11 @@ def red_hawk():
 	backtomenu_option()
 
 def dtect():
-	print('\n###### Installing D-Tect')
+	print('\n###### Installing D-TECT')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/bibortone/D-Tech')
-	os.system('mv D-TECT ~')
+	os.system('mv D-Tech ~/D-TECT')
 	print('###### Done')
 	backtomenu_option()
 
@@ -128,13 +128,13 @@ def astraNmap():
 	print('###### Done')
 	backtomenu_option()
 
-def justforfun():
-	print('\n###### Installing just-for-fun')
+def weeman():
+	print('\n###### Installing weeman')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install git python2 php')
-	os.system('python2 -m pip bs4 requests HTMLParser urlparse mechanize argparse')
-	os.system('git clone https://github.com/Xi4u7/just-for-fun')
-	os.system('mv wtf ~')
+	os.system('apt install clang git python2')
+	os.system('python2 -m pip bs4 html5lib lxml')
+	os.system('git clone https://github.com/evait-security/weeman')
+	os.system('mv weeman ~')
 	print('###### Done')
 	backtomenu_option()
 
@@ -218,7 +218,7 @@ def sqliv():
 	print('\n###### Installing SQLiv')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
-	os.system('git clone https://github.com/Hadesy2k/sqliv')
+	os.system('git clone https://github.com/the-robot/sqliv')
 	os.system('mv sqliv ~')
 	print('###### Done')
 	backtomenu_option()
@@ -319,7 +319,9 @@ def xerxes():
 	os.system('git clone https://github.com/baraalmasri/xerxes')
 	os.system('mv xerxes ~')
 	os.system('cd ~/xerxes && clang xerxes.c -o xerxes')
+	os.system('chmod 755 ~/xerxes/xerxes && cp ~/xerxes/xerxes $PREFIX/bin')
 	print('###### Done')
+	print('###### Usage: xerxes ​www.fakesite.com​ 80')
 	backtomenu_option()
 
 def planetwork_ddos():
@@ -719,7 +721,7 @@ def kodork():
 	print('\n###### Installing ko-dork')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2 && python2 -m pip install urllib2')
-	os.system('git clone https://github.com/ciku370/ko-dork')
+	os.system('git clone https://github.com/CiKu370/ko-dork')
 	os.system('mv ko-dork ~')
 	print('###### Done')
 	backtomenu_option()
@@ -738,7 +740,7 @@ def osif():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2')
 	os.system('python2 -m pip install requests')
-	os.system('git clone https://github.com/ciku370/OSIF')
+	os.system('git clone https://github.com/CiKu370/OSIF')
 	os.system('mv OSIF ~')
 	print('###### Done')
 	backtomenu_option()
@@ -797,15 +799,6 @@ def beanshell():
 	os.system('rm beanshell_2.04_all.deb')
 	print('###### Done')
 	print("###### Type 'bsh' to start.")
-	backtomenu_option()
-
-def msfpg():
-	print('\n###### Installing MSF-Pg')
-	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install git')
-	os.system('git clone https://github.com/haxzsadik/MSF-Pg')
-	os.system('mv MSF-Pg ~')
-	print("###### Done")
 	backtomenu_option()
 
 def crunch():
@@ -1422,6 +1415,112 @@ def numpy():
 	os.system('apt install numpy -y')
 	print('###### Done')
 	print("###### Type 'pkg files numpy | grep usr/bin' to check executable file related to numpy package.")
+	backtomenu_option()
+
+def userrecon():
+	print('\n###### Installing userrecon')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git curl -y')
+	os.system('git clone https://github.com/thelinuxchoice/userrecon')
+	os.system('mv userrecon ~')
+	print('###### Done')
+	backtomenu_option()
+
+def mrsip():
+	print('\n###### Installing Mr.SIP')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install netifaces ipaddress scapy pyfiglet')
+	os.system('git clone https://github.com/meliht/Mr.SIP')
+	os.system('mv Mr.SIP ~')
+	print('###### Done')
+	backtomenu_option()
+
+def tmscanner():
+	print('\n###### Installing TM-scanner')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python python2 nmap git -y')
+	os.system('python -m pip install colorama requests')
+	os.system('python2 -m pip install colorama requests')
+	os.system('git clone https://github.com/TechnicalMujeeb/TM-scanner')
+	os.system('mv TM-scanner ~')
+	print('###### Done')
+	backtomenu_option()
+
+def xss_payload_list():
+	print('\n###### Installing xss-payload-list')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git -y')
+	os.system('git clone https://github.com/payloadbox/xss-payload-list')
+	os.system('mv xss-payload-list ~')
+	print('###### Done')
+	backtomenu_option()
+
+### termux games
+def street_car():
+	print('\n###### Installing street-car')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python python2 -y')
+	os.system('git clone https://github.com/JustaHackers/street_car')
+	os.system('mv street_car ~')
+	print('###### Done')
+	backtomenu_option()
+
+def flappy_bird():
+	print('\n###### Installing flappy-bird')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/JustAHackers/flappy_bird')
+	os.system('mv flappy_bird ~')
+	print('###### Done')
+	backtomenu_option()
+
+def speed_typing():
+	print('\n###### Installing Speed Typing')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/JustAHackers/typing-speed-test')
+	os.system('mv typing-speed-test ~')
+	print('###### Done')
+	backtomenu_option()
+
+def nsnake():
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install nsnake -y')
+	print('###### Done')
+	print("###### Type 'nsnake' to start.")
+	backtomenu_option()
+
+def nudoku():
+	print('\n###### Installing Sudoku')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apg install nudoku -y')
+	print('###### Done')
+	print("###### Type 'nudoku' to start.")
+	backtomenu_option()
+
+def moon_buggy():
+	print('\n###### Installing Moon-Buggy')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apg install moon-buggy -y')
+	print('###### Done')
+	print("###### Type 'moon-buggy' to start.")
+	backtomenu_option()
+
+def ttysolitaire():
+	print('\n###### Installing tty-solitaire')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apg install tty-solitaire -y')
+	print('###### Done')
+	print("###### Type 'ttysolitaire' to start.")
+	backtomenu_option()
+
+def pacman4console():
+	print('\n###### Installing Pacman4Console')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apg install pacman4console -y')
+	print('###### Done')
+	print("###### Type 'pacman' to start.")
 	backtomenu_option()
 
 ### bash function ---
