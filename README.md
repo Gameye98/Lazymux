@@ -19,7 +19,7 @@ Lazymux is a tool that is specially made for termux user which provides a lot of
 Made with ❤️
 
 ## Screenshot
-<img src="core/lazymux.png">
+<img src="core/lazymux_4.png">
 
 ### Requirements
 • Python 3.x
