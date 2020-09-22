@@ -19,10 +19,46 @@ backtomenu_banner = """
   [00] Exit the Lazymux
 """
 
+prefix = os.getenv("PREFIX")
+configBase = "[HOME] = ~"
+configFile = "../lazymux.conf"
+cache_1 = prefix+"/tmp/lazymux_1"
+
 def repo_check(sources_list):
 	if os.path.isfile(os.getenv("PREFIX")+"/etc/apt/sources.list.d/"+sources_list):
 		return True
 	return False
+
+def writeStatus(statusId):
+	open(cache_1,"w").write(str(statusId))
+
+def readStatus():
+	try:
+		statusId = open(cache_1,"r").read()
+		if statusId == "1":
+			return True
+		return False
+	except IOError:
+		return False
+
+def checkConfigFile():
+	if os.path.exists(configFile):
+		if os.path.isdir(configFile):
+			os.system(f"rm -rf {configFile}")
+			open(configFile,"w").write(configBase)
+	else:
+		open(configFile,"w").write(configBase)
+
+def loadConfigFile():
+	checkConfigFile()
+	lfile = ""
+	try:
+		lfile = [x.split("=")[-1].strip() for x in open(configFile,"r").splitlines() if x.split("=")[0].strip() == "[HOME]"][0]
+	except Exception as e:
+		lfile = "~"
+	return lfile
+
+homeDir = loadConfigFile()
 
 def restart_program():
 	python = sys.executable
@@ -30,17 +66,18 @@ def restart_program():
 	curdir = os.getcwd()
 
 def backtomenu_option():
-	print(backtomenu_banner)
-	backtomenu = input("lzmx > ")
-	
-	if backtomenu == "99":
-		restart_program()
-	elif backtomenu == "00":
-		sys.exit()
-	else:
-		print("\nERROR: Wrong Input")
-		time.sleep(2)
-		restart_program()
+	if not readStatus():
+		print(backtomenu_banner)
+		backtomenu = input("lzmx > ")
+		
+		if backtomenu == "99":
+			restart_program()
+		elif backtomenu == "00":
+			sys.exit()
+		else:
+			print("\nERROR: Wrong Input")
+			time.sleep(2)
+			restart_program()
 
 def banner():
 	print(lazymux_banner)
@@ -58,7 +95,7 @@ def red_hawk():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git php')
 	os.system('git clone https://github.com/Tuhinshubhra/RED_HAWK')
-	os.system('mv RED_HAWK ~')
+	os.system('mv RED_HAWK {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -67,7 +104,7 @@ def dtect():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/bibortone/D-Tech')
-	os.system('mv D-Tech ~/D-TECT')
+	os.system('mv D-Tech {}/D-TECT'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -76,7 +113,7 @@ def sqlmap():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2')
 	os.system('git clone https://github.com/sqlmapproject/sqlmap')
-	os.system('mv sqlmap ~')
+	os.system('mv sqlmap {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -86,7 +123,7 @@ def infoga():
 	os.system('apt install python2 git')
 	os.system('python2 -m pip install requests urllib3 urlparse')
 	os.system('git clone https://github.com/m4ll0k/Infoga')
-	os.system('mv Infoga ~')
+	os.system('mv Infoga {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -95,7 +132,7 @@ def reconDog():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/s0md3v/ReconDog')
-	os.system('mv ReconDog ~')
+	os.system('mv ReconDog {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -104,8 +141,8 @@ def androZenmap():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install nmap curl')
 	os.system('curl -O https://raw.githubusercontent.com/Gameye98/Gameye98.github.io/master/scripts/androzenmap.sh')
-	os.system('mkdir ~/AndroZenmap')
-	os.system('mv androzenmap.sh ~/AndroZenmap')
+	os.system('mkdir {}/AndroZenmap'.format(homeDir))
+	os.system('mv androzenmap.sh {}/AndroZenmap'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -115,7 +152,7 @@ def sqlmate():
 	os.system('apt install python2 git')
 	os.system('python2 -m pip install mechanize bs4 HTMLparser argparse requests urlparse2')
 	os.system('git clone https://github.com/s0md3v/sqlmate')
-	os.system('mv sqlmate ~')
+	os.system('mv sqlmate {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -124,7 +161,7 @@ def astraNmap():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git nmap')
 	os.system('git clone https://github.com/Gameye98/AstraNmap')
-	os.system('mv AstraNmap ~')
+	os.system('mv AstraNmap {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -134,7 +171,7 @@ def weeman():
 	os.system('apt install clang git python2')
 	os.system('python2 -m pip bs4 html5lib lxml')
 	os.system('git clone https://github.com/evait-security/weeman')
-	os.system('mv weeman ~')
+	os.system('mv weeman {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -143,8 +180,8 @@ def easyMap():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install php git')
 	os.system('git clone https://github.com/Cvar1984/Easymap')
-	os.system('mv Easymap ~')
-	os.system('cd ~/Easymap && sh install.sh')
+	os.system('mv Easymap {}'.format(homeDir))
+	os.system('cd {}/Easymap && sh install.sh'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -153,7 +190,7 @@ def xd3v():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install curl')
 	os.system('curl -k -O https://gist.github.com/Gameye98/92035588bd0228df6fb7fa77a5f26bc2/raw/f8e73cd3d9f2a72bd536087bb6ba7bc8baef7d1d/xd3v.sh')
-	os.system('mv xd3v.sh ~/../usr/bin/xd3v && chmod +x ~/../usr/bin/xd3v')
+	os.system('mv xd3v.sh {0}/../usr/bin/xd3v && chmod +x {0}/../usr/bin/xd3v'.format(homeDir))
 	print('###### Done')
 	print("###### Type 'xd3v' to start.")
 	backtomenu_option()
@@ -163,7 +200,7 @@ def crips():
 	os.system("apt update && apt upgrade")
 	os.system("apt install git python2 openssl curl libcurl wget")
 	os.system("git clone https://github.com/Manisso/Crips")
-	os.system("mv Crips ~")
+	os.system("mv Crips {}".format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -173,7 +210,7 @@ def sir():
 	os.system("apt install python2 git")
 	os.system("python2 -m pip install bs4 urllib2")
 	os.system("git clone https://github.com/AeonDave/sir.git")
-	os.system("mv sir ~")
+	os.system("mv sir {}".format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -182,7 +219,7 @@ def xshell():
 	os.system("apt update && apt upgrade")
 	os.system("apt install lynx python2 figlet ruby php nano w3m")
 	os.system("git clone https://github.com/Ubaii/Xshell")
-	os.system("mv Xshell ~")
+	os.system("mv Xshell {}".format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -191,7 +228,7 @@ def evilURL():
 	os.system("apt update && apt upgrade")
 	os.system("apt install git python2 python3")
 	os.system("git clone https://github.com/UndeadSec/EvilURL")
-	os.system("mv EvilURL ~")
+	os.system("mv EvilURL {}".format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -200,8 +237,8 @@ def striker():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2')
 	os.system('git clone https://github.com/s0md3v/Striker')
-	os.system('mv Striker ~')
-	os.system('cd ~/Striker && python2 -m pip install -r requirements.txt')
+	os.system('mv Striker {}'.format(homeDir))
+	os.system('cd {}/Striker && python2 -m pip install -r requirements.txt'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -210,7 +247,7 @@ def dsss():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/stamparm/DSSS')
-	os.system('mv DSSS ~')
+	os.system('mv DSSS {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -219,7 +256,7 @@ def sqliv():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/the-robot/sqliv')
-	os.system('mv sqliv ~')
+	os.system('mv sqliv {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -228,7 +265,7 @@ def sqlscan():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git php')
 	os.system('git clone http://www.github.com/Cvar1984/sqlscan')
-	os.system('mv sqlscan ~')
+	os.system('mv sqlscan {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -237,8 +274,8 @@ def wordpreSScan():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 python2-dev clang libxml2-dev libxml2-utils libxslt-dev')
 	os.system('git clone https://github.com/swisskyrepo/Wordpresscan')
-	os.system('mv Wordpresscan ~')
-	os.system('cd ~/Wordpresscan && python2 -m pip install -r requirements.txt')
+	os.system('mv Wordpresscan {}'.format(homeDir))
+	os.system('cd {}/Wordpresscan && python2 -m pip install -r requirements.txt'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -247,7 +284,7 @@ def wpscan():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git ruby curl')
 	os.system('git clone https://github.com/wpscanteam/wpscan')
-	os.system('mv wpscan ~ && cd ~/wpscan')
+	os.system('mv wpscan {0} && cd {0}/wpscan'.format(homeDir))
 	os.system('gem install bundle && bundle config build.nokogiri --use-system-libraries && bundle install && ruby wpscan.rb --update')
 	print('###### Done')
 	backtomenu_option()
@@ -258,7 +295,7 @@ def wordpresscan():
 	os.system('apt install nmap figlet git')
 	os.system('git clone https://github.com/silverhat007/termux-wordpresscan')
 	os.system('cd termux-wordpresscan && chmod +x * && sh install.sh')
-	os.system('mv termux-wordpresscan ~')
+	os.system('mv termux-wordpresscan {}'.format(homeDir))
 	print('###### Done')
 	print("###### Type 'wordpresscan' to start.")
 	backtomenu_option()
@@ -269,7 +306,7 @@ def routersploit():
 	os.system('apt install python2 git')
 	os.system('python2 -m pip install requests')
 	os.system('git clone https://github.com/threat9/routersploit')
-	os.system('mv routersploit ~;cd ~/routersploit;python2 -m pip install -r requirements.txt;termux-fix-shebang rsf.py')
+	os.system('mv routersploit {0};cd {0}/routersploit;python2 -m pip install -r requirements.txt;termux-fix-shebang rsf.py'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -278,7 +315,7 @@ def torshammer():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/dotfighter/torshammer')
-	os.system('mv torshammer ~')
+	os.system('mv torshammer {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -287,7 +324,7 @@ def slowloris():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/gkbrk/slowloris')
-	os.system('mv slowloris ~')
+	os.system('mv slowloris {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -295,10 +332,10 @@ def fl00d12():
 	print('\n###### Installing Fl00d & Fl00d2')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 curl')
-	os.system('mkdir ~/fl00d')
+	os.system('mkdir {}/fl00d'.format(homeDir))
 	os.system('curl -O https://raw.githubusercontent.com/Gameye98/Gameye98.github.io/master/scripts/fl00d.py')
 	os.system('curl -O https://raw.githubusercontent.com/Gameye98/Gameye98.github.io/master/scripts/fl00d2.py')
-	os.system('mv fl00d.py ~/fl00d && mv fl00d2.py ~/fl00d')
+	os.system('mv fl00d.py {0}/fl00d && mv fl00d2.py {0}/fl00d'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -307,7 +344,7 @@ def goldeneye():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2')
 	os.system('git clone https://github.com/jseidl/GoldenEye')
-	os.system('mv GoldenEye ~')
+	os.system('mv GoldenEye {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -317,9 +354,9 @@ def xerxes():
 	os.system('apt install git')
 	os.system('apt install clang')
 	os.system('git clone https://github.com/baraalmasri/xerxes')
-	os.system('mv xerxes ~')
-	os.system('cd ~/xerxes && clang xerxes.c -o xerxes')
-	os.system('chmod 755 ~/xerxes/xerxes && cp ~/xerxes/xerxes $PREFIX/bin')
+	os.system('mv xerxes {}'.format(homeDir))
+	os.system('cd {}/xerxes && clang xerxes.c -o xerxes'.format(homeDir))
+	os.system('chmod 755 {0}/xerxes/xerxes && cp {0}/xerxes/xerxes $PREFIX/bin'.format(homeDir))
 	print('###### Done')
 	print('###### Usage: xerxes ​www.fakesite.com​ 80')
 	backtomenu_option()
@@ -329,7 +366,7 @@ def planetwork_ddos():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2')
 	os.system('git clone https://github.com/Hydra7/Planetwork-DDOS')
-	os.system('mv Planetwork-DDOS ~')
+	os.system('mv Planetwork-DDOS {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -345,7 +382,7 @@ def black_hydra():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install hydra git python2')
 	os.system('git clone https://github.com/Gameye98/Black-Hydra')
-	os.system('mv Black-Hydra ~')
+	os.system('mv Black-Hydra {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -354,7 +391,7 @@ def cupp():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/Mebus/cupp')
-	os.system('mv cupp ~')
+	os.system('mv cupp {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -364,7 +401,7 @@ def asu():
 	os.system('apt install git python2 php')
 	os.system('python2 -m pip install requests bs4 mechanize')
 	os.system('git clone https://github.com/LOoLzeC/ASU')
-	os.system('mv ASU ~')
+	os.system('mv ASU {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -373,7 +410,7 @@ def hash_buster():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/s0md3v/Hash-Buster')
-	os.system('mv Hash-Buster ~')
+	os.system('mv Hash-Buster {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -383,7 +420,7 @@ def instaHack():
 	os.system('apt install python2 git')
 	os.system('python2 -m pip install requests')
 	os.system('git clone https://github.com/Slayeri4/instahack')
-	os.system('mv instahack ~')
+	os.system('mv instahack {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -392,7 +429,7 @@ def indonesian_wordlist():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git')
 	os.system('git clone https://github.com/geovedi/indonesian-wordlist')
-	os.system('mv indonesian-wordlist ~')
+	os.system('mv indonesian-wordlist {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -403,8 +440,8 @@ def fbBrute():
 	os.system('python2 -m pip install mechanize')
 	os.system('curl -O https://raw.githubusercontent.com/Gameye98/Gameye98.github.io/master/scripts/facebook3.py')
 	os.system('curl -O https://raw.githubusercontent.com/Gameye98/Gameye98.github.io/master/wordlist/password.txt')
-	os.system('mkdir ~/facebook-brute-3')
-	os.system('mv facebook3.py ~/facebook-brute-3 && mv password.txt ~/facebook-brute-3')
+	os.system('mkdir {}/facebook-brute-3'.format(homeDir))
+	os.system('mv facebook3.py {0}/facebook-brute-3 && mv password.txt {0}/facebook-brute-3'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -413,8 +450,8 @@ def webdav():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 openssl curl libcurl')
 	os.system('python2 -m pip install urllib3 chardet certifi idna requests')
-	os.system('mkdir ~/webdav')
-	os.system('curl -k -O https://pastebin.com/raw/HnVyQPtR;mv HnVyQPtR ~/webdav/webdav.py')
+	os.system('mkdir {}/webdav'.format(homeDir))
+	os.system('curl -k -O https://pastebin.com/raw/HnVyQPtR;mv HnVyQPtR {}/webdav/webdav.py'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -424,7 +461,7 @@ def webmassploit():
 	os.system("apt install python2 openssl curl libcurl")
 	os.system("python2 -m pip install requests")
 	os.system("curl -k -O https://pastebin.com/raw/K1VYVHxX && mv K1VYVHxX webdav.py")
-	os.system("mkdir ~/webdav-mass-exploit && mv webdav.py ~/webdav-mass-exploit")
+	os.system("mkdir {0}/webdav-mass-exploit && mv webdav.py {0}/webdav-mass-exploit".format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -434,7 +471,7 @@ def sqldump():
 	os.system('apt install python2 curl')
 	os.system('python2 -m pip install google')
 	os.system('curl -k -O https://gist.githubusercontent.com/Gameye98/76076c9a282a6f32749894d5368024a6/raw/6f9e754f2f81ab2b8efda30603dc8306c65bd651/sqldump.py')
-	os.system('mkdir ~/sqldump && chmod +x sqldump.py && mv sqldump.py ~/sqldump')
+	os.system('mkdir {0}/sqldump && chmod +x sqldump.py && mv sqldump.py {0}/sqldump'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -444,7 +481,7 @@ def websploit():
 	os.system('apt install git python2')
 	os.system('python2 -m pip install scapy')
 	os.system('git clone https://github.com/The404Hacking/websploit')
-	os.system('mv websploit ~')
+	os.system('mv websploit {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -452,7 +489,7 @@ def metasploit():
 	print('\n###### Installing Metasploit')
 	os.system("apt update && apt upgrade")
 	os.system("apt install unstable-repo")
-	os.system("cd ~ && apt install metasploit")
+	os.system("cd {} && apt install metasploit".format(homeDir))
 	print('###### Done')
 	print("###### Type 'msfconsole' to start.")
 	backtomenu_option()
@@ -462,7 +499,7 @@ def commix():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/commixproject/commix')
-	os.system('mv commix ~')
+	os.system('mv commix {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -471,7 +508,7 @@ def brutal():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git')
 	os.system('git clone https://github.com/Screetsec/Brutal')
-	os.system('mv Brutal ~')
+	os.system('mv Brutal {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -481,7 +518,7 @@ def knockmail():
 	os.system('apt install python2 git')
 	os.system('python2 -m pip install validate_email pyDNS')
 	os.system('git clone https://github.com/4w4k3/KnockMail')
-	os.system('mv KnockMail ~')
+	os.system('mv KnockMail {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -490,7 +527,7 @@ def hac():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install php git')
 	os.system('git clone https://github.com/Cvar1984/Hac')
-	os.system('mv Hac ~')
+	os.system('mv Hac {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -499,7 +536,7 @@ def rang3r():
 	os.system("apt update && apt upgrade")
 	os.system("apt install git python2 && python2 -m pip install optparse termcolor")
 	os.system("git clone https://github.com/floriankunushevci/rang3r")
-	os.system("mv rang3r ~")
+	os.system("mv rang3r {}".format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -508,7 +545,7 @@ def sh33ll():
 	os.system("apt update && apt upgrade")
 	os.system("apt install git python2")
 	os.system("git clone https://github.com/LOoLzeC/SH33LL")
-	os.system("mv SH33LL ~")
+	os.system("mv SH33LL {}".format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -517,7 +554,7 @@ def social():
 	os.system("apt update && apt upgrade")
 	os.system("apt install python2 perl")
 	os.system("git clone https://github.com/LOoLzeC/social-engineering")
-	os.system("mv social-engineering ~")
+	os.system("mv social-engineering {}".format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -526,7 +563,7 @@ def spiderbot():
 	os.system("apt update && apt upgrade")
 	os.system("apt install git php")
 	os.system("git clone https://github.com/Cvar1984/SpiderBot")
-	os.system("mv SpiderBot ~")
+	os.system("mv SpiderBot {}".format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -535,7 +572,7 @@ def ngrok():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git')
 	os.system('git clone https://github.com/themastersunil/ngrok')
-	os.system('mv ngrok ~')
+	os.system('mv ngrok {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -544,7 +581,7 @@ def sudo():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install ncurses-utils git')
 	os.system('git clone https://github.com/st42/termux-sudo')
-	os.system('mv termux-sudo ~ && cd ~/termux-sudo && chmod 777 *')
+	os.system('mv termux-sudo {0} && cd {0}/termux-sudo && chmod 777 *'.format(homeDir))
 	os.system('cat sudo > /data/data/com.termux/files/usr/bin/sudo')
 	os.system('chmod 700 /data/data/com.termux/files/usr/bin/sudo')
 	print('###### Done')
@@ -555,7 +592,7 @@ def ubuntu():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/Neo-Oli/termux-ubuntu')
-	os.system('mv termux-ubuntu ~ && cd ~/termux-ubuntu && bash ubuntu.sh')
+	os.system('mv termux-ubuntu {0} && cd {0}/termux-ubuntu && bash ubuntu.sh'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -564,7 +601,7 @@ def fedora():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install wget git')
 	os.system('wget https://raw.githubusercontent.com/nmilosev/termux-fedora/master/termux-fedora.sh')
-	os.system('mv termux-fedora.sh ~')
+	os.system('mv termux-fedora.sh {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -573,7 +610,7 @@ def nethunter():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git')
 	os.system('git clone https://github.com/Hax4us/Nethunter-In-Termux')
-	os.system('mv Nethunter-In-Termux ~')
+	os.system('mv Nethunter-In-Termux {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -582,7 +619,7 @@ def blackbox():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git && python2 -m pip install optparse passlib')
 	os.system('git clone https://github.com/jothatron/blackbox')
-	os.system('mv blackbox ~')
+	os.system('mv blackbox {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -593,7 +630,7 @@ def xattacker():
 	os.system('cpnm install HTTP::Request')
 	os.system('cpnm install LWP::Useragent')
 	os.system('git clone https://github.com/Moham3dRiahi/XAttacker')
-	os.system('mv XAttacker ~')
+	os.system('mv XAttacker {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -602,7 +639,7 @@ def vcrt():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/LOoLzeC/Evil-create-framework')
-	os.system('mv Evil-create-framework ~')
+	os.system('mv Evil-create-framework {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -611,7 +648,7 @@ def socfish():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git && python2 -m pip install wget')
 	os.system('git clone https://github.com/UndeadSec/SocialFish')
-	os.system('mv SocialFish ~')
+	os.system('mv SocialFish {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -620,7 +657,7 @@ def ecode():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install php git')
 	os.system('git clone https://github.com/Cvar1984/Ecode')
-	os.system('mv Ecode ~')
+	os.system('mv Ecode {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -630,7 +667,7 @@ def xsstrike():
 	os.system('apt install git python2')
 	os.system('python2 -m pip install fuzzywuzzy prettytable mechanize HTMLParser')
 	os.system('git clone https://github.com/s0md3v/XSStrike')
-	os.system('mv XSStrike ~')
+	os.system('mv XSStrike {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -640,7 +677,7 @@ def breacher():
 	os.system('apt install git python2')
 	os.system('python2 -m pip install requests argparse')
 	os.system('git clone https://github.com/s0md3v/Breacher')
-	os.system('mv Breacher ~')
+	os.system('mv Breacher {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -649,7 +686,7 @@ def stylemux():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git')
 	os.system('git clone https://github.com/BagazMukti/Termux-Styling-Shell-Script')
-	os.system('mv Termux-Styling-Shell-Script ~')
+	os.system('mv Termux-Styling-Shell-Script {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -659,7 +696,7 @@ def txtool():
 	os.system('apt install git python2 nmap php curl')
 	os.system('python2 -m pip install requests')
 	os.system('git clone https://github.com/kuburan/txtool')
-	os.system('mv txtool ~')
+	os.system('mv txtool {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -668,7 +705,7 @@ def passgencvar():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git php')
 	os.system('git clone https://github.com/Cvar1984/PassGen')
-	os.system('mv PassGen ~')
+	os.system('mv PassGen {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -677,7 +714,7 @@ def owscan():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git php')
 	os.system('git clone https://github.com/Gameye98/OWScan')
-	os.system('mv OWScan ~')
+	os.system('mv OWScan {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -686,7 +723,7 @@ def sanlen():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2 && python2 -m pip install requests')
 	os.system('git clone https://github.com/Gameye98/santet-online')
-	os.system('mv santet-online ~')
+	os.system('mv santet-online {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -695,7 +732,7 @@ def spazsms():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2 && python2 -m pip install requests')
 	os.system('git clone https://github.com/Gameye98/SpazSMS')
-	os.system('mv SpazSMS ~')
+	os.system('mv SpazSMS {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -704,7 +741,7 @@ def hasher():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2 && python2 -m pip install passlib binascii progressbar')
 	os.system('git clone https://github.com/CiKu370/hasher')
-	os.system('mv hasher ~')
+	os.system('mv hasher {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -713,7 +750,7 @@ def hashgenerator():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2 && python2 -m pip install passlib progressbar')
 	os.system('git clone https://github.com/CiKu370/hash-generator')
-	os.system('mv hash-generator ~')
+	os.system('mv hash-generator {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -722,7 +759,7 @@ def kodork():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2 && python2 -m pip install urllib2')
 	os.system('git clone https://github.com/CiKu370/ko-dork')
-	os.system('mv ko-dork ~')
+	os.system('mv ko-dork {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -731,7 +768,7 @@ def snitch():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2')
 	os.system('git clone https://github.com/Smaash/snitch')
-	os.system('mv snitch ~')
+	os.system('mv snitch {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -741,7 +778,7 @@ def osif():
 	os.system('apt install git python2')
 	os.system('python2 -m pip install requests')
 	os.system('git clone https://github.com/CiKu370/OSIF')
-	os.system('mv OSIF ~')
+	os.system('mv OSIF {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -750,7 +787,7 @@ def nk26():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git php')
 	os.system('git clone https://github.com/milio48/nk26')
-	os.system('mv nk26 ~')
+	os.system('mv nk26 {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -759,7 +796,7 @@ def devploit():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git && python2 -m pip install urllib2')
 	os.system('git clone https://github.com/joker25000/Devploit')
-	os.system('mv Devploit ~')
+	os.system('mv Devploit {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -768,7 +805,7 @@ def hasherdotid():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
 	os.system('git clone https://github.com/galauerscrew/hasherdotid')
-	os.system('mv hasherdotid ~')
+	os.system('mv hasherdotid {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -777,7 +814,7 @@ def namechk():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git')
 	os.system('git clone https://github.com/HA71/Namechk')
-	os.system('mv Namechk ~')
+	os.system('mv Namechk {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -786,7 +823,7 @@ def xlPy():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python git')
 	os.system('git clone https://github.com/albertoanggi/xl-py')
-	os.system('mv xl-py ~')
+	os.system('mv xl-py {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -857,7 +894,7 @@ def fade():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2 && python2 -m pip install requests')
 	os.system('git clone https://github.com/Gameye98/FaDe')
-	os.system('mv FaDe ~')
+	os.system('mv FaDe {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -866,7 +903,7 @@ def ginf():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git php')
 	os.system('git clone https://github.com/Gameye98/GINF')
-	os.system('mv GINF ~')
+	os.system('mv GINF {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -875,7 +912,7 @@ def auxile():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2 && python2 -m pip install requests bs4 pexpect')
 	os.system('git clone https://github.com/CiKu370/AUXILE')
-	os.system('mv AUXILE ~')
+	os.system('mv AUXILE {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -884,7 +921,7 @@ def inther():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git ruby')
 	os.system('git clone https://github.com/Gameye98/inther')
-	os.system('mv inther ~')
+	os.system('mv inther {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -904,7 +941,7 @@ def fmbrute():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python && python -m pip install requests')
 	os.system('git clone https://github.com/BlackHoleSecurity/FMBrute')
-	os.system('mv FMBrute ~')
+	os.system('mv FMBrute {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -921,7 +958,7 @@ def gpstr():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install php git')
 	os.system('git clone https://github.com/indosecid/gps_tracking')
-	os.system('mv gps_tracking ~')
+	os.system('mv gps_tracking {}'.format(homeDir))
 	print("###### Done")
 	backtomenu_option()
 
@@ -931,7 +968,7 @@ def pret():
 	os.system('apt install python2 imagemagick git')
 	os.system('python2 -m pip install colorama pysnmp')
 	os.system('git clone https://github.com/RUB-NDS/PRET')
-	os.system('mv PRET ~')
+	os.system('mv PRET {}'.format(homeDir))
 	print("###### Done")
 	backtomenu_option()
 
@@ -940,7 +977,7 @@ def atlas():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2 && python2 -m pip install urllib2')
 	os.system('git clone https://github.com/m4ll0k/Atlas')
-	os.system('mv Atlas ~')
+	os.system('mv Atlas {}'.format(homeDir))
 	print("###### Done")
 	backtomenu_option()
 
@@ -967,7 +1004,7 @@ def fbbrutex():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python && python -m pip install requests')
 	os.system('git clone https://github.com/Gameye98/FBBrute')
-	os.system('mv FBBrute ~')
+	os.system('mv FBBrute {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -976,7 +1013,7 @@ def fim():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python && python -m pip install requests bs4')
 	os.system('git clone https://github.com/karjok/fim')
-	os.system('mv fim ~')
+	os.system('mv fim {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -985,7 +1022,7 @@ def rshell():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python && python -m pip install colorama')
 	os.system('git clone https://github.com/Jishu-Epic/RShell')
-	os.system('mv RShell ~')
+	os.system('mv RShell {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -994,7 +1031,7 @@ def termpyter():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python')
 	os.system('git clone https://github.com/Jishu-Epic/TermPyter')
-	os.system('mv TermPyter ~')
+	os.system('mv TermPyter {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1004,7 +1041,7 @@ def maxsubdofinder():
 	os.system('apt install git python2')
 	os.system('python2 -m pip install requests')
 	os.system('git clone https://github.com/maxteroit/MaxSubdoFinder')
-	os.system('mv MaxSubdoFinder ~')
+	os.system('mv MaxSubdoFinder {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1025,7 +1062,7 @@ def pwnedornot():
 	os.system('apt install git python')
 	os.system('python -m pip install requests')
 	os.system('git clone https://github.com/thewhiteh4t/pwnedOrNot')
-	os.system('mv pwnedOrNot ~')
+	os.system('mv pwnedOrNot {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1035,7 +1072,7 @@ def maclook():
 	os.system('apt install git python')
 	os.system('python -m pip install requests')
 	os.system('git clone https://github.com/T4P4N/Mac-Lookup')
-	os.system('mv Mac-Lookup ~')
+	os.system('mv Mac-Lookup {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1056,7 +1093,7 @@ def katak():
 	os.system('apt install git python2')
 	os.system('python2 -m pip install requests progressbar')
 	os.system('git clone https://github.com/Gameye98/Katak')
-	os.system('mv Katak ~')
+	os.system('mv Katak {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1084,7 +1121,7 @@ def billcypher():
 	os.system('apt install git python')
 	os.system('python -m pip install argparse dnspython requests urllib3 colorama')
 	os.system('git clone https://github.com/GitHackTools/BillCipher')
-	os.system('mv BillCypher ~')
+	os.system('mv BillCypher {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1093,7 +1130,7 @@ def vbug():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2')
 	os.system('git clone https://github.com/Gameye98/vbug')
-	os.system('mv vbug ~')
+	os.system('mv vbug {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1102,7 +1139,7 @@ def kojawafft():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git nodejs')
 	os.system('git clone https://github.com/sandalpenyok/kojawafft')
-	os.system('mv kojawafft ~')
+	os.system('mv kojawafft {}'.format(homeDir))
 	os.system('cd $HOME/kojawafft && unzip node_modules.zip && cd -')
 	print('###### Done')
 	backtomenu_option()
@@ -1132,7 +1169,7 @@ def ccgen():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python')
 	os.system('git clone https://github.com/Gameye98/ccgen')
-	os.system('mv ccgen ~')
+	os.system('mv ccgen {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1141,7 +1178,7 @@ def ddcrypt():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python')
 	os.system('git clone https://github.com/Gameye98/ddcrypt')
-	os.system('mv ddcrypt ~')
+	os.system('mv ddcrypt {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1151,7 +1188,7 @@ def dnsrecon():
 	os.system('apt install git python')
 	os.system('git clone https://github.com/darkoperator/dnsrecon')
 	os.system('python -m pip install -r dnsrecon/requirements.txt')
-	os.system('mv dnsrecon ~')
+	os.system('mv dnsrecon {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1160,7 +1197,7 @@ def zphisher():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git php openssh curl')
 	os.system('git clone https://github.com/htr-tech/zphisher')
-	os.system('mv zphisher ~')
+	os.system('mv zphisher {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1169,8 +1206,8 @@ def apktool():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git dpkg')
 	os.system('git clone https://github.com/Lexiie/Termux-Apktool')
-	os.system('mv Termux-Apktool ~')
-	os.system('cd ~/Termux-Apktool && dpkg -i *.deb')
+	os.system('mv Termux-Apktool {}'.format(homeDir))
+	os.system('cd {}/Termux-Apktool && dpkg -i *.deb'.format(homeDir))
 	print('###### Done')
 	print("###### Type 'apktool' to start.")
 	backtomenu_option()
@@ -1194,15 +1231,15 @@ def wifite():
 		os.system('apt update -y && apt upgrade -y')
 		os.system('apt install git python2')
 		os.system('git clone https://github.com/derv82/wifite')
-		os.system('mv wifite ~')
+		os.system('mv wifite {}'.format(homeDir))
 		print('###### Done')
 	backtomenu_option()
 
 def parrot():
 	print('\n###### Installing Parrot')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install wget openssl-tool proot -y && hash -r && cd ~ && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Parrot/parrot.sh && bash parrot.sh')
-	os.system('cd ~ && bash start-parrot.sh')
+	os.system('apt install wget openssl-tool proot -y && hash -r && cd {} && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Parrot/parrot.sh && bash parrot.sh'.format(homeDir))
+	os.system('cd {} && bash start-parrot.sh'.format(homeDir))
 	print('###### Done')
 	print('###### Make sure visit: https://techriz.com/how-to-install-parrot-linux-on-android-without-root/')
 	os.system('am start -a android.intent.action.VIEW -d "https://techriz.com/how-to-install-parrot-linux-on-android-without-root/"')
@@ -1293,7 +1330,7 @@ def dbdat():
 	os.system('apt install git python2')
 	os.system('python2 -m pip install MySQL-python psycopg2 cx_Oracle pymssql ibm_db pymongo pyyaml couchdb')
 	os.system('git clone https://github.com/foospidy/DbDat')
-	os.system('mv DbDat ~')
+	os.system('mv DbDat {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1303,7 +1340,7 @@ def nosqlmap():
 	os.system('apt install git python2 unstable-repo metasploit')
 	os.system('python2 -m pip install pymongo httplib2')
 	os.system('git clone https://github.com/codingo/NoSQLMap')
-	os.system('mv NoSQLMap ~')
+	os.system('mv NoSQLMap {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1313,7 +1350,7 @@ def audit_couchdb():
 	os.system('apt install git nodejs')
 	os.system('npm install -g npm@next audit_couchdb')
 	os.system('git clone https://github.com/iriscouch/audit_couchdb')
-	os.system('mv audit_couchdb ~')
+	os.system('mv audit_couchdb {}'.format(homeDir))
 	print('###### Done')
 	print('###### Usage: audit_couchdb https://admin:secret@localhost:5984')
 	backtomenu_option()
@@ -1333,7 +1370,7 @@ def wifiphisher():
 	os.system('apt install git python -y')
 	os.system('python -m pip install setuptools scapy')
 	os.system('git clone https://github.com/wifiphisher/wifiphisher')
-	os.system('mv wifiphisher ~ && cd ~/wifiphisher && python setup.py install')
+	os.system('mv wifiphisher {0} && cd {0}/wifiphisher && python setup.py install'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1342,7 +1379,7 @@ def sherlock():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python -y')
 	os.system('git clone https://github.com/sherlock-project/sherlock')
-	os.system('mv sherlock ~ && cd ~/sherlock && python -m pip install -r requirements.txt')
+	os.system('mv sherlock {0} && cd {0}/sherlock && python -m pip install -r requirements.txt'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1422,7 +1459,7 @@ def userrecon():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git curl -y')
 	os.system('git clone https://github.com/thelinuxchoice/userrecon')
-	os.system('mv userrecon ~')
+	os.system('mv userrecon {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1432,7 +1469,7 @@ def mrsip():
 	os.system('apt install git python -y')
 	os.system('python -m pip install netifaces ipaddress scapy pyfiglet')
 	os.system('git clone https://github.com/meliht/Mr.SIP')
-	os.system('mv Mr.SIP ~')
+	os.system('mv Mr.SIP {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1443,7 +1480,7 @@ def tmscanner():
 	os.system('python -m pip install colorama requests')
 	os.system('python2 -m pip install colorama requests')
 	os.system('git clone https://github.com/TechnicalMujeeb/TM-scanner')
-	os.system('mv TM-scanner ~')
+	os.system('mv TM-scanner {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1452,7 +1489,7 @@ def xss_payload_list():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git -y')
 	os.system('git clone https://github.com/payloadbox/xss-payload-list')
-	os.system('mv xss-payload-list ~')
+	os.system('mv xss-payload-list {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1462,7 +1499,7 @@ def street_car():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python python2 -y')
 	os.system('git clone https://github.com/JustaHackers/street_car')
-	os.system('mv street_car ~')
+	os.system('mv street_car {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1471,7 +1508,7 @@ def flappy_bird():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2 -y')
 	os.system('git clone https://github.com/JustAHackers/flappy_bird')
-	os.system('mv flappy_bird ~')
+	os.system('mv flappy_bird {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
@@ -1480,7 +1517,7 @@ def speed_typing():
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python2 -y')
 	os.system('git clone https://github.com/JustAHackers/typing-speed-test')
-	os.system('mv typing-speed-test ~')
+	os.system('mv typing-speed-test {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 

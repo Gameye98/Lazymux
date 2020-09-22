@@ -18,6 +18,20 @@ Lazymux is a tool that is specially made for termux user which provides a lot of
 
 Made with ❤️
 
+## Feature
+- **Tool Installation**
+Install Single Tool
+`lzmx > set_install 1`
+Install Multi Tool
+`lzmx > set_install 1 2 3 4`
+Install All Tool
+`lzmx > set_install @`
+- **Default Dir Install**
+On `lazymux.conf` replace symbol ~ with directory you want
+Example: lazymux.conf
+`HOME = /sdcard`
+
+
 ## Screenshot
 <img src="core/lazymux_4.png">
 
@@ -34,5 +48,5 @@ python lazymux.py
 
 ### Contact Me
 Facebook: [Gameye98](https://www.facebook.com/100042910716603)  
-Instagram: @dtlily  
-Telegram : @dtlily  
+Instagram: [@dtlily](https://instagram.com/dtlily)  
+Telegram : [@dtlily](https://t.me/dtlily) 
