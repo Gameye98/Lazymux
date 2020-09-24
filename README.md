@@ -20,15 +20,15 @@ Made with ❤️
 
 ## Feature
 - **Tool Installation**
-Install Single Tool
-`lzmx > set_install 1`
-Install Multi Tool
-`lzmx > set_install 1 2 3 4`
-Install All Tool
-`lzmx > set_install @`
+Install Single Tool  
+`lzmx > set_install 1`  
+Install Multi Tool  
+`lzmx > set_install 1 2 3 4`  
+Install All Tool  
+`lzmx > set_install @`  
 - **Default Dir Install**
-On `lazymux.conf` replace symbol ~ with directory you want
-Example: lazymux.conf
+On `lazymux.conf` replace symbol ~ with directory you want  
+Example: lazymux.conf  
 `HOME = /sdcard`
 
 
