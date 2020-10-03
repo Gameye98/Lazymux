@@ -940,7 +940,7 @@ def fmbrute():
 	print('\n###### Installing FMBrute')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python && python -m pip install requests')
-	os.system('git clone https://github.com/BlackHoleSecurity/FMBrute')
+	os.system('git clone https://github.com/Gameye98/FMBrute')
 	os.system('mv FMBrute {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
