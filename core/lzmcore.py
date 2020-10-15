@@ -117,6 +117,15 @@ def sqlmap():
 	print('###### Done')
 	backtomenu_option()
 
+def sublister():
+	print('\n###### Installing sublister')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2')
+	os.system('git clone https://github.com/aboul3la/Sublist3r')
+	os.system('mv sublister {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
 def infoga():
 	print('\n###### Installing Infoga')
 	os.system('apt update -y && apt upgrade -y')
