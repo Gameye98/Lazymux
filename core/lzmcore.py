@@ -1493,6 +1493,28 @@ def xss_payload_list():
 	print('###### Done')
 	backtomenu_option()
 
+def clickbot():
+	print('\n###### Installing ClickBot')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python git -y')
+	os.system('git clone https://github.com/ziziwho/clickbot')
+	os.system("python -m pip install asyncio colorama telethon rsa pyaes asyncio async_generator colorama bs4 requests")
+	os.system('mv clickbot {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def phoneinfoga():
+	print('\n###### Installing PhoneInfoga')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python git -y')
+	os.system('git clone https://github.com/ExpertAnonymous/PhoneInfoga')
+	os.chdir("PhoneInfoga")
+	os.system("python -m pip install -r requirements.txt")
+	os.chdir("..")
+	os.system('mv PhoneInfoga {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
 ### termux games
 def street_car():
 	print('\n###### Installing street-car')

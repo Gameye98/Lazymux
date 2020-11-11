@@ -65,6 +65,7 @@ def main():
 		print("    [35] Mr.SIP: SIP-Based Audit and Attack Tool")
 		print("    [36] Sherlock: Hunt down social media accounts by username")
 		print("    [37] userrecon: Find usernames across over 75 social networks")
+		print("    [38] PhoneInfoga: One of the most advanced tools to scan phone numbers using only free resources")
 		print("\n    [00] Back to main menu\n")
 		infogathering = input("lzmx > set_install ")
 		if infogathering == "@":
@@ -113,6 +114,7 @@ def main():
 			elif infox.strip() == "35": mrsip()
 			elif infox.strip() == "36": sherlock()
 			elif infox.strip() == "37": userrecon()
+			elif infox.strip() == "38": phoneinfoga()
 			elif infox.strip() == "00" or infox.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -596,6 +598,7 @@ def main():
 		print("    [21] Octave: Scientific Programming Language")
 		print("    [22] fp-compiler: Free Pascal is a 32, 64 and 16 bit professional Pascal compiler")
 		print("    [23] Numpy: The fundamental package for scientific computing with Python")
+		print("    [24] ClickBot: Earn money using telegram bot")
 		print("\n    [00] Back to main menu\n")
 		moretool = input("lzmx > set_install ")
 		if moretool == "@":
@@ -630,6 +633,7 @@ def main():
 			elif moret.strip() == "21": octave()
 			elif moret.strip() == "22": fpcompiler()
 			elif moret.strip() == "23": numpy()
+			elif moret.strip() == "24": clickbot()
 			elif moret.strip() == "00" or moret.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
