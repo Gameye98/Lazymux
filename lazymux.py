@@ -71,7 +71,7 @@ def main():
 		if infogathering == "@":
 			infogathering = ""
 			for x in range(1,38):
-				infogathering += f"{x} "
+				infogathering += f{x} 
 		if len(infogathering.split()) > 1:
 			writeStatus(1)
 		else:
