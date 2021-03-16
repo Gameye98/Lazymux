@@ -45,8 +45,3 @@ git clone https://github.com/Gameye98/Lazymux
 cd Lazymux
 python lazymux.py
 ```
-
-### Contact Me
-Facebook: [Gameye98](https://www.facebook.com/100042910716603)  
-Instagram: [@dtlily](https://instagram.com/dtlily)  
-Telegram : [@dtlily](https://t.me/dtlily) 
