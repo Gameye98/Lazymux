@@ -66,6 +66,7 @@ def main():
 		print("    [36] Sherlock: Hunt down social media accounts by username")
 		print("    [37] userrecon: Find usernames across over 75 social networks")
 		print("    [38] PhoneInfoga: One of the most advanced tools to scan phone numbers using only free resources")
+		print("    [39] SiteBroker: A cross-platform python based utility for information gathering and penetration testing automation")
 		print("\n    [00] Back to main menu\n")
 		infogathering = input("lzmx > set_install ")
 		if infogathering == "@":
@@ -115,6 +116,7 @@ def main():
 			elif infox.strip() == "36": sherlock()
 			elif infox.strip() == "37": userrecon()
 			elif infox.strip() == "38": phoneinfoga()
+			elif infox.strip() == "39": sitebroker()
 			elif infox.strip() == "00" or infox.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -522,6 +524,7 @@ def main():
 		print("    [06] Planetwork-DDOS")
 		print("    [07] Xshell")
 		print("    [08] santet-online: Social Engineering Tool")
+		print("    [09] dost-attack: WebServer Attacking Tools")
 		print("\n    [00] Back to main menu\n")
 		stresstest = input("lzmx > set_install ")
 		if stresstest == "@":
@@ -541,6 +544,7 @@ def main():
 			elif stressx.strip() == "06" or stressx.strip() == "6": planetwork_ddos()
 			elif stressx.strip() == "07" or stressx.strip() == "7": xshell()
 			elif stressx.strip() == "08" or stressx.strip() == "8": sanlen()
+			elif stressx.strip() == "09" or stressx.strip() == "9": dostattack()
 			elif stressx.strip() == "00" or stressx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -599,6 +603,7 @@ def main():
 		print("    [22] fp-compiler: Free Pascal is a 32, 64 and 16 bit professional Pascal compiler")
 		print("    [23] Numpy: The fundamental package for scientific computing with Python")
 		print("    [24] ClickBot: Earn money using telegram bot")
+		print("    [25] BTC-to-IDR-checker: Check the exchange rate virtual money currency to Indonesia Rupiah from Bitcoin.co.id API")
 		print("\n    [00] Back to main menu\n")
 		moretool = input("lzmx > set_install ")
 		if moretool == "@":
@@ -634,6 +639,7 @@ def main():
 			elif moret.strip() == "22": fpcompiler()
 			elif moret.strip() == "23": numpy()
 			elif moret.strip() == "24": clickbot()
+			elif moret.strip() == "25": btc2idr()
 			elif moret.strip() == "00" or moret.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():

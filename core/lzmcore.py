@@ -1515,6 +1515,37 @@ def phoneinfoga():
 	print('###### Done')
 	backtomenu_option()
 
+def btc2idr():
+	print('\n###### Installing BTC-to-IDR-checker')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python git -y')
+	os.system('git clone https://github.com/guruku/BTC-to-IDR-checker')
+	os.system('mv BTC-to-IDR-checker {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def sitebroker():
+	print('\n###### Installing SiteBroker')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python php git -y')
+	os.system('git clone https://github.com/Anon-Exploiter/SiteBroker')
+	os.chdir("SiteBroker")
+	os.system('python -m pip install -r requirements.txt')
+	os.system('python -m pip install html5lib')
+	os.chdir("..")
+	os.system('mv SiteBroker {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def dostattack():
+	print('\n###### Installing dost-attack')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git -y')
+	os.system('git clone https://github.com/verluchie/dost-attack')
+	os.system('mv dost-attack {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
 ### termux games
 def street_car():
 	print('\n###### Installing street-car')
