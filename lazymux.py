@@ -369,6 +369,10 @@ def main():
 		print("    [03] apktool: A utility that can be used for reverse engineering Android applications")
 		print("    [04] uncompyle6: Python cross-version byte-code decompiler")
 		print("    [05] ddcrypt: DroidScript APK Deobfuscator")
+		print("    [06] CFR: Yet another java decompiler")
+		print("    [07] UPX: Ultimate Packer for eXecutables")
+		print("    [08] pyinstxtractor: PyInstaller Extractor")
+		print("    [09] innoextract: A tool to unpack installers created by Inno Setup")
 		print("\n    [00] Back to main menu\n")
 		reversi = input("lzmx > set_install ")
 		if reversi == "@":
@@ -385,6 +389,10 @@ def main():
 			elif revex.strip() == "03" or revex.strip() == "3": apktool()
 			elif revex.strip() == "04" or revex.strip() == "4": uncompyle()
 			elif revex.strip() == "05" or revex.strip() == "5": ddcrypt()
+			elif revex.strip() == "06" or revex.strip() == "6": cfr()
+			elif revex.strip() == "07" or revex.strip() == "7": upx()
+			elif revex.strip() == "08" or revex.strip() == "8": pyinstxtractor()
+			elif revex.strip() == "09" or revex.strip() == "9": innoextract()
 			elif revex.strip() == "00" or revex.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():

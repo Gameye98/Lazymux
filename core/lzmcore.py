@@ -4,6 +4,7 @@ import os, sys, time
 import urllib.request
 from subprocess import check_output as inputstream
 
+current_dir = os.getcwd()
 lazymux_banner = """
  _
 ( )
@@ -1544,6 +1545,62 @@ def dostattack():
 	os.system('git clone https://github.com/verluchie/dost-attack')
 	os.system('mv dost-attack {}'.format(homeDir))
 	print('###### Done')
+	backtomenu_option()
+
+def cfr():
+	print('\n###### Installing CFR')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install dx wget -y')
+	os.system('mkdir $PREFIX/bin/lib')
+	os.system('wget https://www.benf.org/other/cfr/cfr-0.151.jar -O $PREFIX/bin/lib/cfr-0.151.jar')
+	os.chdir(prefix+"/bin/lib")
+	os.system('dx --dex --output=cfr-0.151.dex cfr-0.151.jar')
+	with open(prefix+"/bin/cfr","w") as f:
+		f.write("#!/usr/bin/bash\n")
+		f.write("dalvikvm -cp $PREFIX/bin/lib/cfr-0.151.dex org/benf/cfr/reader/Main \"$@\"")
+	os.system('chmod 755 $PREFIX/bin/cfr')
+	os.system('chmod 755 $PREFIX/bin/lib/cfr-0.151.dex')
+	os.chdir(current_dir)
+	print('###### Done')
+	print("###### Type 'cfr' to start.")
+	backtomenu_option()
+
+def upx():
+	print('\n###### Installing UPX')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install wget tar -y')
+	os.system('wget https://github.com/upx/upx/releases/download/v3.96/upx-3.96-arm64_linux.tar.xz')
+	os.system('tar xf upx-3.96-arm64_linux.tar.xz')
+	os.system('mv upx-3.96-arm64_linux/upx $PREFIX/bin/upx')
+	os.system('rm -rf upx-3.96-arm64_linux upx-3.96-arm64_linux.tar.xz')
+	os.system('chmod 755 $PREFIX/bin/upx')
+	print('###### Done')
+	print("###### Type 'upx' to start.")
+	backtomenu_option()
+
+def pyinstxtractor():
+	print('\n###### Installing pyinstxtractor')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('git clone https://github.com/extremecoders-re/pyinstxtractor')
+	os.system('mv pyinstxtractor {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def innoextract():
+	print('\n###### Installing innoextract')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git clang -y')
+	os.system('git clone https://github.com/dscharrer/innoextract')
+	os.chdir("innoextract")
+	os.system('mkdir -p build')
+	os.chdir("build")
+	os.system('cmake .. && make')
+	os.system('mv innoextract $PREFIX/bin && chmod 755 $PREFIX/bin/innoextract')
+	os.chdir(current_dir)
+	os.system('rm -rf innoextract')
+	print('###### Done')
+	print("###### Type 'innoextract' to start.")
 	backtomenu_option()
 
 ### termux games
