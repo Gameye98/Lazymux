@@ -23,6 +23,8 @@ def main():
 	print("   [14] Termux Utility")
 	print("   [15] Shell Function [.bashrc]")
 	print("   [16] Install CLI Games")
+	print("   [17] Malware Analysis")
+	print("   [18] Compiler/Interpreter")
 	print("\n   [00] Exit the Lazymux\n")
 	lazymux = input("lzmx > set_install ")
 
