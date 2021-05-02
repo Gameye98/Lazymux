@@ -1603,6 +1603,146 @@ def innoextract():
 	print("###### Type 'innoextract' to start.")
 	backtomenu_option()
 
+def lynis():
+	print('\n###### Installing Lynis')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git -y')
+	os.system('git clone https://github.com/CISOfy/lynis')
+	os.system('mv lynis {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def chkrootkit():
+	print('\n###### Installing Chkrootkit')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install clang git -y')
+	os.system('git clone https://github.com/Magentron/chkrootkit')
+	os.system('mv chkrootkit {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def clamav():
+	print('\n###### Installing ClamAV')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install clamav -y')
+	os.system('freshclam')
+	print('###### Done')
+	print("###### Type 'clamscan' to start.")
+	backtomenu_option()
+
+def yara():
+	print('\n###### Installing Yara')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install yara -y')
+	print('###### Done')
+	print("###### Type 'yara' to start.")
+	backtomenu_option()
+
+def virustotal():
+	print('\n###### Installing VirusTotal-CLI')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install virustotal-cli -y')
+	print('###### Done')
+	print("###### Type 'vt' to start.")
+	backtomenu_option()
+
+### Compiler/Interpreter
+def python2():
+	print('\n###### Installing Python2')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python2 -y')
+	print('###### Done')
+	print("###### Type 'python2' to start.")
+	backtomenu_option()
+
+def ecj():
+	print('\n###### Installing ecj')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install ecj -y')
+	print('###### Done')
+	print("###### Type 'ecj' to start.")
+	backtomenu_option()
+
+def golang():
+	print('\n###### Installing Golang')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install golang -y')
+	print('###### Done')
+	print("###### Type 'go' to start.")
+	backtomenu_option()
+
+def ldc():
+	print('\n###### Installing ldc')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install ldc -y')
+	print('###### Done')
+	print("###### Type 'ldc2' to start.")
+	backtomenu_option()
+
+def nim():
+	print('\n###### Installing Nim')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install nim -y')
+	print('###### Done')
+	print("###### Type 'nim' to start.")
+	backtomenu_option()
+
+def shc():
+	print('\n###### Installing shc')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install shc -y')
+	print('###### Done')
+	print("###### Type 'shc' to start.")
+	backtomenu_option()
+
+def tcc():
+	print('\n###### Installing TCC')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install tcc -y')
+	print('###### Done')
+	print("###### Type 'tcc' to start.")
+	backtomenu_option()
+
+def php():
+	print('\n###### Installing PHP')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install php -y')
+	print('###### Done')
+	print("###### Type 'php' to start.")
+	backtomenu_option()
+
+def ruby():
+	print('\n###### Installing Ruby')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install ruby -y')
+	print('###### Done')
+	print("###### Type 'ruby' to start.")
+	backtomenu_option()
+
+def perl():
+	print('\n###### Installing Perl')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install perl -y')
+	print('###### Done')
+	print("###### Type 'perl' to start.")
+	backtomenu_option()
+
+def vlang():
+	print('\n###### Installing Vlang')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install vlang -y')
+	print('###### Done')
+	print("###### Type 'vlang' to start.")
+	backtomenu_option()
+
+def blogc():
+	print('\n###### Installing BlogC')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install blogc -y')
+	print('###### Done')
+	print("###### Type 'blogc' to start.")
+	backtomenu_option()
+
 ### termux games
 def street_car():
 	print('\n###### Installing street-car')
@@ -1632,6 +1772,7 @@ def speed_typing():
 	backtomenu_option()
 
 def nsnake():
+	print('\n###### Installing nsnake')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install nsnake -y')
 	print('###### Done')
@@ -1641,7 +1782,7 @@ def nsnake():
 def nudoku():
 	print('\n###### Installing Sudoku')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apg install nudoku -y')
+	os.system('apt install nudoku -y')
 	print('###### Done')
 	print("###### Type 'nudoku' to start.")
 	backtomenu_option()
@@ -1649,7 +1790,7 @@ def nudoku():
 def moon_buggy():
 	print('\n###### Installing Moon-Buggy')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apg install moon-buggy -y')
+	os.system('apt install moon-buggy -y')
 	print('###### Done')
 	print("###### Type 'moon-buggy' to start.")
 	backtomenu_option()
@@ -1657,7 +1798,7 @@ def moon_buggy():
 def ttysolitaire():
 	print('\n###### Installing tty-solitaire')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apg install tty-solitaire -y')
+	os.system('apt install tty-solitaire -y')
 	print('###### Done')
 	print("###### Type 'ttysolitaire' to start.")
 	backtomenu_option()
@@ -1665,7 +1806,7 @@ def ttysolitaire():
 def pacman4console():
 	print('\n###### Installing Pacman4Console')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apg install pacman4console -y')
+	os.system('apt install pacman4console -y')
 	print('###### Done')
 	print("###### Type 'pacman' to start.")
 	backtomenu_option()

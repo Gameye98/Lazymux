@@ -73,7 +73,7 @@ def main():
 		infogathering = input("lzmx > set_install ")
 		if infogathering == "@":
 			infogathering = ""
-			for x in range(1,38):
+			for x in range(1,40):
 				infogathering += f"{x} "
 		if len(infogathering.split()) > 1:
 			writeStatus(1)
@@ -379,7 +379,7 @@ def main():
 		reversi = input("lzmx > set_install ")
 		if reversi == "@":
 			reversi = ""
-			for x in range(1,6):
+			for x in range(1,10):
 				reversi += f"{x} "
 		if len(reversi.split()) > 1:
 			writeStatus(1)
@@ -608,17 +608,14 @@ def main():
 		print("    [17] RShell: Reverse shell for single listening")
 		print("    [18] TermPyter: Fix all error Jupyter installation on termux")
 		print("    [19] F4K3: Fake User Data Generator")
-		print("    [20] shc: Shell script compiler")
-		print("    [21] Octave: Scientific Programming Language")
-		print("    [22] fp-compiler: Free Pascal is a 32, 64 and 16 bit professional Pascal compiler")
-		print("    [23] Numpy: The fundamental package for scientific computing with Python")
-		print("    [24] ClickBot: Earn money using telegram bot")
-		print("    [25] BTC-to-IDR-checker: Check the exchange rate virtual money currency to Indonesia Rupiah from Bitcoin.co.id API")
+		print("    [20] BTC-to-IDR-checker: Check the exchange rate virtual money currency to Indonesia Rupiah from Bitcoin.co.id API")
+		print("    [21] ClickBot: Earn money using telegram bot")
+		print("    [22] Numpy: The fundamental package for scientific computing with Python")
 		print("\n    [00] Back to main menu\n")
 		moretool = input("lzmx > set_install ")
 		if moretool == "@":
 			moretool = ""
-			for x in range(1,24):
+			for x in range(1,23):
 				moretool += f"{x} "
 		if len(moretool.split()) > 1:
 			writeStatus(1)
@@ -644,12 +641,9 @@ def main():
 			elif moret.strip() == "17": rshell()
 			elif moret.strip() == "18": termpyter()
 			elif moret.strip() == "19": f4k3()
-			elif moret.strip() == "20": shc()
-			elif moret.strip() == "21": octave()
-			elif moret.strip() == "22": fpcompiler()
-			elif moret.strip() == "23": numpy()
-			elif moret.strip() == "24": clickbot()
-			elif moret.strip() == "25": btc2idr()
+			elif moret.strip() == "20": btc2idr()
+			elif moret.strip() == "21": clickbot()
+			elif moret.strip() == "22": numpy()
 			elif moret.strip() == "00" or moret.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -703,7 +697,7 @@ def main():
 		cligam = input("lzmx > set_install ")
 		if cligam == "@":
 			cligam = ""
-			for x in range(1,23):
+			for x in range(1,9):
 				cligam += f"{x} "
 		if len(cligam.split()) > 1:
 			writeStatus(1)
@@ -723,6 +717,81 @@ def main():
 		if readStatus():
 			writeStatus(0)
 	
+	# 17 - Malware Analysis
+	elif lazymux.strip() == "17":
+		print("\n    [01] Lynis: Security Auditing and Rootkit Scanner")
+		print("    [02] Chkrootkit: A Linux Rootkit Scanners")
+		print("    [03] ClamAV: Antivirus Software Toolkit")
+		print("    [04] Yara: Tool aimed at helping malware researchers to identify and classify malware samples")
+		print("    [05] VirusTotal-CLI: Command line interface for VirusTotal")
+		print("\n    [00] Back to main menu\n")
+		malsys = input("lzmx > set_install ")
+		if malsys == "@":
+			malsys = ""
+			for x in range(1,6):
+				malsys += f"{x} "
+		if len(malsys.split()) > 1:
+			writeStatus(1)
+		else:
+			writeStatus(0)
+		for malx in malsys.split():
+			if malx.strip() == "01" or malx.strip() == "1": lynis()
+			elif malx.strip() == "02" or malx.strip() == "2": chkrootkit()
+			elif malx.strip() == "03" or malx.strip() == "3": clamav()
+			elif malx.strip() == "04" or malx.strip() == "4": yara()
+			elif malx.strip() == "05" or malx.strip() == "5": virustotal()
+			elif malx.strip() == "00" or malx.strip() == "0": restart_program()
+			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
+		if readStatus():
+			writeStatus(0)
+	
+	# 18 - Compiler/Interpreter
+	elif lazymux.strip() == "18":
+		print("\n    [01] Python2: Python 2 programming language intended to enable clear programs")
+		print("    [02] ecj: Eclipse Compiler for Java")
+		print("    [03] Golang: Go programming language compiler")
+		print("    [04] ldc: D programming language compiler, built with LLVM")
+		print("    [05] Nim: Nim programming language compiler")
+		print("    [06] shc: Shell script compiler")
+		print("    [07] TCC: Tiny C Compiler")
+		print("    [08] PHP: Server-side, HTML-embedded scripting language")
+		print("    [09] Ruby: Dynamic programming language with a focus on simplicity and productivity")
+		print("    [10] Perl: Capable, feature-rich programming language")
+		print("    [11] Vlang: Simple, fast, safe, compiled language for developing maintainable software")
+		print("    [12] BeanShell: Small, free, embeddable, source level Java interpreter with object based scripting language features written in Java")
+		print("    [13] fp-compiler: Free Pascal is a 32, 64 and 16 bit professional Pascal compiler")
+		print("    [14] Octave: Scientific Programming Language")
+		print("    [15] BlogC: A blog compiler")
+		print("\n    [00] Back to main menu\n")
+		compter = input("lzmx > set_install ")
+		if compter == "@":
+			compter = ""
+			for x in range(1,16):
+				compter += f"{x} "
+		if len(compter.split()) > 1:
+			writeStatus(1)
+		else:
+			writeStatus(0)
+		for compt in compter.split():
+			if compt.strip() == "01" or compt.strip() == "1": python2()
+			elif compt.strip() == "02" or compt.strip() == "2": ecj()
+			elif compt.strip() == "03" or compt.strip() == "3": golang()
+			elif compt.strip() == "04" or compt.strip() == "4": ldc()
+			elif compt.strip() == "05" or compt.strip() == "5": nim()
+			elif compt.strip() == "06" or compt.strip() == "6": shc()
+			elif compt.strip() == "07" or compt.strip() == "7": tcc()
+			elif compt.strip() == "08" or compt.strip() == "8": php()
+			elif compt.strip() == "09" or compt.strip() == "9": ruby()
+			elif compt.strip() == "10": perl()
+			elif compt.strip() == "11": vlang()
+			elif compt.strip() == "12": beanshell()
+			elif compt.strip() == "13": fpcompiler()
+			elif compt.strip() == "14": octave()
+			elif compt.strip() == "15": blogc()
+			elif compt.strip() == "00" or compt.strip() == "0": restart_program()
+			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
+		if readStatus():
+			writeStatus(0)
 	elif lazymux.strip() == "00":
 		sys.exit()
 	
