@@ -1458,10 +1458,12 @@ def numpy():
 def userrecon():
 	print('\n###### Installing userrecon')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install git curl -y')
-	os.system('git clone https://github.com/thelinuxchoice/userrecon')
-	os.system('mv userrecon {}'.format(homeDir))
+	os.system('apt install wget dpkg curl -y')
+	os.system('wget https://raw.githubusercontent.com/Gameye98/Gameye98.github.io/master/package/userrecon_1.0_all.deb')
+	os.system('dpkg -i userrecon_1.0_all.deb')
+	os.system('rm userrecon_1.0_all.deb')
 	print('###### Done')
+	print("###### Type 'userrecon' to start.")
 	backtomenu_option()
 
 def mrsip():
