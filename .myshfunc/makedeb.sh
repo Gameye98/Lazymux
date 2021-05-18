@@ -65,28 +65,20 @@ file_prerm=$(cat <<DOCUMENT
 DOCUMENT
 )
 printf "${file_control}\n" > ${HOME}/makedeb/${project_folder}/DEBIAN/control
-read -p "[makedeb-${package_name}] add DEBIAN/postinst? [Y] " postinst_add
-read -p "[makedeb-${package_name}] add DEBIAN/prerm? [Y] " prerm_add
+read -p "[makedeb-${package_name}] add DEBIAN/${package_name}.postinst? [Y] " postinst_add
+read -p "[makedeb-${package_name}] add DEBIAN/${package_name}.prerm? [Y] " prerm_add
 if [[ "${postinst_add}" == "Y" || "${postinst_add}" == "y" ]]; then
-	printf "${file_postinst}\n" > ${HOME}/makedeb/${project_folder}/DEBIAN/postinst
-	nvim ${HOME}/makedeb/${project_folder}/DEBIAN/postinst
+	printf "${file_postinst}\n" > ${HOME}/makedeb/${project_folder}/DEBIAN/${package_name}.postinst
+	nvim ${HOME}/makedeb/${project_folder}/DEBIAN/${package_name}.postinst
 fi
 if [[ "${prerm_add}" == "Y" || "${prerm_add}" == "y" ]]; then
-	printf "${file_prerm}\n" > ${HOME}/makedeb/${project_folder}/DEBIAN/prerm
-	nvim ${HOME}/makedeb/${project_folder}/DEBIAN/prerm
+	printf "${file_prerm}\n" > ${HOME}/makedeb/${project_folder}/DEBIAN/${package_name}.prerm
+	nvim ${HOME}/makedeb/${project_folder}/DEBIAN/${package_name}.prerm
 fi
 echo -e "[makedeb-${package_name}] ready to enter editor mode"
 nvim ${HOME}/makedeb/${project_folder}/DEBIAN/control
 printf "[makedeb-${package_name}] building deb package... "
-chmod 755 ${HOME}/makedeb/${project_folder}/*
-chmod 755 ${HOME}/makedeb/${project_folder}/*/*
-chmod 755 ${HOME}/makedeb/${project_folder}/*/*/*
-chmod 755 ${HOME}/makedeb/${project_folder}/*/*/*/*
-chmod 755 ${HOME}/makedeb/${project_folder}/*/*/*/*/*
-chmod 755 ${HOME}/makedeb/${project_folder}/*/*/*/*/*/*
-chmod 755 ${HOME}/makedeb/${project_folder}/*/*/*/*/*/*/*
-chmod 755 ${HOME}/makedeb/${project_folder}/DEBIAN
-chmod 755 ${HOME}/makedeb/${project_folder}/DEBIAN/*
+chmod -R 755 ${HOME}/makedeb/${project_folder}
 cd ${HOME}/makedeb && dpkg-deb --build ${project_folder} > /dev/null
 echo -e "done"
 echo -e "[makedeb] output: ${HOME}/makedeb/${project_folder}.deb"
