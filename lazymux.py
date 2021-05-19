@@ -25,6 +25,7 @@ def main():
 	print("   [16] Install CLI Games")
 	print("   [17] Malware Analysis")
 	print("   [18] Compiler/Interpreter")
+	print("   [19] Social Engineering Tools")
 	print("\n   [00] Exit the Lazymux\n")
 	lazymux = input("lzmx > set_install ")
 
@@ -39,7 +40,7 @@ def main():
 		print("    [07] AndroZenmap")
 		print("    [08] sqlmate: A friend of SQLmap which will do what you always expected from SQLmap")
 		print("    [09] AstraNmap: Security scanner used to find hosts and services on a computer network")
-		print("    [10] weeman: HTTP server for phishing in python")
+		print("    [10] MapEye: Accurate GPS Location Tracker (Android, IOS, Windows phones)")
 		print("    [11] Easymap: Nmap Shortcut")
 		print("    [12] BlackBox: A Penetration Testing Framework")
 		print("    [13] XD3v: Powerful tool that lets you know all the essential details about your phone")
@@ -69,11 +70,13 @@ def main():
 		print("    [37] userrecon: Find usernames across over 75 social networks")
 		print("    [38] PhoneInfoga: One of the most advanced tools to scan phone numbers using only free resources")
 		print("    [39] SiteBroker: A cross-platform python based utility for information gathering and penetration testing automation")
+		print("    [40] maigret: Collect a dossier on a person by username from thousands of sites")
+		print("    [41] GatheTOOL: Information Gathering - API hackertarget.com")
 		print("\n    [00] Back to main menu\n")
 		infogathering = input("lzmx > set_install ")
 		if infogathering == "@":
 			infogathering = ""
-			for x in range(1,40):
+			for x in range(1,42):
 				infogathering += f"{x} "
 		if len(infogathering.split()) > 1:
 			writeStatus(1)
@@ -89,7 +92,7 @@ def main():
 			elif infox.strip() == "07" or infox.strip() == "7": androZenmap()
 			elif infox.strip() == "08" or infox.strip() == "8": sqlmate()
 			elif infox.strip() == "09" or infox.strip() == "9": astraNmap()
-			elif infox.strip() == "10": weeman()
+			elif infox.strip() == "10": mapeye()
 			elif infox.strip() == "11": easyMap()
 			elif infox.strip() == "12": blackbox()
 			elif infox.strip() == "13": xd3v()
@@ -119,6 +122,8 @@ def main():
 			elif infox.strip() == "37": userrecon()
 			elif infox.strip() == "38": phoneinfoga()
 			elif infox.strip() == "39": sitebroker()
+			elif infox.strip() == "40": maigret()
+			elif infox.strip() == "41": gathetool()
 			elif infox.strip() == "00" or infox.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -149,11 +154,12 @@ def main():
 		print("    [21] BlackBox: A Penetration Testing Framework")
 		print("    [22] XAttacker: Website Vulnerability Scanner & Auto Exploiter")
 		print("    [23] OWScan: OVID Web Scanner")
+		print("    [24] XPL-SEARCH: Search exploits in multiple exploit databases")
 		print("\n    [00] Back to main menu\n")
 		vulnsys = input("lzmx > set_install ")
 		if vulnsys == "@":
 			vulnsys = ""
-			for x in range(1,24):
+			for x in range(1,25):
 				vulnsys += f"{x} "
 		if len(vulnsys.split()) > 1:
 			writeStatus(1)
@@ -183,6 +189,7 @@ def main():
 			elif vulnsys.strip() == "21": blackbox()
 			elif vulnsys.strip() == "22": xattacker()
 			elif vulnsys.strip() == "23": owscan()
+			elif vulnsys.strip() == "24": xplsearch()
 			elif vulnsys.strip() == "00" or vulnsys.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -212,11 +219,12 @@ def main():
 		print("    [20] FaDe: Fake deface with kindeditor, fckeditor and webdav")
 		print("    [21] AUXILE: Auxile Framework")
 		print("    [22] xss-payload-list: Cross Site Scripting ( XSS ) Vulnerability Payload List")
+		print("    [23] Xadmin: Admin Panel Finder")
 		print("\n    [00] Back to main menu\n")
 		webhack = input("lzmx > set_install ")
 		if webhack == "@":
 			webhack = ""
-			for x in range(1,23):
+			for x in range(1,24):
 				webhack += f"{x} "
 		if len(webhack.split()) > 1:
 			writeStatus(1)
@@ -245,6 +253,7 @@ def main():
 			elif webhx.strip() == "20": fade()
 			elif webhx.strip() == "21": auxile()
 			elif webhx.strip() == "22": xss_payload_list()
+			elif webhx.strip() == "23": xadmin()
 			elif webhx.strip() == "00" or webhx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -301,11 +310,12 @@ def main():
 		print("    [19] Crunch: Highly customizable wordlist generator")
 		print("    [20] Hashcat: World's fastest and most advanced password recovery utility")
 		print("    [21] ASU: Facebook Hacking ToolKit")
+		print("    [22] Credmap: An open source tool that was created to bring awareness to the dangers of credential reuse")
 		print("\n    [00] Back to main menu\n")
 		passtak = input("lzmx > set_install ")
 		if passtak == "@":
 			passtak = ""
-			for x in range(1,22):
+			for x in range(1,23):
 				passtak += f"{x} "
 		if len(passtak.split()) > 1:
 			writeStatus(1)
@@ -333,6 +343,7 @@ def main():
 			elif passx.strip() == "19": crunch()
 			elif passx.strip() == "20": hashcat()
 			elif passx.strip() == "21": asu()
+			elif passx.strip() == "22": credmap()
 			elif passx.strip() == "00" or passx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -438,19 +449,14 @@ def main():
 	elif lazymux.strip() == "9" or lazymux.strip() == "09":
 		print("\n    [01] KnockMail: Verify if Email Exists")
 		print("    [02] tcpdump: A powerful command-line packet analyzer")
-		print("    [03] Hac")
+		print("    [03] Ettercap: Comprehensive suite for MITM attacks, can sniff live connections, do content filtering on the fly and much more")
 		print("    [04] hping3: hping is a command-line oriented TCP/IP packet assembler/analyzer")
-		print("    [05] SocialFish: Educational Phishing Tool & Information Collector")
-		print("    [06] santet-online: Social Engineering Tool")
-		print("    [07] SpazSMS: Send unsolicited messages repeatedly on the same phone number")
-		print("    [08] LiteOTP: Multi Spam SMS OTP")
-		print("    [09] tshark: Network protocol analyzer and sniffer")
-		print("    [10] Ettercap: Comprehensive suite for MITM attacks, can sniff live connections, do content filtering on the fly and much more")
+		print("    [05] tshark: Network protocol analyzer and sniffer")
 		print("\n    [00] Back to main menu\n")
 		sspoof = input("lzmx > set_install ")
 		if sspoof == "@":
 			sspoof = ""
-			for x in range(1,11):
+			for x in range(1,6):
 				sspoof += f"{x} "
 		if len(sspoof.split()) > 1:
 			writeStatus(1)
@@ -459,14 +465,9 @@ def main():
 		for sspx in sspoof.split():
 			if sspx.strip() == "01" or sspx.strip() == "1": knockmail()
 			elif sspx.strip() == "02" or sspx.strip() == "2": tcpdump()
-			elif sspx.strip() == "03" or sspx.strip() == "3": hac()
+			elif sspx.strip() == "03" or sspx.strip() == "3": ettercap()
 			elif sspx.strip() == "04" or sspx.strip() == "4": hping3()
-			elif sspx.strip() == "05" or sspx.strip() == "5": socfish()
-			elif sspx.strip() == "06" or sspx.strip() == "6": sanlen()
-			elif sspx.strip() == "07" or sspx.strip() == "7": spazsms()
-			elif sspx.strip() == "08" or sspx.strip() == "8": liteotp()
-			elif sspx.strip() == "09" or sspx.strip() == "9": tshark()
-			elif sspx.strip() == "10": ettercap()
+			elif sspx.strip() == "05" or sspx.strip() == "5": tshark()
 			elif sspx.strip() == "00" or sspx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -539,7 +540,7 @@ def main():
 		stresstest = input("lzmx > set_install ")
 		if stresstest == "@":
 			stresstest = ""
-			for x in range(1,9):
+			for x in range(1,10):
 				stresstest += f"{x} "
 		if len(stresstest.split()) > 1:
 			writeStatus(1)
@@ -607,15 +608,14 @@ def main():
 		print("    [16] heroku: CLI to interact with Heroku")
 		print("    [17] RShell: Reverse shell for single listening")
 		print("    [18] TermPyter: Fix all error Jupyter installation on termux")
-		print("    [19] F4K3: Fake User Data Generator")
+		print("    [19] Numpy: The fundamental package for scientific computing with Python")
 		print("    [20] BTC-to-IDR-checker: Check the exchange rate virtual money currency to Indonesia Rupiah from Bitcoin.co.id API")
 		print("    [21] ClickBot: Earn money using telegram bot")
-		print("    [22] Numpy: The fundamental package for scientific computing with Python")
 		print("\n    [00] Back to main menu\n")
 		moretool = input("lzmx > set_install ")
 		if moretool == "@":
 			moretool = ""
-			for x in range(1,23):
+			for x in range(1,22):
 				moretool += f"{x} "
 		if len(moretool.split()) > 1:
 			writeStatus(1)
@@ -640,10 +640,9 @@ def main():
 			elif moret.strip() == "16": heroku()
 			elif moret.strip() == "17": rshell()
 			elif moret.strip() == "18": termpyter()
-			elif moret.strip() == "19": f4k3()
+			elif moret.strip() == "19": numpy()
 			elif moret.strip() == "20": btc2idr()
 			elif moret.strip() == "21": clickbot()
-			elif moret.strip() == "22": numpy()
 			elif moret.strip() == "00" or moret.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -724,11 +723,12 @@ def main():
 		print("    [03] ClamAV: Antivirus Software Toolkit")
 		print("    [04] Yara: Tool aimed at helping malware researchers to identify and classify malware samples")
 		print("    [05] VirusTotal-CLI: Command line interface for VirusTotal")
+		print("    [06] avpass: Tool for leaking and bypassing Android malware detection system")
 		print("\n    [00] Back to main menu\n")
 		malsys = input("lzmx > set_install ")
 		if malsys == "@":
 			malsys = ""
-			for x in range(1,6):
+			for x in range(1,7):
 				malsys += f"{x} "
 		if len(malsys.split()) > 1:
 			writeStatus(1)
@@ -740,6 +740,7 @@ def main():
 			elif malx.strip() == "03" or malx.strip() == "3": clamav()
 			elif malx.strip() == "04" or malx.strip() == "4": yara()
 			elif malx.strip() == "05" or malx.strip() == "5": virustotal()
+			elif malx.strip() == "06" or malx.strip() == "6": avpass()
 			elif malx.strip() == "00" or malx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -789,6 +790,38 @@ def main():
 			elif compt.strip() == "14": octave()
 			elif compt.strip() == "15": blogc()
 			elif compt.strip() == "00" or compt.strip() == "0": restart_program()
+			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
+		if readStatus():
+			writeStatus(0)
+	
+	# 19 - Social Engineering Tools
+	elif lazymux.strip() == "19":
+		print("\n    [01] weeman: HTTP server for phishing in python")
+		print("    [02] SocialFish: Educational Phishing Tool & Information Collector")
+		print("    [03] santet-online: Social Engineering Tool")
+		print("    [04] SpazSMS: Send unsolicited messages repeatedly on the same phone number")
+		print("    [05] LiteOTP: Multi Spam SMS OTP")
+		print("    [06] F4K3: Fake User Data Generator")
+		print("    [07] Hac")
+		print("\n    [00] Back to main menu\n")
+		soceng = input("lzmx > set_install ")
+		if soceng == "@":
+			soceng = ""
+			for x in range(1,8):
+				soceng += f"{x} "
+		if len(soceng.split()) > 1:
+			writeStatus(1)
+		else:
+			writeStatus(0)
+		for socng in soceng.split():
+			if socng.strip() == "01" or socng.strip() == "1": weeman()
+			elif socng.strip() == "02" or socng.strip() == "2": socfish()
+			elif socng.strip() == "03" or socng.strip() == "3": sanlen()
+			elif socng.strip() == "04" or socng.strip() == "4": spazsms()
+			elif socng.strip() == "05" or socng.strip() == "5": liteotp()
+			elif socng.strip() == "06" or socng.strip() == "6": f4k3()
+			elif socng.strip() == "07" or socng.strip() == "7": hac()
+			elif socng.strip() == "00" or socng.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)

@@ -1648,6 +1648,72 @@ def virustotal():
 	print("###### Type 'vt' to start.")
 	backtomenu_option()
 
+def maigret():
+	print('\n###### Installing maigret')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python -y')
+	os.system('python -m pip install maigret')
+	print('###### Done')
+	print("###### Usage: maigret <username>")
+	print("###### Usage: maigret -h")
+	backtomenu_option()
+
+def xplsearch():
+	print('\n###### Installing XPL-SEARCH')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git php -y')
+	os.system('git clone https://github.com/r00tmars/XPL-SEARCH')
+	os.system('mv XPL-SEARCH {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def xadmin():
+	print('\n###### Installing Xadmin')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git perl -y')
+	os.system('git clone https://github.com/Manisso/Xadmin')
+	os.system('mv Xadmin {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def credmap():
+	print('\n###### Installing Credmap')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/lightos/credmap')
+	os.system('mv credmap {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def mapeye():
+	print('\n###### Installing MapEye')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git php python -y')
+	os.system('python -m pip install requests')
+	os.system('git clone https://github.com/bhikandeshmukh/MapEye')
+	os.system('mv MapEye {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def gathetool():
+	print('\n###### Installing GatheTOOL')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git php python -y')
+	os.system('python -m pip install requests')
+	os.system('git clone https://github.com/AngelSecurityTeam/GatheTOOL')
+	os.system('mv GatheTOOL {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def avpass():
+	print('\n###### Installing avpass')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 python -y')
+	os.system('git clone https://github.com/sslab-gatech/avpass')
+	os.system('mv avpass {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
 ### Compiler/Interpreter
 def python2():
 	print('\n###### Installing Python2')
