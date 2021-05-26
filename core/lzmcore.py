@@ -83,6 +83,14 @@ def backtomenu_option():
 def banner():
 	print(lazymux_banner)
 
+### Repo Installer
+def pointless_repo():
+	urllib.request.urlretrieve('https://its-pointless.github.io/setup-pointless-repo.sh','setup-pointless-repo.sh')
+	os.system('bash setup-pointless-repo.sh')
+	os.remove('setup-pointless-repo.sh')
+	os.system('apt update -y && apt upgrade -y')
+###
+
 def nmap():
 	print('\n###### Installing Nmap')
 	os.system('apt update -y && apt upgrade -y')
@@ -1420,10 +1428,7 @@ def octave():
 	print('\n###### Installing Octave')
 	os.system('apt update -y && apt upgrade -y')
 	if not repo_check("pointless.list"):
-		urllib.request.urlretrieve('https://its-pointless.github.io/setup-pointless-repo.sh','setup-pointless-repo.sh')
-		os.system('bash setup-pointless-repo.sh')
-		os.remove('setup-pointless-repo.sh')
-		os.system('apt update -y && apt upgrade -y')
+		pointless_repo()
 	os.system('apt install octave -y')
 	print('###### Done')
 	print("###### Type 'octave' to start.")
@@ -1433,10 +1438,7 @@ def fpcompiler():
 	print('\n###### Installing fp-compiler')
 	os.system('apt update -y && apt upgrade -y')
 	if not repo_check("pointless.list"):
-		urllib.request.urlretrieve('https://its-pointless.github.io/setup-pointless-repo.sh','setup-pointless-repo.sh')
-		os.system('bash setup-pointless-repo.sh')
-		os.remove('setup-pointless-repo.sh')
-		os.system('apt update -y && apt upgrade -y')
+		pointless_repo()
 	os.system('apt install fp-compiler -y')
 	print('###### Done')
 	print("###### Type 'fpc' to start.")
@@ -1446,10 +1448,7 @@ def numpy():
 	print('\n###### Installing numpy')
 	os.system('apt update -y && apt upgrade -y')
 	if not repo_check("pointless.list"):
-		urllib.request.urlretrieve('https://its-pointless.github.io/setup-pointless-repo.sh','setup-pointless-repo.sh')
-		os.system('bash setup-pointless-repo.sh')
-		os.remove('setup-pointless-repo.sh')
-		os.system('apt update -y && apt upgrade -y')
+		pointless_repo()
 	os.system('apt install numpy -y')
 	print('###### Done')
 	print("###### Type 'pkg files numpy | grep usr/bin' to check executable file related to numpy package.")
@@ -1712,6 +1711,21 @@ def avpass():
 	os.system('git clone https://github.com/sslab-gatech/avpass')
 	os.system('mv avpass {}'.format(homeDir))
 	print('###### Done')
+	backtomenu_option()
+
+def binwalk():
+	print('\n###### Installing binwalk')
+	os.system('apt update -y && apt upgrade -y')
+	if not repo_check("pointless.list"):
+		pointless_repo()
+	os.system('apt install gzip bzip2 tar arj lhasa p7zip cabextract sleuthkit lzop mtd-utils cmake build-essential make numpy scipy python git -y')
+	os.system('git clone https://github.com/ReFirmLabs/binwalk')
+	os.chdir("binwalk")
+	os.system('python setup.py install')
+	os.chdir("..")
+	os.system('mv binwalk {}'.format(homeDir))
+	print('###### Done')
+	print("###### Type 'binwalk' to start.")
 	backtomenu_option()
 
 ### Compiler/Interpreter
