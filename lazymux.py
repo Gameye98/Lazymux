@@ -72,11 +72,13 @@ def main():
 		print("    [39] SiteBroker: A cross-platform python based utility for information gathering and penetration testing automation")
 		print("    [40] maigret: Collect a dossier on a person by username from thousands of sites")
 		print("    [41] GatheTOOL: Information Gathering - API hackertarget.com")
+		print("    [42] ADB-ToolKit")
+		print("    [43] TekDefense-Automater: Automater - IP URL and MD5 OSINT Analysis")
 		print("\n    [00] Back to main menu\n")
 		infogathering = input("lzmx > set_install ")
 		if infogathering == "@":
 			infogathering = ""
-			for x in range(1,42):
+			for x in range(1,201):
 				infogathering += f"{x} "
 		if len(infogathering.split()) > 1:
 			writeStatus(1)
@@ -124,6 +126,8 @@ def main():
 			elif infox.strip() == "39": sitebroker()
 			elif infox.strip() == "40": maigret()
 			elif infox.strip() == "41": gathetool()
+			elif infox.strip() == "42": adbtk()
+			elif infox.strip() == "43": tekdefense()
 			elif infox.strip() == "00" or infox.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -155,11 +159,12 @@ def main():
 		print("    [22] XAttacker: Website Vulnerability Scanner & Auto Exploiter")
 		print("    [23] OWScan: OVID Web Scanner")
 		print("    [24] XPL-SEARCH: Search exploits in multiple exploit databases")
+		print("    [25] AndroBugs_Framework: An efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications")
 		print("\n    [00] Back to main menu\n")
 		vulnsys = input("lzmx > set_install ")
 		if vulnsys == "@":
 			vulnsys = ""
-			for x in range(1,25):
+			for x in range(1,201):
 				vulnsys += f"{x} "
 		if len(vulnsys.split()) > 1:
 			writeStatus(1)
@@ -190,6 +195,7 @@ def main():
 			elif vulnsys.strip() == "22": xattacker()
 			elif vulnsys.strip() == "23": owscan()
 			elif vulnsys.strip() == "24": xplsearch()
+			elif vulnsys.strip() == "25": androbugs()
 			elif vulnsys.strip() == "00" or vulnsys.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -220,11 +226,12 @@ def main():
 		print("    [21] AUXILE: Auxile Framework")
 		print("    [22] xss-payload-list: Cross Site Scripting ( XSS ) Vulnerability Payload List")
 		print("    [23] Xadmin: Admin Panel Finder")
+		print("    [24] CMSeeK: CMS Detection and Exploitation suite - Scan WordPress, Joomla, Drupal and over 180 other CMSs")
 		print("\n    [00] Back to main menu\n")
 		webhack = input("lzmx > set_install ")
 		if webhack == "@":
 			webhack = ""
-			for x in range(1,24):
+			for x in range(1,201):
 				webhack += f"{x} "
 		if len(webhack.split()) > 1:
 			writeStatus(1)
@@ -254,6 +261,7 @@ def main():
 			elif webhx.strip() == "21": auxile()
 			elif webhx.strip() == "22": xss_payload_list()
 			elif webhx.strip() == "23": xadmin()
+			elif webhx.strip() == "24": cmseek()
 			elif webhx.strip() == "00" or webhx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -270,7 +278,7 @@ def main():
 		dbssm = input("lzmx > set_install ")
 		if dbssm == "@":
 			dbssm = ""
-			for x in range(1,6):
+			for x in range(1,201):
 				dbssm += f"{x} "
 		if len(dbssm.split()) > 1:
 			writeStatus(1)
@@ -311,11 +319,12 @@ def main():
 		print("    [20] Hashcat: World's fastest and most advanced password recovery utility")
 		print("    [21] ASU: Facebook Hacking ToolKit")
 		print("    [22] Credmap: An open source tool that was created to bring awareness to the dangers of credential reuse")
+		print("    [23] BruteX: Automatically brute force all services running on a target")
 		print("\n    [00] Back to main menu\n")
 		passtak = input("lzmx > set_install ")
 		if passtak == "@":
 			passtak = ""
-			for x in range(1,23):
+			for x in range(1,201):
 				passtak += f"{x} "
 		if len(passtak.split()) > 1:
 			writeStatus(1)
@@ -344,6 +353,7 @@ def main():
 			elif passx.strip() == "20": hashcat()
 			elif passx.strip() == "21": asu()
 			elif passx.strip() == "22": credmap()
+			elif passx.strip() == "23": brutex()
 			elif passx.strip() == "00" or passx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -359,7 +369,7 @@ def main():
 		wiretak = input("lzmx > set_install ")
 		if wiretak == "@":
 			wiretak = ""
-			for x in range(1,5):
+			for x in range(1,201):
 				wiretak += f"{x} "
 		if len(wiretak.split()) > 1:
 			writeStatus(1)
@@ -391,7 +401,7 @@ def main():
 		reversi = input("lzmx > set_install ")
 		if reversi == "@":
 			reversi = ""
-			for x in range(1,11):
+			for x in range(1,201):
 				reversi += f"{x} "
 		if len(reversi.split()) > 1:
 			writeStatus(1)
@@ -423,11 +433,13 @@ def main():
 		print("    [06] XAttacker: Website Vulnerability Scanner & Auto Exploiter")  
 		print("    [07] Websploit: An advanced MiTM Framework")
 		print("    [08] Routersploit: Exploitation Framework for Embedded Devices")
+		print("    [09] A-Rat: Remote Administration Tool")
+		print("    [10] BAF: Blind Attacking Framework")
 		print("\n    [00] Back to main menu\n")
 		exploitool = input("lzmx > set_install ")
 		if exploitool == "@":
 			exploitool = ""
-			for x in range(1,9):
+			for x in range(1,201):
 				exploitool += f"{x} "
 		if len(exploitool.split()) > 1:
 			writeStatus(1)
@@ -442,6 +454,8 @@ def main():
 			elif explx.strip() == "06" or explx.strip() == "6": xattacker()
 			elif explx.strip() == "07" or explx.strip() == "7": websploit()
 			elif explx.strip() == "08" or explx.strip() == "8": routersploit()
+			elif explx.strip() == "09" or explx.strip() == "9": arat()
+			elif explx.strip() == "10": baf()
 			elif explx.strip() == "00" or explx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -458,7 +472,7 @@ def main():
 		sspoof = input("lzmx > set_install ")
 		if sspoof == "@":
 			sspoof = ""
-			for x in range(1,6):
+			for x in range(1,201):
 				sspoof += f"{x} "
 		if len(sspoof.split()) > 1:
 			writeStatus(1)
@@ -486,7 +500,7 @@ def main():
 		reportls = input("lzmx > set_install ")
 		if reportls == "@":
 			reportls = ""
-			for x in range(1,6):
+			for x in range(1,201):
 				reportls += f"{x} "
 		if len(reportls.split()) > 1:
 			writeStatus(1)
@@ -512,7 +526,7 @@ def main():
 		forensc = input("lzmx > set_install ")
 		if forensc == "@":
 			forensc = ""
-			for x in range(1,4):
+			for x in range(1,201):
 				forensc += f"{x} "
 		if len(forensc.split()) > 1:
 			writeStatus(1)
@@ -542,7 +556,7 @@ def main():
 		stresstest = input("lzmx > set_install ")
 		if stresstest == "@":
 			stresstest = ""
-			for x in range(1,10):
+			for x in range(1,201):
 				stresstest += f"{x} "
 		if len(stresstest.split()) > 1:
 			writeStatus(1)
@@ -574,7 +588,7 @@ def main():
 		innudis = input("lzmx > set_install ")
 		if innudis == "@":
 			innudis = ""
-			for x in range(1,6):
+			for x in range(1,201):
 				innudis += f"{x} "
 		if len(innudis.split()) > 1:
 			writeStatus(1)
@@ -617,7 +631,7 @@ def main():
 		moretool = input("lzmx > set_install ")
 		if moretool == "@":
 			moretool = ""
-			for x in range(1,22):
+			for x in range(1,201):
 				moretool += f"{x} "
 		if len(moretool.split()) > 1:
 			writeStatus(1)
@@ -664,7 +678,7 @@ def main():
 		myshf = input("lzmx > set_install ")
 		if myshf == "@":
 			myshf = ""
-			for x in range(1,9):
+			for x in range(1,201):
 				myshf += f"{x} "
 		if len(myshf.split()) > 1:
 			writeStatus(1)
@@ -698,7 +712,7 @@ def main():
 		cligam = input("lzmx > set_install ")
 		if cligam == "@":
 			cligam = ""
-			for x in range(1,9):
+			for x in range(1,201):
 				cligam += f"{x} "
 		if len(cligam.split()) > 1:
 			writeStatus(1)
@@ -730,7 +744,7 @@ def main():
 		malsys = input("lzmx > set_install ")
 		if malsys == "@":
 			malsys = ""
-			for x in range(1,7):
+			for x in range(1,201):
 				malsys += f"{x} "
 		if len(malsys.split()) > 1:
 			writeStatus(1)
@@ -769,7 +783,7 @@ def main():
 		compter = input("lzmx > set_install ")
 		if compter == "@":
 			compter = ""
-			for x in range(1,16):
+			for x in range(1,201):
 				compter += f"{x} "
 		if len(compter.split()) > 1:
 			writeStatus(1)
@@ -809,7 +823,7 @@ def main():
 		soceng = input("lzmx > set_install ")
 		if soceng == "@":
 			soceng = ""
-			for x in range(1,8):
+			for x in range(1,201):
 				soceng += f"{x} "
 		if len(soceng.split()) > 1:
 			writeStatus(1)

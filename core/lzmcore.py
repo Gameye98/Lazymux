@@ -1728,6 +1728,73 @@ def binwalk():
 	print("###### Type 'binwalk' to start.")
 	backtomenu_option()
 
+def arat():
+	print('\n###### Installing A-Rat')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python git -y')
+	os.system('git clone https://github.com/RexTheGod/A-Rat')
+	os.system('mv A-Rat {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def adbtk():
+	print('\n###### Installing ADB-Toolkit')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git -y')
+	os.system('git clone https://github.com/ASHWIN990/ADB-Toolkit')
+	os.system('mv ADB-Toolkit {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def androbugs():
+	print('\n###### Installing AndroBugs_Framework')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('python2 -m pip install pymongo')
+	os.system('git clone https://github.com/AndroBugs/AndroBugs_Framework')
+	os.system('mv AndroBugs_Framework {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def tekdefense():
+	print('\n###### Installing TekDefense-Automater')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('python2 -m pip install requests')
+	os.system('git clone https://github.com/1aN0rmus/TekDefense-Automater')
+	os.system('mv TekDefense-Automater {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def baf():
+	print('\n###### Installing BAF')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('python2 -m pip install requests bs4 selenium colored termcolor')
+	os.system('git clone https://github.com/engMaher/BAF')
+	os.system('mv BAF {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def brutex():
+	print('\n###### Installing BruteX')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git hydra -y')
+	os.system('git clone https://github.com/1N3/BruteX')
+	os.system('mv BruteX {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def cmseek():
+	print('\n###### Installing CMSeeK')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install requests')
+	os.system('git clone https://github.com/Tuhinshubhra/CMSeeK')
+	os.system('mv CMSeeK {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
 ### Compiler/Interpreter
 def python2():
 	print('\n###### Installing Python2')
