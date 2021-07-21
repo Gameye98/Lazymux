@@ -3,3 +3,6 @@ update.txt
 core/__pycache__
 lzdb.py
 lazymux.conf
+lzinfo.py
+lzinfo.txt
+lzinfo.history

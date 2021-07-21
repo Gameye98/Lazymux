@@ -1795,6 +1795,129 @@ def cmseek():
 	print('###### Done')
 	backtomenu_option()
 
+def cmsmap():
+	print('\n###### Installing CMSmap')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('git clone https://github.com/Dionach/CMSmap')
+	os.system('mv CMSmap {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def clickjacking():
+	print('\n###### Installing Clickjacking-Tester')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('git clone https://github.com/D4Vinci/Clickjacking-Tester')
+	os.system('mv Clickjacking-Tester {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def cookiestealer():
+	print('\n###### Installing Cookie-stealer')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git php -y')
+	os.system('git clone https://github.com/Xyl2k/Cookie-stealer')
+	os.system('mv Cookie-stealer {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def dhcpig():
+	print('\n###### Installing DHCPig')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('python2 -m pip install scapy')
+	os.system('git clone https://github.com/kamorin/DHCPig')
+	os.system('mv DHCPig {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def cyberscan():
+	print('\n###### Installing CyberScan')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/medbenali/CyberScan')
+	os.system('mv CyberScan {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def dkmc():
+	print('\n###### Installing DKMC')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/Mr-Un1k0d3r/DKMC')
+	os.mkdir("DKMC/output")
+	os.system('mv DKMC {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def crawlbox():
+	print('\n###### Installing CrawlBox')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('python2 -m pip install tldextract requests requests_ntlm fake_useragent')
+	os.system('git clone https://github.com/abaykan/CrawlBox')
+	os.system('mv CrawlBox {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def eagleeye():
+	print('\n###### Installing EagleEye')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install termcolor opencv-python selenium face_recognition WeasyPrint requests-html')
+	os.system('git clone https://github.com/ThoughtfulDev/EagleEye')
+	os.system('mv EagleEye {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def gemailhack():
+	print('\n###### Installing Gemail-Hack')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/Ha3MrX/Gemail-Hack')
+	os.system('mv Gemail-Hack {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def eyewitness():
+	print('\n###### Installing EyeWitness')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('git clone https://github.com/FortyNorthSecurity/EyeWitness')
+	os.system('mv EyeWitness {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def goblinwordgenerator():
+	print('\n###### Installing GoblinWordGenerator')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('git clone https://github.com/UndeadSec/GoblinWordGenerator')
+	os.system('mv GoblinWordGenerator {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def inspy():
+	print('\n###### Installing InSpy')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('python2 -m pip install requests==2.20.1 BeautifulSoup==3.2.1')
+	os.system('git clone https://github.com/leapsecurity/InSpy')
+	os.system('mv InSpy {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def leaked():
+	print('\n###### Installing Leaked')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install requests')
+	os.system('git clone https://github.com/GitHackTools/Leaked')
+	os.system('mv Leaked {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
 ### Compiler/Interpreter
 def python2():
 	print('\n###### Installing Python2')
@@ -1890,6 +2013,30 @@ def blogc():
 	os.system('apt install blogc -y')
 	print('###### Done')
 	print("###### Type 'blogc' to start.")
+	backtomenu_option()
+
+def dart():
+	print('\n###### Installing Dart')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install dart -y')
+	print('###### Done')
+	print("###### Type 'dart' to start.")
+	backtomenu_option()
+
+def yasm():
+	print('\n###### Installing Yasm')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install yasm -y')
+	print('###### Done')
+	print("###### Type 'yasm' to start.")
+	backtomenu_option()
+
+def nasm():
+	print('\n###### Installing Nasm')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install nasm -y')
+	print('###### Done')
+	print("###### Type 'nasm' to start.")
 	backtomenu_option()
 
 ### termux games
