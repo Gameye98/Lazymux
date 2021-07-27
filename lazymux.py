@@ -140,7 +140,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 02 - Vulnerability Analysis
 	elif lazymux.strip() == "2" or lazymux.strip() == "02":
 		print("\n    [01] Nmap: Utility for network discovery and security auditing")
@@ -280,7 +280,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 04 - Database Assessment
 	elif lazymux.strip() == "4" or lazymux.strip() == "04":
 		print("\n    [01] DbDat: DbDat performs numerous checks on a database to evaluate security")
@@ -308,7 +308,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 05 - Password Attacks
 	elif lazymux.strip() == "5" or lazymux.strip() == "05":
 		print("\n    [01] Hydra: Network logon cracker supporting different services")
@@ -376,7 +376,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 06 - Wireless Attacks
 	elif lazymux.strip() == "6" or lazymux.strip() == "06":
 		print("\n    [01] Aircrack-ng: WiFi security auditing tools suite")
@@ -402,7 +402,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 07 - Reverse Engineering
 	elif lazymux.strip() == "7" or lazymux.strip() == "07":
 		print("\n    [01] Binary Exploitation")
@@ -438,7 +438,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 08 - Exploitation Tools
 	elif lazymux.strip() == "8" or lazymux.strip() == "08":
 		print("\n    [01] Metasploit: Advanced open-source platform for developing, testing and using exploit code")
@@ -446,7 +446,7 @@ def main():
 		print("    [03] BlackBox: A Penetration Testing Framework")
 		print("    [04] Brutal: Payload for teensy like a rubber ducky but the syntax is different")
 		print("    [05] TXTool: An easy pentesting tool")
-		print("    [06] XAttacker: Website Vulnerability Scanner & Auto Exploiter")  
+		print("    [06] XAttacker: Website Vulnerability Scanner & Auto Exploiter")
 		print("    [07] Websploit: An advanced MiTM Framework")
 		print("    [08] Routersploit: Exploitation Framework for Embedded Devices")
 		print("    [09] A-Rat: Remote Administration Tool")
@@ -476,7 +476,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 09 - Sniffing and Spoofing
 	elif lazymux.strip() == "9" or lazymux.strip() == "09":
 		print("\n    [01] KnockMail: Verify if Email Exists")
@@ -504,7 +504,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 10 - Reporting Tools
 	elif lazymux.strip() == "10":
 		print("\n    [01] dos2unix: Converts between DOS and Unix text files")
@@ -532,7 +532,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 11 - Forensic Tools
 	elif lazymux.strip() == "11":
 		print("\n    [01] steghide: Embeds a message in a file by replacing some of the least significant bits")
@@ -560,7 +560,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 12 - Stress Testing
 	elif lazymux.strip() == "12":
 		print("\n    [01] Torshammer: Slow post DDOS tool")
@@ -598,7 +598,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 13 - Install Linux Distro
 	elif lazymux.strip() == "13":
 		print("\n    [01] Ubuntu")
@@ -626,7 +626,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 14 - Termux Utility
 	elif lazymux.strip() == "14":
 		print("\n    [01] SpiderBot: Curl website using random proxy and user agent")
@@ -685,7 +685,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 15 - Shell Function [.bashrc]
 	elif lazymux.strip() == "15":
 		print("\n    [01] FBVid (FB Video Downloader)")
@@ -719,7 +719,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 16 - Install CLI Games
 	elif lazymux.strip() == "16":
 		print("\n    [01] Flappy Bird")
@@ -753,7 +753,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 17 - Malware Analysis
 	elif lazymux.strip() == "17":
 		print("\n    [01] Lynis: Security Auditing and Rootkit Scanner")
@@ -785,7 +785,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 18 - Compiler/Interpreter
 	elif lazymux.strip() == "18":
 		print("\n    [01] Python2: Python 2 programming language intended to enable clear programs")
@@ -839,7 +839,7 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
-	
+
 	# 19 - Social Engineering Tools
 	elif lazymux.strip() == "19":
 		print("\n    [01] weeman: HTTP server for phishing in python")
@@ -875,7 +875,7 @@ def main():
 			writeStatus(0)
 	elif lazymux.strip() == "00":
 		sys.exit()
-	
+
 	else:
 		print("\nERROR: Wrong Input")
 		timeout(1)

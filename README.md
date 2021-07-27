@@ -8,7 +8,7 @@
 [![BlackHole Security](https://img.shields.io/badge/team-BlackHole%20Security-ocean.svg)](https://github.com/BlackHoleSecurity)
 [![Gameye98/DedSecTL](https://img.shields.io/badge/author-Gameye98/DedSecTL-red.svg)](https://github.com/Gameye98)
 
-[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/Gameye98)  
+[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/Gameye98)
 
 [![BlackHole Security](core/gitbhs.svg)](https://github.com/BlackHoleSecurity)
 
@@ -19,15 +19,15 @@ Made with ❤️
 
 ## Feature
 - **Tool Installation**
-Install Single Tool  
-`lzmx > set_install 1`  
-Install Multi Tool  
-`lzmx > set_install 1 2 3 4`  
-Install All Tool  
-`lzmx > set_install @`  
+Install Single Tool
+`lzmx > set_install 1`
+Install Multi Tool
+`lzmx > set_install 1 2 3 4`
+Install All Tool
+`lzmx > set_install @`
 - **Default Dir Install**
-On `lazymux.conf` replace symbol ~ with directory you want  
-Example: lazymux.conf  
+On `lazymux.conf` replace symbol ~ with directory you want
+Example: lazymux.conf
 `HOME = /sdcard`
 
 
