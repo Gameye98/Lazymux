@@ -1,3 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/python3
 ## lazymux.py - Lazymux v4.0
 ##
 import os, sys
