@@ -1918,6 +1918,63 @@ def leaked():
 	print('###### Done')
 	backtomenu_option()
 
+def gloomframework():
+	print('\n###### Installing Gloom-Framework')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git nmap python -y')
+	os.system('python -m pip install mechanize pythonwhois')
+	os.system('git clone https://github.com/StreetSec/Gloom-Framework')
+	os.system('mv Gloom-Framework {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def lfisuite():
+	print('\n###### Installing LFISuite')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/D35m0nd142/LFISuite')
+	os.system('mv LFISuite {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def parsero():
+	print('\n###### Installing Parsero')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/behindthefirewalls/Parsero')
+	os.system('mv Parsero {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def pwnstar():
+	print('\n###### Installing PwnSTAR')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/SilverFoxx/PwnSTAR')
+	os.system('mv PwnSTAR {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def pybozocrack():
+	print('\n###### Installing PyBozoCrack')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install wheel==0.22.0')
+	os.system('git clone https://github.com/ikkebr/PyBozoCrack')
+	os.system('mv PyBozoCrack {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def pyrit():
+	print('\n###### Installing Pyrit')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('python2 -m pip install httplib2==0.10.3 colorlog==2.10.0 beautifulsoup4==4.5.3 protobuf==3.2.0rc2 requests==2.11.1 google==1.9.3')
+	os.system('git clone https://github.com/JPaulMora/Pyrit')
+	os.system('mv Pyrit {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
 ### Compiler/Interpreter
 def python2():
 	print('\n###### Installing Python2')

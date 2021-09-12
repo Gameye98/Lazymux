@@ -239,6 +239,8 @@ def main():
 		print("    [24] CMSeeK: CMS Detection and Exploitation suite - Scan WordPress, Joomla, Drupal and over 180 other CMSs")
 		print("    [25] CMSmap: A python open source CMS scanner that automates the process of detecting security flaws of the most popular CMSs")
 		print("    [26] CrawlBox: Easy way to brute-force web directory")
+		print("    [27] LFISuite: Totally Automatic LFI Exploiter (+ Reverse Shell) and Scanner")
+		print("    [28] Parsero: Robots.txt audit tool")
 		print("\n    [00] Back to main menu\n")
 		webhack = input("lzmx > set_install ")
 		if webhack == "@":
@@ -276,6 +278,8 @@ def main():
 			elif webhx.strip() == "24": cmseek()
 			elif webhx.strip() == "25": cmsmap()
 			elif webhx.strip() == "26": crawlbox()
+			elif webhx.strip() == "27": lfisuite()
+			elif webhx.strip() == "28": parsero()
 			elif webhx.strip() == "00" or webhx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -336,6 +340,7 @@ def main():
 		print("    [23] BruteX: Automatically brute force all services running on a target")
 		print("    [24] Gemail-Hack: python script for Hack gmail account brute force")
 		print("    [25] GoblinWordGenerator: Python wordlist generator")
+		print("    [26] PyBozoCrack: A silly & effective MD5 cracker in Python")
 		print("\n    [00] Back to main menu\n")
 		passtak = input("lzmx > set_install ")
 		if passtak == "@":
@@ -372,6 +377,7 @@ def main():
 			elif passx.strip() == "23": brutex()
 			elif passx.strip() == "24": gemailhack()
 			elif passx.strip() == "25": goblinwordgenerator()
+			elif passx.strip() == "26": pybozocrack()
 			elif passx.strip() == "00" or passx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -383,6 +389,8 @@ def main():
 		print("    [02] Wifite: An automated wireless attack tool")
 		print("    [03] Wifiphisher: The Rogue Access Point Framework")
 		print("    [04] Routersploit: Exploitation Framework for Embedded Devices")
+		print("    [05] PwnSTAR: (Pwn SofT-Ap scRipt) - for all your fake-AP needs!")
+		print("    [06] Pyrit: The famous WPA precomputed cracker, Migrated from Google")
 		print("\n    [00] Back to main menu\n")
 		wiretak = input("lzmx > set_install ")
 		if wiretak == "@":
@@ -398,6 +406,8 @@ def main():
 			elif wirex.strip() == "02" or wirex.strip() == "2": wifite()
 			elif wirex.strip() == "03" or wirex.strip() == "3": wifiphisher()
 			elif wirex.strip() == "04" or wirex.strip() == "4": routersploit()
+			elif wirex.strip() == "05" or wirex.strip() == "5": pwnstar()
+			elif wirex.strip() == "06" or wirex.strip() == "6": pyrit()
 			elif wirex.strip() == "00" or wirex.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -451,6 +461,7 @@ def main():
 		print("    [08] Routersploit: Exploitation Framework for Embedded Devices")
 		print("    [09] A-Rat: Remote Administration Tool")
 		print("    [10] BAF: Blind Attacking Framework")
+		print("    [11] Gloom-Framework: Linux Penetration Testing Framework")
 		print("\n    [00] Back to main menu\n")
 		exploitool = input("lzmx > set_install ")
 		if exploitool == "@":
@@ -472,6 +483,7 @@ def main():
 			elif explx.strip() == "08" or explx.strip() == "8": routersploit()
 			elif explx.strip() == "09" or explx.strip() == "9": arat()
 			elif explx.strip() == "10": baf()
+			elif explx.strip() == "11": gloomframework()
 			elif explx.strip() == "00" or explx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
