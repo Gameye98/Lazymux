@@ -169,6 +169,7 @@ def main():
 		print("    [24] XPL-SEARCH: Search exploits in multiple exploit databases")
 		print("    [25] AndroBugs_Framework: An efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications")
 		print("    [26] Clickjacking-Tester: A python script designed to check if the website if vulnerable of clickjacking and create a poc")
+		print("    [27] Sn1per: Attack Surface Management Platform | Sn1perSecurity LLC")
 		print("\n    [00] Back to main menu\n")
 		vulnsys = input("lzmx > set_install ")
 		if vulnsys == "@":
@@ -206,6 +207,7 @@ def main():
 			elif vulnsys.strip() == "24": xplsearch()
 			elif vulnsys.strip() == "25": androbugs()
 			elif vulnsys.strip() == "26": clickjacking()
+			elif vulnsys.strip() == "27": sn1per()
 			elif vulnsys.strip() == "00" or vulnsys.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -241,6 +243,10 @@ def main():
 		print("    [26] CrawlBox: Easy way to brute-force web directory")
 		print("    [27] LFISuite: Totally Automatic LFI Exploiter (+ Reverse Shell) and Scanner")
 		print("    [28] Parsero: Robots.txt audit tool")
+		print("    [29] Sn1per: Attack Surface Management Platform | Sn1perSecurity LLC")
+		print("    [30] Sublist3r: Fast subdomains enumeration tool for penetration testers")
+		print("    [31] WP-plugin-scanner: A tool to list plugins installed on a wordpress powered website")
+		print("    [32] WhatWeb: Next generation web scanner")
 		print("\n    [00] Back to main menu\n")
 		webhack = input("lzmx > set_install ")
 		if webhack == "@":
@@ -280,6 +286,10 @@ def main():
 			elif webhx.strip() == "26": crawlbox()
 			elif webhx.strip() == "27": lfisuite()
 			elif webhx.strip() == "28": parsero()
+			elif webhx.strip() == "29": sn1per()
+			elif webhx.strip() == "30": sublist3r()
+			elif webhx.strip() == "31": wppluginscanner()
+			elif webhx.strip() == "32": whatweb()
 			elif webhx.strip() == "00" or webhx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -341,6 +351,7 @@ def main():
 		print("    [24] Gemail-Hack: python script for Hack gmail account brute force")
 		print("    [25] GoblinWordGenerator: Python wordlist generator")
 		print("    [26] PyBozoCrack: A silly & effective MD5 cracker in Python")
+		print("    [27] brutespray: Brute-Forcing from Nmap output - Automatically attempts default creds on found services")
 		print("\n    [00] Back to main menu\n")
 		passtak = input("lzmx > set_install ")
 		if passtak == "@":
@@ -378,6 +389,7 @@ def main():
 			elif passx.strip() == "24": gemailhack()
 			elif passx.strip() == "25": goblinwordgenerator()
 			elif passx.strip() == "26": pybozocrack()
+			elif passx.strip() == "27": brutespray()
 			elif passx.strip() == "00" or passx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -462,6 +474,7 @@ def main():
 		print("    [09] A-Rat: Remote Administration Tool")
 		print("    [10] BAF: Blind Attacking Framework")
 		print("    [11] Gloom-Framework: Linux Penetration Testing Framework")
+		print("    [12] Zerodoor: A script written lazily for generating cross-platform  backdoors on the go :)")
 		print("\n    [00] Back to main menu\n")
 		exploitool = input("lzmx > set_install ")
 		if exploitool == "@":
@@ -484,6 +497,7 @@ def main():
 			elif explx.strip() == "09" or explx.strip() == "9": arat()
 			elif explx.strip() == "10": baf()
 			elif explx.strip() == "11": gloomframework()
+			elif explx.strip() == "12": zerodoor()
 			elif explx.strip() == "00" or explx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -862,6 +876,7 @@ def main():
 		print("    [06] F4K3: Fake User Data Generator")
 		print("    [07] Hac")
 		print("    [08] Cookie-stealer: Crappy cookie stealer")
+		print("    [09] zphisher: Automated Phishing Tool")
 		print("\n    [00] Back to main menu\n")
 		soceng = input("lzmx > set_install ")
 		if soceng == "@":
@@ -881,6 +896,7 @@ def main():
 			elif socng.strip() == "06" or socng.strip() == "6": f4k3()
 			elif socng.strip() == "07" or socng.strip() == "7": hac()
 			elif socng.strip() == "08" or socng.strip() == "8": cookiestealer()
+			elif socng.strip() == "09" or socng.strip() == "9": zphisher()
 			elif socng.strip() == "00" or socng.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():

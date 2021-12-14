@@ -382,7 +382,8 @@ def planetwork_ddos():
 def hydra():
 	print('\n###### Installing Hydra')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install hydra')
+	os.system('')
+	os.system('git clone https://github.com/vanhauser-thc/thc-hydra')
 	print('###### Done')
 	backtomenu_option()
 
@@ -1972,6 +1973,65 @@ def pyrit():
 	os.system('python2 -m pip install httplib2==0.10.3 colorlog==2.10.0 beautifulsoup4==4.5.3 protobuf==3.2.0rc2 requests==2.11.1 google==1.9.3')
 	os.system('git clone https://github.com/JPaulMora/Pyrit')
 	os.system('mv Pyrit {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def sn1per():
+	print('\n###### Installing Sn1per')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('git clone https://github.com/1N3/Sn1per')
+	os.chdir("Sn1per")
+	os.system("bash install.sh")
+	os.chdir("..")
+	os.system('mv Sn1per {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def sublist3r():
+	print('\n###### Installing Sublist3r')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install argparse dnspython requests')
+	os.system('git clone https://github.com/aboul3la/Sublist3r')
+	os.system('mv Sublist3r {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def wppluginscanner():
+	print('\n###### Installing WP-plugin-scanner')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/mintobit/WP-plugin-scanner')
+	os.system('mv WP-plugin-scanner {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def whatweb():
+	print('\n###### Installing WhatWeb')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('git clone https://github.com/urbanadventurer/WhatWeb')
+	os.system('mv WhatWeb {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def zerodoor():
+	print('\n###### Installing Zerodoor')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git gcc nmap-ncat python2 -y')
+	os.system('git clone https://github.com/Souhardya/Zerodoor')
+	os.system('mv Zerodoor {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def brutespray():
+	print('\n###### Installing brutespray')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install argcomplete==1.10.0')
+	os.system('git clone https://github.com/x90skysn3k/brutespray')
+	os.system('mv brutespray {}'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
