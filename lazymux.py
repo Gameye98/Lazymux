@@ -26,7 +26,8 @@ def main():
 	print("   [17] Malware Analysis")
 	print("   [18] Compiler/Interpreter")
 	print("   [19] Social Engineering Tools")
-	print("\n   [00] Exit the Lazymux\n")
+	print("\n   [99] Update the Lazymux")
+	print("   [00] Exit the Lazymux\n")
 	lazymux = input("lzmx > set_install ")
 
 	# 01 - Information Gathering
@@ -436,6 +437,7 @@ def main():
 		print("    [07] UPX: Ultimate Packer for eXecutables")
 		print("    [08] pyinstxtractor: PyInstaller Extractor")
 		print("    [09] innoextract: A tool to unpack installers created by Inno Setup")
+		print("    [10] pycdc: C++ python bytecode disassembler and decompiler")
 		print("\n    [00] Back to main menu\n")
 		reversi = input("lzmx > set_install ")
 		if reversi == "@":
@@ -456,6 +458,7 @@ def main():
 			elif revex.strip() == "07" or revex.strip() == "7": upx()
 			elif revex.strip() == "08" or revex.strip() == "8": pyinstxtractor()
 			elif revex.strip() == "09" or revex.strip() == "9": innoextract()
+			elif revex.strip() == "10": pycdc()
 			elif revex.strip() == "00" or revex.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -901,6 +904,8 @@ def main():
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
+	elif lazymux.strip() == "99":
+		os.system("git pull")
 	elif lazymux.strip() == "00":
 		sys.exit()
 	

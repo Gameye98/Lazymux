@@ -73,7 +73,7 @@ def backtomenu_option():
 		
 		if backtomenu == "99":
 			restart_program()
-		elif backtomenu == "00":
+		elif backtomenu == "0" or backtomenu == "00":
 			sys.exit()
 		else:
 			print("\nERROR: Wrong Input")
@@ -2032,6 +2032,22 @@ def brutespray():
 	os.system('python -m pip install argcomplete==1.10.0')
 	os.system('git clone https://github.com/x90skysn3k/brutespray')
 	os.system('mv brutespray {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+
+def pycdc():
+	print('\n###### Installing pycdc')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python clang cmake make -y')
+	os.system('git clone https://github.com/zrax/pycdc')
+	os.system('mv pycdc {}'.format(homeDir))
+	os.chdir(homeDir)
+	os.chdir("pycdc")
+	os.system('cmake .')
+	os.system('make')
+	os.system('make check')
+	os.chdir(current_dir)
 	print('###### Done')
 	backtomenu_option()
 
