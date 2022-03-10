@@ -2051,6 +2051,25 @@ def pycdc():
 	print('###### Done')
 	backtomenu_option()
 
+def apkid():
+	print('\n###### Installing APKiD')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python yara yara-static -y')
+	os.system('python -m pip install apkid')
+	print('###### Done')
+	print("###### Type 'apkid' to start.")
+	backtomenu_option()
+
+def dtlx():
+	print('\n###### Installing DTL-X')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python git apktool apksigner openjdk-17 -y')
+	os.system('python -m pip install loguru')
+	os.system('git clone https://github.com/Gameye98/DTL-X')
+	os.system('mv DTL-X {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
 ### Compiler/Interpreter
 def python2():
 	print('\n###### Installing Python2')

@@ -438,6 +438,8 @@ def main():
 		print("    [08] pyinstxtractor: PyInstaller Extractor")
 		print("    [09] innoextract: A tool to unpack installers created by Inno Setup")
 		print("    [10] pycdc: C++ python bytecode disassembler and decompiler")
+		print("    [11] APKiD: Android Application Identifier for Packers, Protectors, Obfuscators and Oddities - PEiD for Android")
+		print("    [12] DTL-X: Python APK Reverser & Patcher Tool")
 		print("\n    [00] Back to main menu\n")
 		reversi = input("lzmx > set_install ")
 		if reversi == "@":
@@ -459,6 +461,8 @@ def main():
 			elif revex.strip() == "08" or revex.strip() == "8": pyinstxtractor()
 			elif revex.strip() == "09" or revex.strip() == "9": innoextract()
 			elif revex.strip() == "10": pycdc()
+			elif revex.strip() == "11": apkid()
+			elif revex.strip() == "12": dtlx()
 			elif revex.strip() == "00" or revex.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
