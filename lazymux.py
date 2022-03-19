@@ -4,6 +4,7 @@ import os, sys
 import readline
 from time import sleep as timeout
 from core.lzmcore import *
+print(" cupu disini")
 
 def main():
 	banner()
