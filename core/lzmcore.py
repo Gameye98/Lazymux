@@ -1082,7 +1082,7 @@ def jadx():
 	print("###### Type 'jadx' to start.")
 	backtomenu_option()
 
-def pwnedornot():
+def pwnedOrNot():
 	print('\n###### Installing pwnedOrNot')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git python')
