@@ -119,7 +119,7 @@ def main():
 			elif infox.strip() == "27": asu()
 			elif infox.strip() == "28": fim()
 			elif infox.strip() == "29": maxsubdofinder()
-			elif infox.strip() == "30": pwnedOrNot()
+			elif infox.strip() == "30": pwnedornot()
 			elif infox.strip() == "31": maclook()
 			elif infox.strip() == "32": billcypher()
 			elif infox.strip() == "33": dnsrecon()
