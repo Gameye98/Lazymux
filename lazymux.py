@@ -353,6 +353,7 @@ def main():
 		print("    [25] GoblinWordGenerator: Python wordlist generator")
 		print("    [26] PyBozoCrack: A silly & effective MD5 cracker in Python")
 		print("    [27] brutespray: Brute-Forcing from Nmap output - Automatically attempts default creds on found services")
+		print("    [28] crowbar: Crowbar is brute forcing tool that can be used during penetration tests")
 		print("\n    [00] Back to main menu\n")
 		passtak = input("lzmx > set_install ")
 		if passtak == "@":
@@ -391,6 +392,7 @@ def main():
 			elif passx.strip() == "25": goblinwordgenerator()
 			elif passx.strip() == "26": pybozocrack()
 			elif passx.strip() == "27": brutespray()
+			elif passx.strip() == "28": crowbar()
 			elif passx.strip() == "00" or passx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -440,6 +442,7 @@ def main():
 		print("    [10] pycdc: C++ python bytecode disassembler and decompiler")
 		print("    [11] APKiD: Android Application Identifier for Packers, Protectors, Obfuscators and Oddities - PEiD for Android")
 		print("    [12] DTL-X: Python APK Reverser & Patcher Tool")
+		print("    [13] APKLeaks: Scanning APK file for URIs, endpoints & secrets")
 		print("\n    [00] Back to main menu\n")
 		reversi = input("lzmx > set_install ")
 		if reversi == "@":
@@ -463,6 +466,7 @@ def main():
 			elif revex.strip() == "10": pycdc()
 			elif revex.strip() == "11": apkid()
 			elif revex.strip() == "12": dtlx()
+			elif revex.strip() == "13": apkleaks()
 			elif revex.strip() == "00" or revex.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -634,11 +638,16 @@ def main():
 	
 	# 13 - Install Linux Distro
 	elif lazymux.strip() == "13":
-		print("\n    [01] Ubuntu")
+		print("\n    [01] Ubuntu (impish)")
 		print("    [02] Fedora")
 		print("    [03] Kali Nethunter")
 		print("    [04] Parrot")
 		print("    [05] Arch Linux")
+		print("    [06] Alpine Linux (edge)")
+		print("    [07] Debian (bullseye)")
+		print("    [08] Manjaro AArch64")
+		print("    [09] OpenSUSE (Tumbleweed)")
+		print("    [10] Void Linux")
 		print("\n    [00] Back to main menu\n")
 		innudis = input("lzmx > set_install ")
 		if innudis == "@":
@@ -655,6 +664,11 @@ def main():
 			elif innux.strip() == "03" or innux.strip() == "3": nethunter()
 			elif innux.strip() == "04" or innux.strip() == "4": parrot()
 			elif innux.strip() == "05" or innux.strip() == "5": archlinux()
+			elif innux.strip() == "06" or innux.strip() == "6": alpine()
+			elif innux.strip() == "07" or innux.strip() == "7": debian()
+			elif innux.strip() == "08" or innux.strip() == "8": manjaroArm64()
+			elif innux.strip() == "09" or innux.strip() == "9": opensuse()
+			elif innux.strip() == "10": voidLinux()
 			elif innux.strip() == "00" or innux.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():

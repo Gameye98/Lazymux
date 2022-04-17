@@ -598,6 +598,7 @@ def sudo():
 	backtomenu_option()
 
 def ubuntu():
+	"""
 	print('\n###### Installing Ubuntu')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python2 git')
@@ -605,13 +606,28 @@ def ubuntu():
 	os.system('mv termux-ubuntu {0} && cd {0}/termux-ubuntu && bash ubuntu.sh'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
+	"""
+	print('\n###### Installing Ubuntu')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install proot-distro')
+	os.system('proot-distro install ubuntu')
+	print('###### Done')
+	backtomenu_option()
 
 def fedora():
+	"""
 	print('\n###### Installing Fedora')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install wget git')
 	os.system('wget https://raw.githubusercontent.com/nmilosev/termux-fedora/master/termux-fedora.sh')
 	os.system('mv termux-fedora.sh {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+	"""
+	print('\n###### Installing Ubuntu')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install proot-distro')
+	os.system('proot-distro install fedora')
 	print('###### Done')
 	backtomenu_option()
 
@@ -1256,12 +1272,21 @@ def parrot():
 	backtomenu_option()
 
 def archlinux():
+	"""
 	print('\n###### Installing Arch Linux')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install git')
 	os.system('cd $HOME && git clone https://github.com/sdrausty/TermuxArch')
 	os.system('cd $HOME && bash TermuxArch/setupTermuxArch.sh')
 	print('###### Done')
+	backtomenu_option()
+	"""
+	print('\n###### Installing Arch Linux')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install proot-distro')
+	os.system('proot-distro install archlinux')
+	print('###### Done')
+	print("###### Type 'proot-distro login archlinux' to start.")
 	backtomenu_option()
 
 def tshark():
@@ -2068,6 +2093,40 @@ def dtlx():
 	os.system('git clone https://github.com/Gameye98/DTL-X')
 	os.system('mv DTL-X {}'.format(homeDir))
 	print('###### Done')
+	backtomenu_option()
+
+def crowbar():
+	print('\n###### Installing crowbar')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install paramiko==2.7.1')
+	os.system('git clone https://github.com/galkan/crowbar')
+	os.system('mv crowbar {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def voidLinux():
+	print('\n###### Installing Void Linux')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install proot-distro')
+	os.system('proot-distro install void')
+	print("###### Type 'proot-distro login void' to start.")
+	print('###### Done')
+	backtomenu_option()
+
+def apkleaks():
+	print('\n###### Installing APKLeaks')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python -y')
+	if not os.path.isfile(os.getenv("PREFIX")+"/bin/jadx"):
+		os.system('apt install dpkg wget -y')
+		os.system('wget https://github.com/Lexiie/Termux-Jadx/blob/master/jadx-0.6.1_all.deb?raw=true')
+		os.system('dpkg -i jadx-0.6.1_all.deb?raw=true')
+		os.system('rm -rf jadx-0.6.1_all.deb?raw=true')
+	os.system('python -m pip install apkleaks')
+	print('###### Done')
+	print("###### Type 'apkleaks' to start.")
+	print("###### Usage: apkleaks -f /path/file.apk")
 	backtomenu_option()
 
 ### Compiler/Interpreter
