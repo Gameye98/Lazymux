@@ -2141,14 +2141,14 @@ def apkmitm():
 	backtomenu_option()
 
 def ssl_pinning_remover():
-	print('\n###### Installing ssl_pinning_remover')
-	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install python -y')
-	os.system('python -m pip install ssl-pinning-remover')
-	print('###### Done')
-	print("###### Type 'ssl_pinning_remover' to start.")
-	print("###### Usage: ssl_pinning_remover -i /path/file.apk -v")
-	backtomenu_option()
+        print('\n###### Installing ssl_pinning_re>
+        os.system('apt update -y && apt upgrade ->
+        os.system('apt install python -y')
+        os.system('python -m pip install ssl-pinn>
+        print('###### Done')
+        print("###### Type 'ssl_pinning_remover' >
+        print("###### Usage: ssl_pinning_remover >
+        backtomenu_option()
 
 ### Compiler/Interpreter
 def python2():
