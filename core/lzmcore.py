@@ -2140,7 +2140,7 @@ def apkmitm():
 	print("###### Usage: apk-mitm /path/file.apk")
 	backtomenu_option()
 
-def ssl_pinning_remover((:
+def ssl_pinning_remover():
 	print('\n###### Installing ssl_pinning_remover')
 	os.system('apt update -y && apt upgrade -y')
 	os.system('apt install python -y')
