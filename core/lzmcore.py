@@ -2129,6 +2129,27 @@ def apkleaks():
 	print("###### Usage: apkleaks -f /path/file.apk")
 	backtomenu_option()
 
+def apkmitm():
+	print('\n###### Installing apk-mitm')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install nodejs apktool -y')
+	os.system('npm i -g apk-mitm')
+	open(os.getenv("HOME")+"/.bashrc","a").write("\nalias apk-mitm=\"apk-mitm --apktool $PREFIX/share/java/apktool.jar\"\n")
+	print('###### Done')
+	print("###### Type 'apk-mitm' to start.")
+	print("###### Usage: apk-mitm /path/file.apk")
+	backtomenu_option()
+
+def ssl_pinning_remover((:
+	print('\n###### Installing ssl_pinning_remover')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python -y')
+	os.system('python -m pip install ssl-pinning-remover')
+	print('###### Done')
+	print("###### Type 'ssl_pinning_remover' to start.")
+	print("###### Usage: ssl_pinning_remover -i /path/file.apk -v")
+	backtomenu_option()
+
 ### Compiler/Interpreter
 def python2():
 	print('\n###### Installing Python2')

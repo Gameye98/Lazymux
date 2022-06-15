@@ -443,6 +443,8 @@ def main():
 		print("    [11] APKiD: Android Application Identifier for Packers, Protectors, Obfuscators and Oddities - PEiD for Android")
 		print("    [12] DTL-X: Python APK Reverser & Patcher Tool")
 		print("    [13] APKLeaks: Scanning APK file for URIs, endpoints & secrets")
+		print("    [14] apk-mitm: A CLI application that automatically prepares Android APK files for HTTPS inspection")
+		print("    [15] ssl-pinning-remover: An SSL Pinning Remover for Android Apps")
 		print("\n    [00] Back to main menu\n")
 		reversi = input("lzmx > set_install ")
 		if reversi == "@":
@@ -467,6 +469,8 @@ def main():
 			elif revex.strip() == "11": apkid()
 			elif revex.strip() == "12": dtlx()
 			elif revex.strip() == "13": apkleaks()
+			elif revex.strip() == "14": apkmitm()
+			elif revex.strip() == "15": ssl_pinning_remover()
 			elif revex.strip() == "00" or revex.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
