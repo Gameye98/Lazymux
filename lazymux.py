@@ -79,6 +79,8 @@ def main():
 		print("    [45] EyeWitness: EyeWitness is designed to take screenshots of websites, provide some server header info, and identify default credentials if possible")
 		print("    [46] InSpy: A python based LinkedIn enumeration tool")
 		print("    [47] Leaked: Leaked? 2.1 - A Checking tool for Hash codes, Passwords and Emails leaked")
+		print("    [48] fierce: A DNS reconnaissance tool for locating non-contiguous IP space")
+		print("    [49] gasmask: Information gathering tool - OSINT")
 		print("\n    [00] Back to main menu\n")
 		infogathering = input("lzmx > set_install ")
 		if infogathering == "@":
@@ -137,6 +139,8 @@ def main():
 			elif infox.strip() == "45": eyewitness()
 			elif infox.strip() == "46": inspy()
 			elif infox.strip() == "47": leaked()
+			elif infox.strip() == "48": fierce()
+			elif infox.strip() == "49": gasmask()
 			elif infox.strip() == "00" or infox.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -248,6 +252,7 @@ def main():
 		print("    [30] Sublist3r: Fast subdomains enumeration tool for penetration testers")
 		print("    [31] WP-plugin-scanner: A tool to list plugins installed on a wordpress powered website")
 		print("    [32] WhatWeb: Next generation web scanner")
+		print("    [33] fuxploider: File upload vulnerability scanner and exploitation tool")
 		print("\n    [00] Back to main menu\n")
 		webhack = input("lzmx > set_install ")
 		if webhack == "@":
@@ -291,6 +296,7 @@ def main():
 			elif webhx.strip() == "30": sublist3r()
 			elif webhx.strip() == "31": wppluginscanner()
 			elif webhx.strip() == "32": whatweb()
+			elif webhx.strip() == "33": fuxploider()
 			elif webhx.strip() == "00" or webhx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -354,6 +360,8 @@ def main():
 		print("    [26] PyBozoCrack: A silly & effective MD5 cracker in Python")
 		print("    [27] brutespray: Brute-Forcing from Nmap output - Automatically attempts default creds on found services")
 		print("    [28] crowbar: Crowbar is brute forcing tool that can be used during penetration tests")
+		print("    [29] elpscrk: An Intelligent wordlist generator based on user profiling, permutations, and statistics")
+		print("    [30] fbht: Facebook Hacking Tool")
 		print("\n    [00] Back to main menu\n")
 		passtak = input("lzmx > set_install ")
 		if passtak == "@":
@@ -393,6 +401,8 @@ def main():
 			elif passx.strip() == "26": pybozocrack()
 			elif passx.strip() == "27": brutespray()
 			elif passx.strip() == "28": crowbar()
+			elif passx.strip() == "29": elpscrk()
+			elif passx.strip() == "30": fbht()
 			elif passx.strip() == "00" or passx.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
@@ -902,6 +912,7 @@ def main():
 		print("    [07] Hac")
 		print("    [08] Cookie-stealer: Crappy cookie stealer")
 		print("    [09] zphisher: Automated Phishing Tool")
+		print("    [10] Evilginx: Advanced Phishing With Two-factor Authentication Bypass")
 		print("\n    [00] Back to main menu\n")
 		soceng = input("lzmx > set_install ")
 		if soceng == "@":
@@ -922,13 +933,14 @@ def main():
 			elif socng.strip() == "07" or socng.strip() == "7": hac()
 			elif socng.strip() == "08" or socng.strip() == "8": cookiestealer()
 			elif socng.strip() == "09" or socng.strip() == "9": zphisher()
+			elif socng.strip() == "10": evilginx()
 			elif socng.strip() == "00" or socng.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
 			writeStatus(0)
 	elif lazymux.strip() == "99":
 		os.system("git pull")
-	elif lazymux.strip() == "00":
+	elif lazymux.strip() == "0" or lazymux.strip() == "00":
 		sys.exit()
 	
 	else:

@@ -2150,6 +2150,65 @@ def ssl_pinning_remover():
 	print("###### Usage: ssl_pinning_remover -i /path/file.apk -v")
 	backtomenu_option()
 
+def elpscrk():
+	print('\n###### Installing elpscrk')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('python2 -m pip install colorama~=0.4.4 psutil~=5.8.0 click~=8.0.1 phonenumbers~=8.12.27')
+	os.system('git clone https://github.com/D4Vinci/elpscrk')
+	os.system('mv elpscrk {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def evilginx():
+	print('\n###### Installing evilginx')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git nginx python2 -y')
+	os.system('git clone https://github.com/kgretzky/evilginx')
+	os.system('mv evilginx {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def fbht():
+	print('\n###### Installing fbht')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('apt install python2-numpy')
+	os.system('python2 -m pip install mechanize')
+	os.system('git clone https://github.com/chinoogawa/fbht')
+	os.system('mv fbht {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def fierce():
+	print('\n###### Installing fierce')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('python2 -m pip install dnspython==1.16.0 fierce')
+	print('###### Done')
+	print("###### Usage: fierce -h")
+	backtomenu_option()
+
+def fuxploider():
+	print('\n###### Installing fuxploider')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python -y')
+	os.system('python -m pip install requests coloredlogs bs4')
+	os.system('git clone https://github.com/almandin/fuxploider')
+	os.system('mv fuxploider {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
+def gasmask():
+	print('\n###### Installing gasmask')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('python2 -m pip install validators python-whois dnspython requests shodan censys')
+	os.system('git clone https://github.com/twelvesec/gasmask')
+	os.system('mv gasmask {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
 ### Compiler/Interpreter
 def python2():
 	print('\n###### Installing Python2')

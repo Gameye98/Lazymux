@@ -18,7 +18,7 @@ Lazymux is a tool installer that is specially made for termux user which provide
 Made with ❤️
 
 ## Feature
-- **Tool Installation**
+- **Tool Installation**  
 Install Single Tool  
 `lzmx > set_install 1`  
 Install Multi Tool  
