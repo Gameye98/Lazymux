@@ -913,6 +913,7 @@ def main():
 		print("    [08] Cookie-stealer: Crappy cookie stealer")
 		print("    [09] zphisher: Automated Phishing Tool")
 		print("    [10] Evilginx: Advanced Phishing With Two-factor Authentication Bypass")
+		print("    [11] ghost-phisher: Automatically exported from code.google.com/p/ghost-phisher")
 		print("\n    [00] Back to main menu\n")
 		soceng = input("lzmx > set_install ")
 		if soceng == "@":
@@ -934,6 +935,7 @@ def main():
 			elif socng.strip() == "08" or socng.strip() == "8": cookiestealer()
 			elif socng.strip() == "09" or socng.strip() == "9": zphisher()
 			elif socng.strip() == "10": evilginx()
+			elif socng.strip() == "11": ghostphisher()
 			elif socng.strip() == "00" or socng.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():

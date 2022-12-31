@@ -2209,6 +2209,15 @@ def gasmask():
 	print('###### Done')
 	backtomenu_option()
 
+def ghostphisher():
+	print('\n###### Installing ghost-phisher')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install git python2 -y')
+	os.system('git clone https://github.com/savio-code/ghost-phisher')
+	os.system('mv ghost-phisher {}'.format(homeDir))
+	print('###### Done')
+	backtomenu_option()
+
 ### Compiler/Interpreter
 def python2():
 	print('\n###### Installing Python2')

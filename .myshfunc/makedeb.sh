@@ -1,5 +1,7 @@
 
 makedeb() {
+# Author: Gameye98/DedSecTL
+# Contact: https://github.com/Gameye98
 # Usage: makedeb
 echo -e "[makedeb] program running..."
 subdir=("bin" "etc" "include" "lib" "libexec" "share" "src" "tmp" "var")
