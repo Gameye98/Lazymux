@@ -497,9 +497,13 @@ def websploit():
 
 def metasploit():
 	print('\n###### Installing Metasploit')
-	os.system("apt update && apt upgrade")
-	os.system("apt install unstable-repo")
-	os.system("cd {} && apt install metasploit".format(homeDir))
+	os.system("apt update -y && apt upgrade -y")
+	os.system("apt install git wget")
+    os.system("wget -O {}/metasploit.sh https://raw.github.com/gushmazuko/metasploit_in_termux/master/metasploit.sh".format(homeDir))
+    oldpwd = os.getenv("PWD")
+    os.chdir(os.getenv("HOME"))
+    os.system("bash metasploit.sh")
+    os.chdir(oldpwd)
 	print('###### Done')
 	print("###### Type 'msfconsole' to start.")
 	backtomenu_option()
