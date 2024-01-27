@@ -2222,6 +2222,14 @@ def ghostphisher():
 	print('###### Done')
 	backtomenu_option()
 
+def gef():
+	print('\n###### Installing GEF')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install gdb wget -y')
+	os.system('bash -c "$(wget https://gef.blah.cat/sh -O -)"')
+	print('###### Done')
+	backtomenu_option()
+
 ### Compiler/Interpreter
 def python2():
 	print('\n###### Installing Python2')

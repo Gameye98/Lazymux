@@ -455,6 +455,7 @@ def main():
 		print("    [13] APKLeaks: Scanning APK file for URIs, endpoints & secrets")
 		print("    [14] apk-mitm: A CLI application that automatically prepares Android APK files for HTTPS inspection")
 		print("    [15] ssl-pinning-remover: An SSL Pinning Remover for Android Apps")
+		print("    [16] GEF: GEF (GDB Enhanced Features) - a modern experience for GDB with advanced debugging capabilities for exploit devs & reverse engineers on Linux")
 		print("\n    [00] Back to main menu\n")
 		reversi = input("lzmx > set_install ")
 		if reversi == "@":
@@ -481,6 +482,7 @@ def main():
 			elif revex.strip() == "13": apkleaks()
 			elif revex.strip() == "14": apkmitm()
 			elif revex.strip() == "15": ssl_pinning_remover()
+			elif revex.strip() == "16": gef()
 			elif revex.strip() == "00" or revex.strip() == "0": restart_program()
 			else: print("\nERROR: Wrong Input");timeout(1);restart_program()
 		if readStatus():
