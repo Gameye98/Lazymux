@@ -380,21 +380,25 @@ def planetwork_ddos():
 	backtomenu_option()
 
 def hydra():
-	print('\n###### Installing Hydra')
-	os.system('apt update -y && apt upgrade -y')
-	os.system('')
-	os.system('git clone https://github.com/vanhauser-thc/thc-hydra')
-	print('###### Done')
-	backtomenu_option()
+    print('\n###### Installing Hydra')
+    os.system('apt update -y && apt upgrade -y')
+    os.system('apt install tur-repo -y')
+    os.system('apt update -y && apt upgrade -y')
+    os.system('apt install thc-hydra -y')
+    # os.system('git clone https://github.com/vanhauser-thc/thc-hydra')
+    print('###### Done')
+    backtomenu_option()
 
 def black_hydra():
-	print('\n###### Installing Black Hydra')
-	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install hydra git python2')
-	os.system('git clone https://github.com/Gameye98/Black-Hydra')
-	os.system('mv Black-Hydra {}'.format(homeDir))
-	print('###### Done')
-	backtomenu_option()
+    print('\n###### Installing Black Hydra')
+    os.system('apt update -y && apt upgrade -y')
+    os.system('apt install tur-repo git python2 -y')
+    os.system('apt update -y && apt upgrade -y')
+    os.system('apt install thc-hydra -y')
+    os.system('git clone https://github.com/Gameye98/Black-Hydra')
+    os.system('mv Black-Hydra {}'.format(homeDir))
+    print('###### Done')
+    backtomenu_option()
 
 def cupp():
 	print('\n###### Installing Cupp')
