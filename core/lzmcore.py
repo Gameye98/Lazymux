@@ -1488,6 +1488,13 @@ def numpy():
 	print("###### Type 'pkg files numpy | grep usr/bin' to check executable file related to numpy package.")
 	backtomenu_option()
 
+def pandas():
+	print('\n###### Installing pandas')
+	os.system('apt update -y && apt upgrade -y')
+	os.system('apt install python-pandas -y')
+	print('###### Done')
+	backtomenu_option()
+
 def userrecon():
 	print('\n###### Installing userrecon')
 	os.system('apt update -y && apt upgrade -y')
@@ -2354,6 +2361,16 @@ def nasm():
 	print('###### Done')
 	print("###### Type 'nasm' to start.")
 	backtomenu_option()
+
+def notebook():
+    print('\n###### Installing jupyter-notebook')
+    os.system('apt update -y && apt upgrade -y')
+    os.system('apt install libzmq libcrypt rust')
+    os.system('python -m pip install -U pip prompt prompt_toolkit pickleshare openpyxl')
+    os.system('apt install python python-numpy python-pandas matplotlib -y')
+    os.system('python -m pip install notebook')
+    print('###### Done')
+    backtomenu_option()
 
 ### termux games
 def street_car():
