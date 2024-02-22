@@ -1623,7 +1623,8 @@ def upx():
 def pyinstxtractor():
 	print('\n###### Installing pyinstxtractor')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install git python -y')
+	os.system('apt install ldd git python -y')
+	os.system('python -m pip install pyinstaller')
 	os.system('git clone https://github.com/extremecoders-re/pyinstxtractor')
 	os.system('mv pyinstxtractor {}'.format(homeDir))
 	print('###### Done')
@@ -1632,7 +1633,7 @@ def pyinstxtractor():
 def innoextract():
 	print('\n###### Installing innoextract')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install git clang -y')
+	os.system('apt install boost cmake git clang -y')
 	os.system('git clone https://github.com/dscharrer/innoextract')
 	os.chdir("innoextract")
 	os.system('mkdir -p build')
