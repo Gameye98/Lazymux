@@ -1633,7 +1633,7 @@ def pyinstxtractor():
 def innoextract():
 	print('\n###### Installing innoextract')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install boost cmake git clang -y')
+	os.system('apt install ldd doxygen boost boost-headers cmake git clang -y')
 	os.system('git clone https://github.com/dscharrer/innoextract')
 	os.chdir("innoextract")
 	os.system('mkdir -p build')
