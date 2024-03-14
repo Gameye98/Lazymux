@@ -2131,19 +2131,21 @@ def voidLinux():
 	backtomenu_option()
 
 def apkleaks():
-	print('\n###### Installing APKLeaks')
-	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install python -y')
-	if not os.path.isfile(os.getenv("PREFIX")+"/bin/jadx"):
-		os.system('apt install dpkg wget -y')
-		os.system('wget https://github.com/Lexiie/Termux-Jadx/blob/master/jadx-0.6.1_all.deb?raw=true')
-		os.system('dpkg -i jadx-0.6.1_all.deb?raw=true')
-		os.system('rm -rf jadx-0.6.1_all.deb?raw=true')
-	os.system('python -m pip install apkleaks')
-	print('###### Done')
-	print("###### Type 'apkleaks' to start.")
-	print("###### Usage: apkleaks -f /path/file.apk")
-	backtomenu_option()
+    print('\n###### Installing APKLeaks')
+    os.system('apt update -y && apt upgrade -y')
+    os.system('apt install libxslt libxslt-static libxml2 libxml2-python libxml2-static libxml2-utils -y')
+    os.system('apt install python -y')
+    if not os.path.isfile(os.getenv("PREFIX")+"/bin/jadx"):
+        os.system('apt install dpkg wget -y')
+        os.system('wget https://raw.githubusercontent.com/Lexiie/Termux-Jadx/master/jadx-0.6.1_all.deb')
+        os.system('dpkg -i jadx-0.6.1_all.deb')
+        os.system('rm -rf jadx-0.6.1_all.deb')
+    os.system('python -m pip install setuptools')
+    os.system('python -m pip install apkleaks')
+    print('###### Done')
+    print("###### Type 'apkleaks' to start.")
+    print("###### Usage: apkleaks -f /path/file.apk")
+    backtomenu_option()
 
 def apkmitm():
 	print('\n###### Installing apk-mitm')
