@@ -2244,6 +2244,18 @@ def gef():
 	print('###### Done')
 	backtomenu_option()
 
+def osi_ig():
+    print('\n###### Installing osi.ig')
+    os.system('apt update -y && apt upgrade -y')
+    os.system('apt install git python wget -y')
+    os.system('git clone https://github.com/th3unkn0n/osi.ig')
+    os.chdir("osi.ig")
+    os.system('python -m pip -r requirements.txt')
+    os.chdir("..")
+    os.system('mv osi.ig {}'.format(homeDir))
+    print('###### Done')
+    backtomenu_option()
+
 ### Compiler/Interpreter
 def python2():
 	print('\n###### Installing Python2')

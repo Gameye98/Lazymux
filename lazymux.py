@@ -81,6 +81,7 @@ def main():
         print("    [47] Leaked: Leaked? 2.1 - A Checking tool for Hash codes, Passwords and Emails leaked")
         print("    [48] fierce: A DNS reconnaissance tool for locating non-contiguous IP space")
         print("    [49] gasmask: Information gathering tool - OSINT")
+        print("    [50] osi.ig: Information Gathering (Instagram)")
         print("\n    [00] Back to main menu\n")
         infogathering = input("lzmx > set_install ")
         if infogathering == "@":
@@ -141,11 +142,12 @@ def main():
             elif infox.strip() == "47": leaked()
             elif infox.strip() == "48": fierce()
             elif infox.strip() == "49": gasmask()
+            elif infox.strip() == "50": osi_ig()
             elif infox.strip() == "00" or infox.strip() == "0": restart_program()
             else: print("\nERROR: Wrong Input");timeout(1);restart_program()
         if readStatus():
             writeStatus(0)
-    
+ 
     # 02 - Vulnerability Analysis
     elif lazymux.strip() == "2" or lazymux.strip() == "02":
         print("\n    [01] Nmap: Utility for network discovery and security auditing")
