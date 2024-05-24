@@ -2256,6 +2256,16 @@ def osi_ig():
     print('###### Done')
     backtomenu_option()
 
+def proxy_checker():
+    print('\n###### Installing proxy-checker')
+    os.system('apt update && apt upgrade -y')
+    os.system('apt install git python -y')
+    os.system('python -m pip install colorama requests')
+    os.system('git clone https://github.com/pythonism/proxy-checker')
+    os.system('mv proxy-checker {}'.format(homeDir))
+    print('###### Done')
+    backtomenu_option()
+
 ### Compiler/Interpreter
 def python2():
 	print('\n###### Installing Python2')
