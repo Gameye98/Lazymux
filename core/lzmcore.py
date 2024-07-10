@@ -312,10 +312,10 @@ def wordpresscan():
 def routersploit():
 	print('\n###### Installing Routersploit')
 	os.system('apt update -y && apt upgrade -y')
-	os.system('apt install python2 git')
-	os.system('python2 -m pip install requests')
+	os.system('apt install python git')
+	os.system('python -m pip install requests')
 	os.system('git clone https://github.com/threat9/routersploit')
-	os.system('mv routersploit {0};cd {0}/routersploit;python2 -m pip install -r requirements.txt;termux-fix-shebang rsf.py'.format(homeDir))
+	os.system('mv routersploit {0};cd {0}/routersploit;python -m pip install -r requirements.txt;termux-fix-shebang rsf.py'.format(homeDir))
 	print('###### Done')
 	backtomenu_option()
 
